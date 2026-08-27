@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builds - LoL</title>
+    <link rel="stylesheet" href="pia.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">LOL</div>
+            <ul class="menu">
+                <li><a href="pia.html">Inicio</a></li>
+                <li><a href="campeones.html">Campeones</a></li>
+                <li><a href="builds.html">Builds</a></li>
+                <li><a href="jugadores.html">Jugadores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-titulo">
+            <h1>Builds</h1>
+            <p>Consulta objetos, runas y configuraciones para cada personaje</p>
+        </section>
+
+        <section class="filtros" aria-label="Filtrar builds por rol">
+            <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+            <button class="filtro-btn" data-filtro="asesino">Asesinos</button>
+            <button class="filtro-btn" data-filtro="luchador">Luchadores</button>
+            <button class="filtro-btn" data-filtro="mago">Magos</button>
+            <button class="filtro-btn" data-filtro="tirador">Tiradores</button>
+            <button class="filtro-btn" data-filtro="soporte">Soportes</button>
+            <button class="filtro-btn" data-filtro="tanque">Tanques</button>
+        </section>
+
+        <section class="listado">
+            <div class="grid-builds" id="grid-builds"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Programacion Web Tercera OP</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/builds.js"></script>
+</body>
+</html>
