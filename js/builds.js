@@ -50,12 +50,11 @@
             : datos.builds[filtro] || [];
     }
 
-    const datos = obtenerDatosIniciales();
     crearFiltrados({
         grid: grid,
         botones: document.querySelectorAll(".btn-filter"),
         obtenerItems: function (filtro) {
-            return obtenerBuilds(datos, filtro);
+            return obtenerBuilds(obtenerDatos(), filtro);
         },
         renderItem: crearCartaBuild
     });

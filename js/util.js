@@ -19,6 +19,21 @@ const ROLES = {
     tank: "tanque"
 };
 
+const CLAVE_DATOS_PIA = "piaDatos";
+
+function obtenerDatos() {
+    try {
+        const guardados = localStorage.getItem(CLAVE_DATOS_PIA);
+        return guardados ? JSON.parse(guardados) : obtenerDatosIniciales();
+    } catch (error) {
+        return obtenerDatosIniciales();
+    }
+}
+
+function guardarDatos(datos) {
+    localStorage.setItem(CLAVE_DATOS_PIA, JSON.stringify(datos));
+}
+
 /**
  * Devuelve una copia de los datos iniciales para que el panel pueda editarlos
  * sin modificar el objeto original durante la sesión.
@@ -81,4 +96,20 @@ function crearFiltrados(config) {
     });
 
     renderizar();
+
+    window.addEventListener("storage", function (evento) {
+        if (evento.key === CLAVE_DATOS_PIA) {
+            renderizar();
+        }
+    });
+
+    window.addEventListener("pageshow", renderizar);
+
+    window.addEventListener("focus", renderizar);
+
+    document.addEventListener("visibilitychange", function () {
+        if (document.visibilityState === "visible") {
+            renderizar();
+        }
+    });
 }

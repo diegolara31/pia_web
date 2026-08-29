@@ -52,12 +52,11 @@
             : datos.jugadores[filtro] || [];
     }
 
-    const datos = obtenerDatosIniciales();
     crearFiltrados({
         grid: grid,
         botones: document.querySelectorAll(".btn-filter"),
         obtenerItems: function (filtro) {
-            return obtenerJugadores(datos, filtro);
+            return obtenerJugadores(obtenerDatos(), filtro);
         },
         renderItem: crearCartaJugador
     });

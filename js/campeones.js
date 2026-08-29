@@ -41,12 +41,11 @@
         );
     }
 
-    const datos = obtenerDatosIniciales();
     crearFiltrados({
         grid: grid,
         botones: document.querySelectorAll(".btn-filter"),
         obtenerItems: function (filtro) {
-            return obtenerCampeones(datos, filtro);
+            return obtenerCampeones(obtenerDatos(), filtro);
         },
         renderItem: crearCartaCampeon
     });

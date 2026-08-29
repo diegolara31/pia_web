@@ -12,8 +12,6 @@
     const lista = document.getElementById("lista-registros");
     const mensaje = document.getElementById("mensaje-panel");
     const btnNuevo = document.getElementById("btn-nuevo");
-    const btnExportar = document.getElementById("btn-exportar");
-    const inputImportar = document.getElementById("input-importar");
     const btnCancelar = document.getElementById("btn-cancelar");
     const btnCerrarSesion = document.getElementById("btn-cerrar-sesion");
     const registroId = document.getElementById("registro-id");
@@ -83,18 +81,6 @@
                 }
             });
         });
-    }
-
-    function estructuraValida(candidato) {
-        return Boolean(
-            candidato &&
-            ["campeones", "builds", "jugadores"].every(function (categoria) {
-                return candidato[categoria] && typeof candidato[categoria] === "object" && !Array.isArray(candidato[categoria]);
-            }) &&
-            ["campeones", "builds", "jugadores"].every(function (categoria) {
-                return Object.values(candidato[categoria]).every(Array.isArray);
-            })
-        );
     }
 
     function mostrarMensaje(texto, tipo) {
@@ -327,7 +313,7 @@
         };
     }
 
-    function guardarRegistro(evento) {
+    async function guardarRegistro(evento) {
         evento.preventDefault();
         const error = validarFormulario();
 
@@ -336,6 +322,7 @@
             return;
         }
 
+        const datosOriginales = JSON.parse(JSON.stringify(datos));
         const estabaEditando = Boolean(idEnEdicion);
         const registro = crearRegistro();
         const rol = normalizarRol(registro.rol);
@@ -348,72 +335,47 @@
         }
 
         datos[tipoActual][rol].push(registro);
-        limpiarFormulario();
-        actualizarResumen();
-        renderizarLista();
-        mostrarMensaje(estabaEditando ? "Registro actualizado en memoria." : "Registro guardado en memoria.", "success");
+
+        try {
+            guardarDatos(datos);
+            limpiarFormulario();
+            actualizarResumen();
+            renderizarLista();
+            mostrarMensaje(estabaEditando ? "Registro actualizado en el navegador." : "Registro guardado en el navegador.", "success");
+        } catch (error) {
+            datos = datosOriginales;
+            normalizarDatosPanel();
+            renderizarLista();
+            mostrarMensaje("No se pudo guardar el registro en el navegador.", "danger");
+        }
     }
 
-    function eliminarRegistro(id) {
+    async function eliminarRegistro(id) {
         const registro = buscarRegistro(id);
 
         if (!registro || !window.confirm("¿Quieres eliminar este registro?")) {
             return;
         }
 
+        const datosOriginales = JSON.parse(JSON.stringify(datos));
         datos[tipoActual][registro.rol] = datos[tipoActual][registro.rol].filter(function (item) {
             return String(item.id) !== String(id);
         });
 
-        if (String(idEnEdicion) === String(id)) {
-            limpiarFormulario();
-        }
-
-        actualizarResumen();
-        renderizarLista();
-        mostrarMensaje("Registro eliminado de la sesión.", "success");
-    }
-
-    function descargarJson() {
-        const archivo = new Blob([JSON.stringify(datos, null, 4)], { type: "application/json" });
-        const url = URL.createObjectURL(archivo);
-        const enlace = document.createElement("a");
-        enlace.href = url;
-        enlace.download = "data.json";
-        enlace.click();
-        URL.revokeObjectURL(url);
-        mostrarMensaje("JSON descargado. Puedes volver a cargarlo desde este panel cuando lo necesites.", "success");
-    }
-
-    function importarJson(evento) {
-        const archivo = evento.target.files[0];
-
-        if (!archivo) {
-            return;
-        }
-
-        const lector = new FileReader();
-        lector.onload = function () {
-            try {
-                const importados = JSON.parse(lector.result);
-
-                if (!estructuraValida(importados)) {
-                    throw new Error("El archivo no tiene la estructura de datos esperada.");
-                }
-
-                datos = importados;
-                normalizarDatosPanel();
+        try {
+            guardarDatos(datos);
+            if (String(idEnEdicion) === String(id)) {
                 limpiarFormulario();
-                actualizarResumen();
-                renderizarLista();
-                mostrarMensaje("JSON cargado correctamente en esta sesión.", "success");
-            } catch (error) {
-                mostrarMensaje(error.message || "El archivo JSON no es válido.", "danger");
-            } finally {
-                inputImportar.value = "";
             }
-        };
-        lector.readAsText(archivo);
+            actualizarResumen();
+            renderizarLista();
+            mostrarMensaje("Registro eliminado del navegador.", "success");
+        } catch (error) {
+            datos = datosOriginales;
+            normalizarDatosPanel();
+            renderizarLista();
+            mostrarMensaje("No se pudo eliminar el registro del navegador.", "danger");
+        }
     }
 
     tipoSelector.addEventListener("change", function () {
@@ -430,8 +392,6 @@
         }
     });
 
-    btnExportar.addEventListener("click", descargarJson);
-    inputImportar.addEventListener("change", importarJson);
     btnCancelar.addEventListener("click", limpiarFormulario);
     form.addEventListener("submit", guardarRegistro);
 
@@ -454,7 +414,7 @@
 
     btnCerrarSesion.addEventListener("click", cerrarSesion);
 
-    datos = obtenerDatosIniciales();
+    datos = obtenerDatos();
     normalizarDatosPanel();
     cambiarCamposActivos();
     actualizarResumen();

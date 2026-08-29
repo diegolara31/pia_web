@@ -393,17 +393,6 @@ footer p {
     font-size: 1.4rem;
 }
 
-.demo-credentials {
-    background-color: rgba(200, 169, 81, 0.08);
-    border-left: 3px solid var(--lol-gold);
-    color: var(--lol-muted);
-    padding: 0.75rem 1rem;
-}
-
-.demo-credentials code {
-    color: var(--lol-gold-light);
-}
-
 .form-label {
     color: #ffffff;
     font-weight: 700;
