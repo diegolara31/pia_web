@@ -84,7 +84,7 @@ const DATA = {
 const USUARIOS = [
     {
         usuario: "admin",
-        password: "lol2026",
+        password: "admin",
         nombre: "Administrador",
         rol: "admin"
     }
