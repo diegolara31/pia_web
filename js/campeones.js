@@ -7,40 +7,47 @@
     "use strict";
 
     const grid = document.getElementById("grid-campeones");
-    function obtenerCampeones(filtro) {
+    function obtenerCampeones(datos, filtro) {
         return filtro === "todos"
-            ? aplanar(DATA.campeones)
-            : DATA.campeones[filtro] || [];
+            ? aplanar(datos.campeones)
+            : datos.campeones[filtro] || [];
     }
 
     function crearCartaCampeon(c) {
         const habilidades = c.habilidades
             .map(function (h) {
-                return "<li>" + h + "</li>";
+                return '<li class="habilidad">' + h + "</li>";
             })
             .join("");
 
         return (
-            '<article class="carta campeon-carta">' +
+            '<div class="col-12 col-md-6 col-xl-4">' +
+                '<article class="card carta campeon-carta h-100">' +
+                    '<div class="card-body d-flex flex-column">' +
                 '<div class="campeon-header">' +
-                    "<h3>" + c.nombre + "</h3>" +
-                    '<span class="badge badge-' + normalizarRol(c.rol) + '">' + c.rol + "</span>" +
+                    '<h3 class="h4 mb-0">' + c.nombre + "</h3>" +
+                    '<span class="badge rounded-pill badge-' + normalizarRol(c.rol) + '">' + c.rol + "</span>" +
                 "</div>" +
-                '<p class="campeon-region">Region: ' + c.region + "</p>" +
-                '<p class="campeon-desc">' + c.descripcion + "</p>" +
-                '<p class="campeon-dificultad">Dificultad: <strong>' + c.dificultad + "</strong></p>" +
-                '<div class="campeon-habilidades">' +
-                    "<h4>Habilidades</h4>" +
-                    "<ul>" + habilidades + "</ul>" +
+                '<p class="campeon-region mb-2">Region: ' + c.region + "</p>" +
+                '<p class="campeon-desc mb-3">' + c.descripcion + "</p>" +
+                '<p class="campeon-dificultad mb-3">Dificultad: <strong>' + c.dificultad + "</strong></p>" +
+                '<div class="campeon-habilidades mt-auto">' +
+                    '<h4 class="mb-2">Habilidades</h4>' +
+                    '<ul class="list-unstyled d-flex flex-wrap gap-2 mb-0">' + habilidades + "</ul>" +
                 "</div>" +
-            "</article>"
+                    "</div>" +
+                "</article>" +
+            "</div>"
         );
     }
 
+    const datos = obtenerDatosIniciales();
     crearFiltrados({
         grid: grid,
-        botones: document.querySelectorAll(".filtro-btn"),
-        obtenerItems: obtenerCampeones,
+        botones: document.querySelectorAll(".btn-filter"),
+        obtenerItems: function (filtro) {
+            return obtenerCampeones(datos, filtro);
+        },
         renderItem: crearCartaCampeon
     });
 })();

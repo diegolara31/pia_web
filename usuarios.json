@@ -1,0 +1,10 @@
+{
+    "usuarios": [
+        {
+            "usuario": "admin",
+            "password": "lol2026",
+            "nombre": "Administrador",
+            "rol": "admin"
+        }
+    ]
+}

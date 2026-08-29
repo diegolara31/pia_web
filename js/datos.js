@@ -1,8 +1,12 @@
+/*
+ * Datos iniciales en formato compatible con JSON para la versión estática.
+ * data.json y usuarios.json contienen la misma información como respaldo.
+ */
+
 const DATA = {
     campeones: {
         asesino: [],
         luchador: [],
-
         mago: [
             {
                 id: 1,
@@ -19,16 +23,13 @@ const DATA = {
                 ]
             }
         ],
-
         tirador: [],
         soporte: [],
         tanque: []
     },
-
     builds: {
         asesino: [],
         luchador: [],
-
         mago: [
             {
                 id: 1,
@@ -53,16 +54,13 @@ const DATA = {
                 ]
             }
         ],
-
         tirador: [],
         soporte: [],
         tanque: []
     },
-
     jugadores: {
         asesino: [],
         luchador: [],
-
         mago: [
             {
                 id: 1,
@@ -77,9 +75,17 @@ const DATA = {
                 kda: "3.8"
             }
         ],
-
         tirador: [],
         soporte: [],
         tanque: []
     }
 };
+
+const USUARIOS = [
+    {
+        usuario: "admin",
+        password: "lol2026",
+        nombre: "Administrador",
+        rol: "admin"
+    }
+];

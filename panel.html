@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de administración - LoL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="pia.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand logo" href="pia.html">LOL</a>
+                <div class="d-flex align-items-center gap-3">
+                    <span class="small text-light d-none d-sm-inline">Sesión: <strong id="usuario-activo">admin</strong></span>
+                    <button class="btn btn-outline-primary btn-sm" id="btn-cerrar-sesion" type="button">Cerrar sesión</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow-1 py-4 py-md-5">
+        <div class="container">
+            <div class="panel-heading mb-4">
+                <p class="eyebrow mb-2">Administración local</p>
+                <h1 class="display-5 fw-bold mb-2">Panel de contenido</h1>
+                <p class="text-secondary mb-0">Guarda, consulta, edita o elimina registros durante esta sesión y descarga el JSON actualizado.</p>
+            </div>
+
+            <div class="row g-3 mb-4" aria-label="Resumen del contenido">
+                <div class="col-12 col-md-4">
+                    <div class="card carta summary-card h-100">
+                        <div class="card-body">
+                            <span class="stat-label">Campeones</span>
+                            <strong class="summary-value" id="total-campeones">0</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card carta summary-card h-100">
+                        <div class="card-body">
+                            <span class="stat-label">Builds</span>
+                            <strong class="summary-value" id="total-builds">0</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card carta summary-card h-100">
+                        <div class="card-body">
+                            <span class="stat-label">Jugadores</span>
+                            <strong class="summary-value" id="total-jugadores">0</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="card carta panel-card mb-4">
+                <div class="card-body p-3 p-md-4">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+                        <div>
+                            <h2 class="h4 mb-1">Gestionar registros</h2>
+                            <p class="text-secondary mb-0">Selecciona una categoría para ver lo que tienes.</p>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row gap-2">
+                            <label class="visually-hidden" for="tipo-datos">Categoría</label>
+                            <select class="form-select" id="tipo-datos">
+                                <option value="campeones">Campeones</option>
+                                <option value="builds">Builds</option>
+                                <option value="jugadores">Jugadores</option>
+                            </select>
+                            <button class="btn btn-primary text-nowrap" id="btn-nuevo" type="button">Nuevo registro</button>
+                            <label class="btn btn-outline-primary text-nowrap mb-0" for="input-importar">Cargar JSON</label>
+                            <input class="d-none" id="input-importar" type="file" accept=".json,application/json">
+                            <button class="btn btn-outline-primary text-nowrap" id="btn-exportar" type="button">Descargar JSON</button>
+                        </div>
+                    </div>
+
+                    <div id="mensaje-panel" class="alert d-none" role="status"></div>
+
+                    <form id="form-datos" class="row g-3 mb-4">
+                        <input type="hidden" id="registro-id">
+
+                        <div class="panel-fields" data-tipo="campeones">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="campeon-nombre">Nombre</label>
+                                    <input class="form-control" id="campeon-nombre" type="text" autocomplete="off">
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label" for="campeon-rol">Rol</label>
+                                    <select class="form-select" id="campeon-rol">
+                                        <option value="Mago">Mago</option>
+                                        <option value="Asesino">Asesino</option>
+                                        <option value="Luchador">Luchador</option>
+                                        <option value="Tirador">Tirador</option>
+                                        <option value="Soporte">Soporte</option>
+                                        <option value="Tanque">Tanque</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label" for="campeon-dificultad">Dificultad</label>
+                                    <select class="form-select" id="campeon-dificultad">
+                                        <option value="Baja">Baja</option>
+                                        <option value="Media" selected>Media</option>
+                                        <option value="Alta">Alta</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <label class="form-label" for="campeon-region">Región</label>
+                                    <input class="form-control" id="campeon-region" type="text" autocomplete="off">
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <label class="form-label" for="campeon-habilidades">Habilidades <span class="text-secondary">(separadas por comas)</span></label>
+                                    <input class="form-control" id="campeon-habilidades" type="text" autocomplete="off">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="campeon-descripcion">Descripción</label>
+                                    <textarea class="form-control" id="campeon-descripcion" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-fields d-none" data-tipo="builds">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="build-campeon">Campeón</label>
+                                    <input class="form-control" id="build-campeon" type="text" autocomplete="off">
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label" for="build-rol">Rol</label>
+                                    <select class="form-select" id="build-rol">
+                                        <option value="Mago">Mago</option>
+                                        <option value="Asesino">Asesino</option>
+                                        <option value="Luchador">Luchador</option>
+                                        <option value="Tirador">Tirador</option>
+                                        <option value="Soporte">Soporte</option>
+                                        <option value="Tanque">Tanque</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label" for="build-objetos">Objetos <span class="text-secondary">(comas)</span></label>
+                                    <input class="form-control" id="build-objetos" type="text" autocomplete="off">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="build-descripcion">Descripción</label>
+                                    <textarea class="form-control" id="build-descripcion" rows="2"></textarea>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="build-runas">Runas principales <span class="text-secondary">(comas)</span></label>
+                                    <input class="form-control" id="build-runas" type="text" autocomplete="off">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="build-runas-secundarias">Runas secundarias <span class="text-secondary">(comas)</span></label>
+                                    <input class="form-control" id="build-runas-secundarias" type="text" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-fields d-none" data-tipo="jugadores">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label" for="jugador-nombre">Nombre</label>
+                                    <input class="form-control" id="jugador-nombre" type="text" autocomplete="off">
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label" for="jugador-rol">Rol</label>
+                                    <select class="form-select" id="jugador-rol">
+                                        <option value="Mago">Mago</option>
+                                        <option value="Asesino">Asesino</option>
+                                        <option value="Luchador">Luchador</option>
+                                        <option value="Tirador">Tirador</option>
+                                        <option value="Soporte">Soporte</option>
+                                        <option value="Tanque">Tanque</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <label class="form-label" for="jugador-region">Región</label>
+                                    <input class="form-control" id="jugador-region" type="text" autocomplete="off">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <label class="form-label" for="jugador-rango">Rango</label>
+                                    <input class="form-control" id="jugador-rango" type="text" autocomplete="off">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <label class="form-label" for="jugador-nivel">Nivel</label>
+                                    <input class="form-control" id="jugador-nivel" type="number" min="1" value="1">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <label class="form-label" for="jugador-campeon">Campeón favorito</label>
+                                    <input class="form-control" id="jugador-campeon" type="text" autocomplete="off">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <label class="form-label" for="jugador-partidas">Partidas</label>
+                                    <input class="form-control" id="jugador-partidas" type="number" min="1" value="1">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <label class="form-label" for="jugador-victorias">Victorias</label>
+                                    <input class="form-control" id="jugador-victorias" type="number" min="0" value="0">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <label class="form-label" for="jugador-kda">KDA</label>
+                                    <input class="form-control" id="jugador-kda" type="text" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex flex-column flex-sm-row justify-content-end gap-2 pt-2">
+                            <button class="btn btn-outline-primary d-none" id="btn-cancelar" type="button">Cancelar edición</button>
+                            <button class="btn btn-primary" type="submit">Guardar registro</button>
+                        </div>
+                    </form>
+
+                    <div class="border-top pt-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h5 mb-0" id="titulo-lista">Campeones guardados</h3>
+                            <span class="badge rounded-pill badge-default" id="contador-lista">0 registros</span>
+                        </div>
+                        <div id="lista-registros" class="row g-3"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="mt-auto">
+        <p>Programacion Web Tercera OP</p>
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/panel.js"></script>
+</body>
+</html>

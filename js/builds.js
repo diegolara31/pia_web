@@ -11,45 +11,52 @@
     function crearTags(items, claseTag) {
         return items
             .map(function (item) {
-                return '<span class="tag ' + claseTag + '">' + item + "</span>";
+                return '<span class="tag badge ' + claseTag + '">' + item + "</span>";
             })
             .join("");
     }
 
     function crearCartaBuild(b) {
         return (
-            '<article class="carta build-carta">' +
+            '<div class="col-12 col-md-6">' +
+                '<article class="card carta build-carta h-100">' +
+                    '<div class="card-body d-flex flex-column">' +
                 '<div class="build-header">' +
-                    "<h3>" + b.campeon + "</h3>" +
-                    '<span class="badge badge-' + normalizarRol(b.rol) + '">' + b.rol + "</span>" +
+                    '<h3 class="h4 mb-0">' + b.campeon + "</h3>" +
+                    '<span class="badge rounded-pill badge-' + normalizarRol(b.rol) + '">' + b.rol + "</span>" +
                 "</div>" +
-                '<p class="build-desc">' + b.descripcion + "</p>" +
-                '<div class="build-seccion">' +
-                    "<h4>Objetos</h4>" +
+                '<p class="build-desc mb-4">' + b.descripcion + "</p>" +
+                '<div class="build-seccion mb-3">' +
+                    '<h4 class="mb-2">Objetos</h4>' +
                     '<div class="tags">' + crearTags(b.objetos, "tag-objeto") + "</div>" +
                 "</div>" +
-                '<div class="build-seccion">' +
-                    "<h4>Runas Principales</h4>" +
+                '<div class="build-seccion mb-3">' +
+                    '<h4 class="mb-2">Runas Principales</h4>' +
                     '<div class="tags">' + crearTags(b.runas, "tag-runa") + "</div>" +
                 "</div>" +
-                '<div class="build-seccion">' +
-                    "<h4>Runas Secundarias</h4>" +
+                '<div class="build-seccion mb-0">' +
+                    '<h4 class="mb-2">Runas Secundarias</h4>' +
                     '<div class="tags">' + crearTags(b.runasSecundarias, "tag-runa-sec") + "</div>" +
                 "</div>" +
-            "</article>"
+                    "</div>" +
+                "</article>" +
+            "</div>"
         );
     }
 
-    function obtenerBuilds(filtro) {
+    function obtenerBuilds(datos, filtro) {
         return filtro === "todos"
-            ? aplanar(DATA.builds)
-            : DATA.builds[filtro] || [];
+            ? aplanar(datos.builds)
+            : datos.builds[filtro] || [];
     }
 
+    const datos = obtenerDatosIniciales();
     crearFiltrados({
         grid: grid,
-        botones: document.querySelectorAll(".filtro-btn"),
-        obtenerItems: obtenerBuilds,
+        botones: document.querySelectorAll(".btn-filter"),
+        obtenerItems: function (filtro) {
+            return obtenerBuilds(datos, filtro);
+        },
         renderItem: crearCartaBuild
     });
 })();

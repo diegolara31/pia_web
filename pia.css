@@ -1,291 +1,327 @@
-/* ====== RESET ====== */
+/*
+ * Tema visual del sitio.
+ * Bootstrap se encarga de la estructura responsive, espaciados y componentes;
+ * este archivo conserva únicamente la identidad visual de LoL.
+ */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --lol-bg: #0a0f18;
+    --lol-surface: #111827;
+    --lol-surface-soft: #1a2332;
+    --lol-border: #263244;
+    --lol-gold: #c8a951;
+    --lol-gold-light: #e2c66b;
+    --lol-muted: #aeb5c0;
+    --bs-primary: var(--lol-gold);
+    --bs-primary-rgb: 200, 169, 81;
+    --bs-body-bg: var(--lol-bg);
+    --bs-body-color: #ffffff;
+    --bs-link-color: var(--lol-gold);
+    --bs-link-hover-color: var(--lol-gold-light);
 }
-
-/* ====== BASE ====== */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #0a0f18;
+    background-color: var(--lol-bg);
     color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ====== HEADER / NAV ====== */
+/* ====== NAVBAR ====== */
 
 header {
-    width: 100%;
-    background-color: #111827;
-    border-bottom: 2px solid #c8a951;
+    background-color: var(--lol-surface);
+    border-bottom: 2px solid var(--lol-gold);
 }
 
-nav {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar {
+    min-height: 76px;
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #c8a951;
+    color: var(--lol-gold) !important;
+    font-size: 1.75rem;
+    font-weight: 700;
     letter-spacing: 2px;
 }
 
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 35px;
-}
-
-.menu a {
-    text-decoration: none;
+.navbar .nav-link {
     color: #ffffff;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
-.menu a:hover {
-    color: #c8a951;
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+    color: var(--lol-gold);
+}
+
+.navbar-toggler {
+    border-color: rgba(200, 169, 81, 0.6);
 }
 
 /* ====== HERO ====== */
 
 .hero {
-    min-height: 550px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(
-        rgba(5, 10, 20, 0.75),
-        rgba(5, 10, 20, 0.95)
-    );
+    min-height: min(560px, calc(100vh - 76px));
+    background:
+        radial-gradient(circle at 50% 30%, rgba(200, 169, 81, 0.14), transparent 38%),
+        linear-gradient(rgba(5, 10, 20, 0.75), rgba(5, 10, 20, 0.95));
 }
 
 .hero-content {
     max-width: 800px;
 }
 
+.btn-primary {
+    background-color: var(--lol-gold);
+    border-color: var(--lol-gold);
+    color: #080c14;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--lol-gold-light) !important;
+    border-color: var(--lol-gold-light) !important;
+    color: #080c14 !important;
+}
+
+.btn-outline-primary {
+    border-color: var(--lol-gold);
+    color: var(--lol-gold);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background-color: var(--lol-gold) !important;
+    border-color: var(--lol-gold) !important;
+    color: #080c14 !important;
+}
+
+.hero h1,
+.pagina-titulo h1,
+.section-title {
+    color: var(--lol-gold);
+    letter-spacing: 2px;
+}
+
 .hero h1 {
-    font-size: 64px;
     letter-spacing: 4px;
-    color: #c8a951;
-    margin-bottom: 20px;
 }
 
 .hero h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #ffffff;
+    margin-bottom: 1rem;
 }
 
-.hero p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #c7cbd1;
-    margin-bottom: 35px;
+.hero p,
+.pagina-titulo p {
+    color: var(--lol-muted);
 }
 
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* ====== BOTONES ====== */
-
-.btn-primary,
-.btn-secondary {
-    display: inline-block;
-    padding: 14px 28px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.btn-primary {
-    background-color: #c8a951;
+.hero .btn-primary {
+    background-color: var(--lol-gold);
     color: #080c14;
+    border-color: var(--lol-gold);
 }
 
-.btn-secondary {
-    border: 2px solid #c8a951;
-    color: #c8a951;
-    background-color: transparent;
-}
-
-.btn-primary:hover {
-    background-color: #e2c66b;
-    transform: translateY(-3px);
-}
-
-.btn-secondary:hover {
-    background-color: #c8a951;
+.hero .btn-primary:hover,
+.hero .btn-primary:focus {
+    background-color: var(--lol-gold-light);
+    border-color: var(--lol-gold-light);
     color: #080c14;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
-/* ====== CATEGORIAS (HOME) ====== */
-
-.categorias {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 70px 40px;
+.hero .btn-outline-primary {
+    color: var(--lol-gold);
+    border-color: var(--lol-gold);
 }
 
-.categorias > h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 45px;
-    color: #c8a951;
+.hero .btn-outline-primary:hover,
+.hero .btn-outline-primary:focus {
+    background-color: var(--lol-gold);
+    border-color: var(--lol-gold);
+    color: #080c14;
+    transform: translateY(-2px);
 }
 
-.cartas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.hero .btn {
+    transition: 0.3s ease;
 }
+
+/* ====== CARDS ====== */
 
 .carta {
-    background-color: #111827;
-    border: 1px solid #263244;
-    border-radius: 10px;
-    padding: 30px;
-    min-height: 240px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: 0.3s;
+    background-color: var(--lol-surface);
+    border: 1px solid var(--lol-border);
+    border-radius: 0.625rem;
+    color: #ffffff;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .carta:hover {
-    transform: translateY(-8px);
-    border-color: #c8a951;
+    border-color: var(--lol-gold);
     box-shadow: 0 10px 30px rgba(200, 169, 81, 0.15);
+    transform: translateY(-6px);
 }
 
-.carta h3 {
-    font-size: 24px;
+.carta .card-title {
     color: #ffffff;
-    margin-bottom: 15px;
 }
 
-.carta p {
-    color: #aeb5c0;
+.carta .card-text,
+.campeon-desc,
+.build-desc {
+    color: var(--lol-muted);
     line-height: 1.6;
-    margin-bottom: 25px;
 }
 
-.carta a {
-    color: #c8a951;
+.carta a:not(.btn) {
+    color: var(--lol-gold);
+    font-weight: 700;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    transition: color 0.3s ease, padding-left 0.3s ease;
 }
 
-.carta a:hover {
-    color: #e2c66b;
+.carta a:not(.btn):hover,
+.carta a:not(.btn):focus {
+    color: var(--lol-gold-light);
     padding-left: 5px;
 }
 
-/* ====== PAGINAS: TITULO ====== */
-
 .pagina-titulo {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 40px 30px;
-    text-align: center;
 }
 
 .pagina-titulo h1 {
-    font-size: 48px;
-    color: #c8a951;
     letter-spacing: 3px;
-    margin-bottom: 15px;
-}
-
-.pagina-titulo p {
-    font-size: 18px;
-    color: #aeb5c0;
 }
 
 /* ====== FILTROS ====== */
 
-.filtros {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px 30px;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
+.btn-filter {
+    background-color: var(--lol-surface);
+    border: 1px solid var(--lol-border);
+    color: var(--lol-muted);
+    font-size: 0.875rem;
+    font-weight: 700;
 }
 
-.filtro-btn {
-    padding: 10px 24px;
-    background-color: #111827;
-    border: 1px solid #263244;
-    border-radius: 5px;
-    color: #aeb5c0;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+.btn-filter:hover,
+.btn-filter:focus {
+    background-color: var(--lol-surface);
+    border-color: var(--lol-gold);
+    color: var(--lol-gold);
 }
 
-.filtro-btn:hover {
-    border-color: #c8a951;
-    color: #c8a951;
-}
-
-.filtro-btn.activo {
-    background-color: #c8a951;
+.btn-filter.activo {
+    background-color: var(--lol-gold);
+    border-color: var(--lol-gold);
     color: #080c14;
-    border-color: #c8a951;
 }
 
-/* ====== LISTADO Y GRIDS ====== */
-
-.listado {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px 60px;
+.btn-filter.activo:hover,
+.btn-filter.activo:focus {
+    background-color: var(--lol-gold);
+    border-color: var(--lol-gold);
+    color: #080c14;
 }
 
-.grid-campeones,
-.grid-jugadores {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+/* ====== CARDS DE CAMPEONES, BUILDS Y JUGADORES ====== */
+
+.campeon-header,
+.build-header,
+.jugador-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: space-between;
 }
 
-.grid-builds {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+.campeon-header h3,
+.build-header h3,
+.jugador-header h3 {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.campeon-region {
+    color: var(--lol-gold);
+    font-size: 0.875rem;
+}
+
+.campeon-dificultad {
+    color: var(--lol-muted);
+    font-size: 0.875rem;
+}
+
+.campeon-habilidades h4,
+.build-seccion h4 {
+    color: var(--lol-gold);
+    font-size: 0.9375rem;
+}
+
+.habilidad {
+    background-color: var(--lol-surface-soft);
+    border: 1px solid var(--lol-border);
+    border-radius: 0.25rem;
+    color: var(--lol-muted);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.625rem;
+}
+
+.tag {
+    border-radius: 0.3125rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    padding: 0.375rem 0.75rem;
+}
+
+.tag-objeto {
+    background-color: var(--lol-surface-soft);
+    border: 1px solid var(--lol-gold);
+    color: var(--lol-gold);
+}
+
+.tag-runa {
+    background-color: #2d1b4e;
+    border: 1px solid #6b46c1;
+    color: #c4b5fd;
+}
+
+.tag-runa-sec {
+    background-color: var(--lol-surface-soft);
+    border: 1px solid var(--lol-border);
+    color: var(--lol-muted);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-label {
+    color: #7f8998;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.stat-value {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.stat-value.winrate {
+    color: var(--lol-gold);
 }
 
 /* ====== BADGES ====== */
-
-.badge {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
 
 .badge-asesino  { background-color: #b83280; color: #ffffff; }
 .badge-luchador { background-color: #c53030; color: #ffffff; }
@@ -294,183 +330,142 @@ nav {
 .badge-soporte  { background-color: #2f855a; color: #ffffff; }
 .badge-tanque   { background-color: #975a16; color: #ffffff; }
 .badge-default  { background-color: #4a5568; color: #ffffff; }
-.badge-rango    { background-color: #c8a951; color: #080c14; }
-
-/* ====== CARTA CAMPEON ====== */
-
-.campeon-carta,
-.build-carta,
-.jugador-carta {
-    min-height: auto;
-}
-
-.campeon-header,
-.build-header,
-.jugador-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-.campeon-header h3,
-.build-header h3,
-.jugador-header h3 {
-    margin-bottom: 0;
-}
-
-.campeon-region {
-    color: #c8a951;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.campeon-desc {
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.campeon-dificultad {
-    font-size: 14px;
-    color: #aeb5c0;
-    margin-bottom: 15px;
-}
-
-.campeon-habilidades h4 {
-    font-size: 15px;
-    color: #c8a951;
-    margin-bottom: 8px;
-}
-
-.campeon-habilidades ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.campeon-habilidades li {
-    background-color: #1a2332;
-    border: 1px solid #263244;
-    border-radius: 4px;
-    padding: 4px 10px;
-    font-size: 12px;
-    color: #aeb5c0;
-}
-
-/* ====== CARTA BUILD ====== */
-
-.build-desc {
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.build-seccion {
-    margin-bottom: 18px;
-}
-
-.build-seccion h4 {
-    font-size: 15px;
-    color: #c8a951;
-    margin-bottom: 10px;
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.tag {
-    padding: 6px 12px;
-    border-radius: 5px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.tag-objeto    { background-color: #1a2332; border: 1px solid #c8a951; color: #c8a951; }
-.tag-runa      { background-color: #2d1b4e; border: 1px solid #6b46c1; color: #c4b5fd; }
-.tag-runa-sec  { background-color: #1a2332; border: 1px solid #263244; color: #aeb5c0; }
-
-/* ====== CARTA JUGADOR ====== */
-
-.jugador-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-}
-
-.stat {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.stat-label {
-    font-size: 12px;
-    color: #7f8998;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.stat-value {
-    font-size: 16px;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.stat-value.winrate {
-    color: #c8a951;
-}
 
 /* ====== FOOTER ====== */
 
 footer {
-    width: 100%;
     background-color: #080c14;
-    border-top: 1px solid #263244;
+    border-top: 1px solid var(--lol-border);
+    margin-top: 2rem;
+    padding: 1.5rem 1.25rem;
     text-align: center;
-    padding: 25px 20px;
-    margin-top: 30px;
 }
 
 footer p {
     color: #7f8998;
-    font-size: 14px;
+    font-size: 0.875rem;
+    margin: 0;
 }
 
-/* ====== RESPONSIVE ====== */
+/* ====== AJUSTES PARA PANTALLAS PEQUEÑAS ====== */
 
-@media (max-width: 900px) {
-    .cartas,
-    .grid-campeones,
-    .grid-builds,
-    .grid-jugadores {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .cartas,
-    .grid-campeones,
-    .grid-builds,
-    .grid-jugadores {
-        grid-template-columns: 1fr;
-    }
-
-    .menu {
-        gap: 15px;
+@media (max-width: 575.98px) {
+    .hero {
+        min-height: 480px;
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: clamp(2.35rem, 12vw, 3.5rem);
     }
 
     .hero h2 {
-        font-size: 24px;
+        font-size: 1.35rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
     }
 
     .pagina-titulo h1 {
-        font-size: 32px;
+        font-size: 2.5rem;
     }
+
+    .campeon-header,
+    .build-header,
+    .jugador-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* ====== LOGIN Y PANEL ====== */
+
+.text-secondary {
+    color: var(--lol-muted) !important;
+}
+
+.login-card {
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.login-icon {
+    color: var(--lol-gold);
+    font-size: 1.4rem;
+}
+
+.demo-credentials {
+    background-color: rgba(200, 169, 81, 0.08);
+    border-left: 3px solid var(--lol-gold);
+    color: var(--lol-muted);
+    padding: 0.75rem 1rem;
+}
+
+.demo-credentials code {
+    color: var(--lol-gold-light);
+}
+
+.form-label {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.form-control,
+.form-select {
+    background-color: #0d1420;
+    border-color: var(--lol-border);
+    color: #ffffff;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #0d1420;
+    border-color: var(--lol-gold);
+    box-shadow: 0 0 0 0.25rem rgba(200, 169, 81, 0.18);
+    color: #ffffff;
+}
+
+.form-control::placeholder {
+    color: #7f8998;
+}
+
+.form-select option {
+    background-color: #0d1420;
+    color: #ffffff;
+}
+
+.panel-heading h1 {
+    color: var(--lol-gold);
+}
+
+.eyebrow {
+    color: var(--lol-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.summary-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.summary-value {
+    color: var(--lol-gold);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.panel-fields {
+    width: 100%;
+}
+
+.empty-state {
+    border: 1px dashed var(--lol-border);
+    color: var(--lol-muted);
+}
+
+.panel-card .border-top {
+    border-color: var(--lol-border) !important;
 }

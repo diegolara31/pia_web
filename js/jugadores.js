@@ -14,7 +14,7 @@
 
     function crearStat(etiqueta, valor, claseExtra) {
         return (
-            '<div class="stat">' +
+            '<div class="col-6 stat">' +
                 '<span class="stat-label">' + etiqueta + "</span>" +
                 '<span class="stat-value ' + (claseExtra || "") + '">' + valor + "</span>" +
             "</div>"
@@ -23,12 +23,14 @@
 
     function crearCartaJugador(j) {
         return (
-            '<article class="carta jugador-carta">' +
+            '<div class="col-12 col-md-6 col-xl-4">' +
+                '<article class="card carta jugador-carta h-100">' +
+                    '<div class="card-body">' +
                 '<div class="jugador-header">' +
-                    "<h3>" + j.nombre + "</h3>" +
-                    '<span class="badge badge-' + normalizarRol(j.rol) + '">' + j.rol + "</span>" +
+                    '<h3 class="h4 mb-0">' + j.nombre + "</h3>" +
+                    '<span class="badge rounded-pill badge-' + normalizarRol(j.rol) + '">' + j.rol + "</span>" +
                 "</div>" +
-                '<div class="jugador-stats">' +
+                '<div class="jugador-stats row g-3">' +
                     crearStat("Region", j.region) +
                     crearStat("Rango", j.rango) +
                     crearStat("Nivel", j.nivel) +
@@ -38,20 +40,25 @@
                     crearStat("Win Rate", calcularWinRate(j) + "%", "winrate") +
                     crearStat("KDA", j.kda) +
                 "</div>" +
-            "</article>"
+                    "</div>" +
+                "</article>" +
+            "</div>"
         );
     }
 
-    function obtenerJugadores(filtro) {
+    function obtenerJugadores(datos, filtro) {
         return filtro === "todos"
-            ? aplanar(DATA.jugadores)
-            : DATA.jugadores[filtro] || [];
+            ? aplanar(datos.jugadores)
+            : datos.jugadores[filtro] || [];
     }
 
+    const datos = obtenerDatosIniciales();
     crearFiltrados({
         grid: grid,
-        botones: document.querySelectorAll(".filtro-btn"),
-        obtenerItems: obtenerJugadores,
+        botones: document.querySelectorAll(".btn-filter"),
+        obtenerItems: function (filtro) {
+            return obtenerJugadores(datos, filtro);
+        },
         renderItem: crearCartaJugador
     });
 })();

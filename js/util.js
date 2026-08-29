@@ -20,6 +20,15 @@ const ROLES = {
 };
 
 /**
+ * Devuelve una copia de los datos iniciales para que el panel pueda editarlos
+ * sin modificar el objeto original durante la sesión.
+ * @returns {Object} Datos iniciales del sitio.
+ */
+function obtenerDatosIniciales() {
+    return JSON.parse(JSON.stringify(DATA));
+}
+
+/**
  * Normaliza un rol a su clave canonica (sin acentos, minusculas, con sinonimos).
  * Si el rol no esta mapeado, devuelve "default" para usar el badge generico.
  * @param {string} rol - Rol tal como viene en los datos.
@@ -48,7 +57,7 @@ function aplanar(grupo) {
  * Crea el sistema de filtros de una pagina.
  * @param {Object} config - Configuracion del filtrador.
  * @param {HTMLElement} config.grid - Contenedor donde se renderiza.
- * @param {NodeList} config.botones - Botones de filtro (.filtro-btn).
+ * @param {NodeList} config.botones - Botones de filtro (.btn-filter).
  * @param {Function} config.obtenerItems - Devuelve los items segun el filtro activo.
  * @param {Function} config.renderItem - Convierte un item en HTML.
  */
