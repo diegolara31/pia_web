@@ -4,88 +4,7003 @@
  */
 
 const DATA = {
-    campeones: {
-        asesino: [],
-        luchador: [],
-        mago: [
+    "campeones": {
+        "asesino": [
             {
-                id: 1,
-                nombre: "Ahri",
-                rol: "Mago",
-                dificultad: "Media",
-                region: "Jonia",
-                descripcion: "Una vastaya de nueve colas que manipula la magia y las emociones de sus enemigos.",
-                habilidades: [
-                    "Orbe del engaño",
-                    "Zorro de fuego",
-                    "Encanto",
-                    "Impulso espiritual"
+                "id": 3,
+                "nombre": "Akali",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Jonia",
+                "descripcion": "Tras renunciar a la Orden Kinkou y a su título como el Puño de la Sombra, Akali pelea a solas, lista para ser el arma letal que su pueblo necesita. Aunque conserva todo lo que aprendió de su maestro Shen, juró defender a Jonia de sus enemigos... una...",
+                "habilidades": [
+                    "Ráfaga de los Cinco Filos",
+                    "Manto Crepuscular",
+                    "Maniobra de Shuriken",
+                    "Ejecución Perfecta"
+                ]
+            },
+            {
+                "id": 30,
+                "nombre": "Ekko",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Zaun",
+                "descripcion": "Ekko es un prodigio que creció en las duras calles de Zaun. Con el Pulsar-Z, un dispositivo de su propia invención, Ekko puede explorar las múltiples posibilidades de la realidad para crear el momento perfecto. Al manipular el tiempo de tal forma, este...",
+                "habilidades": [
+                    "Rebobinador de Tiempo",
+                    "Convergencia Paralela",
+                    "Salto de Fase",
+                    "Cronorruptura"
+                ]
+            },
+            {
+                "id": 31,
+                "nombre": "Elise",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Islas de la Sombra",
+                "descripcion": "Elise es una depredadora mortífera que reside en un palacio cerrado y sin luz, en las profundidades de la ciudad más vieja de Noxus. Cuando era mortal era la señora de una poderosa casa, pero la mordida de un vil semidiós la transformó en algo hermoso...",
+                "habilidades": [
+                    "Neurotoxina / Mordida Venenosa",
+                    "Araña Volátil / Raudo Frenesí",
+                    "Capullo / Rápel",
+                    "Forma Arácnida"
+                ]
+            },
+            {
+                "id": 32,
+                "nombre": "Evelynn",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Runaterra",
+                "descripcion": "Dentro de las oscuras vetas de Runaterra, la demonio Evelynn acecha a su siguiente víctima. Seduce a su presa con la apariencia voluptuosa de una mujer humana, pero una vez que alguien sucumbe ante sus encantos, Evelynn revela su verdadera forma. Es en...",
+                "habilidades": [
+                    "Púas de Odio",
+                    "Seducción",
+                    "Latigazo",
+                    "Última Caricia"
+                ]
+            },
+            {
+                "id": 36,
+                "nombre": "Fizz",
+                "rol": "Asesino",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "Fizz es un yordle anfibio que habita en los arrecifes alrededor de Aguasturbias. A menudo recupera y regresa las monedas lanzadas al mar por capitanes supersticiosos, pero hasta los más escépticos marinos saben que no deben contrariarlo; hay muchas...",
+                "habilidades": [
+                    "Golpe Travierizo",
+                    "Tridente Piedramar",
+                    "Juguetón / Bromista",
+                    "Carnada para Tiburones"
+                ]
+            },
+            {
+                "id": 61,
+                "nombre": "Kassadin",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "El Vacío",
+                "descripcion": "Al abrirse paso a través de los lugares más oscuros del mundo, Kassadin sabe que sus días están contados. Aunque alguna vez fue un experimentado guía y aventurero de Shurima, eligió vivir en el anonimato y tener una familia en las pacíficas tribus del...",
+                "habilidades": [
+                    "Esfera Nula",
+                    "Cuchilla Infernal",
+                    "Pulso de Fuerza",
+                    "Ruptura en el Camino"
+                ]
+            },
+            {
+                "id": 62,
+                "nombre": "Katarina",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Noxus",
+                "descripcion": "Decisiva en su juicio y letal en combate, Katarina es una asesina noxiana del más alto calibre. Como la hija mayor del legendario General Du Couteau, ella hizo que reconocieran sus talentos con agiles muertes a sus enemigos desprevenidos. Su feroz...",
+                "habilidades": [
+                    "Hoja Rebotante",
+                    "Preparación",
+                    "Shunpo",
+                    "Loto Mortal"
+                ]
+            },
+            {
+                "id": 66,
+                "nombre": "Kha'Zix",
+                "rol": "Asesino",
+                "dificultad": "Media",
+                "region": "El Vacío",
+                "descripcion": "El Vacío crece y el Vacío se adapta. En ninguna de sus múltiples manifestaciones estas verdades son más evidentes que en Kha'Zix. La evolución es la esencia de este mutante horror que nació para sobrevivir y acabar con los más fuertes. Cuando se le...",
+                "habilidades": [
+                    "Saborea su Miedo",
+                    "Púas del Vacío",
+                    "Salto",
+                    "Ataque del Vacío"
+                ]
+            },
+            {
+                "id": 70,
+                "nombre": "LeBlanc",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Noxus",
+                "descripcion": "Misteriosa hasta para los otros miembros de Rosa Negra, LeBlanc es uno de los tantos nombres de una mujer pálida que ha manipulado personas y eventos desde los primeros días de Noxus. Usando su magia para reflejarse a sí misma, esta hechicera puede...",
+                "habilidades": [
+                    "Sello de la Maldad",
+                    "Distorsión",
+                    "Cadenas Etéreas",
+                    "Mímica"
+                ]
+            },
+            {
+                "id": 75,
+                "nombre": "Locke",
+                "rol": "Asesino",
+                "dificultad": "Media",
+                "region": "Demacia",
+                "descripcion": "Corvin Locke, hijo de una familia de ocultistas demacianos, es un exorcista que combate con clavos y domina ritos prohibidos. Criado entre mentiras e hipocresía, rápidamente aprendió que los demonios no son la causa de la oscuridad de la humanidad, sino...",
+                "habilidades": [
+                    "Clavos de la Expiación",
+                    "Incineración del Alma",
+                    "Salto de Ceniza",
+                    "Purgatorio"
+                ]
+            },
+            {
+                "id": 88,
+                "nombre": "Naafiri",
+                "rol": "Asesino",
+                "dificultad": "Baja",
+                "region": "Shurima",
+                "descripcion": "A través de las arenas de Shurima, resuena un coro de aullidos. Es el llamado de los sabuesos de las dunas, depredadores voraces que forman manadas y compiten por el derecho a cazar en estas tierras desérticas. Entre ellos, una manada se destaca por...",
+                "habilidades": [
+                    "Dagas Darkin",
+                    "El Llamado de la Manada",
+                    "Eviscerar",
+                    "Presa a la Vista"
+                ]
+            },
+            {
+                "id": 93,
+                "nombre": "Nidalee",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Ixtal",
+                "descripcion": "Criada en las profundidades de la jungla, Nidalee es una rastreadora maestra que puede transformarse en puma a su voluntad. Ni mujer, ni bestia, ella defiende salvajemente su territorio de todos y cada uno de los intrusos, con trampas cuidadosamente...",
+                "habilidades": [
+                    "Jabalina / Tumbar",
+                    "Trampa / Salto",
+                    "Arrebato Primitivo / Zarpazo",
+                    "Piel de Puma"
+                ]
+            },
+            {
+                "id": 103,
+                "nombre": "Qiyana",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Ixtal",
+                "descripcion": "En la ciudad selvática de Ixaocan, Qiyana trama su despiadado camino hacia el trono de Yun Tal. Última en la línea de sucesión familiar, se enfrenta a quienes se interpongan en su camino con descarada confianza y un dominio nunca antes visto de la magia...",
+                "habilidades": [
+                    "Furia Elemental / Filo de Ixtal",
+                    "Terraformación",
+                    "Osadía",
+                    "Talento Supremo"
+                ]
+            },
+            {
+                "id": 111,
+                "nombre": "Rengar",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Ixtal",
+                "descripcion": "Rengar es un feroz vastaya cazador de trofeos que vive para sentir la emoción de rastrear y asesinar a criaturas peligrosas. Recorre el mundo en búsqueda de las bestias más salvajes que puede encontrar y en particular persigue cualquier rastro de...",
+                "habilidades": [
+                    "Fiereza",
+                    "Rugido de Batalla",
+                    "Boleadoras",
+                    "Adrenalina del Cazador"
+                ]
+            },
+            {
+                "id": 120,
+                "nombre": "Shaco",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Runaterra",
+                "descripcion": "Creado hace mucho tiempo como un juguete para un solitario príncipe, la marioneta encantada Shaco ahora se deleita con la matanza y el caos. Corrompido por una oscura magia y la pérdida de su querido dueño, la que alguna vez fue una gentil marioneta...",
+                "habilidades": [
+                    "Engaño",
+                    "Caja Sorpresa",
+                    "Veneno de Doble Filo",
+                    "Alucinación"
+                ]
+            },
+            {
+                "id": 135,
+                "nombre": "Talon",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Noxus",
+                "descripcion": "Talon es el filo que yace en la oscuridad y un despiadado asesino que ataca sin advertencia solo para escapar antes de que alguien note su presencia. Se hizo de una reputación peligrosa en las brutales calles de Noxus, donde se vio obligado a pelear...",
+                "habilidades": [
+                    "Diplomacia Noxiana",
+                    "Rastrillar",
+                    "Sendero del Asesino",
+                    "Asalto Sombrío"
+                ]
+            },
+            {
+                "id": 168,
+                "nombre": "Zed",
+                "rol": "Asesino",
+                "dificultad": "Alta",
+                "region": "Jonia",
+                "descripcion": "Implacable y despiadado, Zed es el líder de la Orden de la Sombra, una organización que él creó con la intención de militarizar las tradiciones de artes marciales y mágicas de Jonia para repeler a los invasores noxianos. Durante la guerra, la...",
+                "habilidades": [
+                    "Navaja Shuriken",
+                    "Sombra Viviente",
+                    "Cuchillada Sombría",
+                    "Marca de la Muerte"
                 ]
             }
         ],
-        tirador: [],
-        soporte: [],
-        tanque: []
-    },
-    builds: {
-        asesino: [],
-        luchador: [],
-        mago: [
+        "luchador": [
             {
-                id: 1,
-                campeon: "Ahri",
-                rol: "Mago",
-                descripcion: "Build de ejemplo para una campeona maga de daño explosivo.",
-                objetos: [
-                    "Malignidad",
-                    "Botas de hechicero",
-                    "Llamasombria",
-                    "Sombrero mortal de Rabadon"
+                "id": 1,
+                "nombre": "Aatrox",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "Aatrox y sus hermanos, que alguna vez fueron respetados defensores de Shurima contra el Vacío, se convirtieron en una amenaza aún mayor para Runaterra y los derrotaron con hechicería mortal usada con astucia. Pero, después de siglos de encarcelamiento...",
+                "habilidades": [
+                    "La Espada Darkin",
+                    "Cadenas Infernales",
+                    "Impulso Siniestro",
+                    "Destructor de Mundos"
+                ]
+            },
+            {
+                "id": 6,
+                "nombre": "Ambessa",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Noxus",
+                "descripcion": "Todos los que conocen el apellido Medarda le tienen un enorme respeto y un temor más grande a la matriarca de la familia: Ambessa. Esta general noxiana es una combinación letal de fuerza implacable y determinación audaz en el combate. Su labor como...",
+                "habilidades": [
+                    "Barrido Astuto | Azote Desgarrador",
+                    "Repudio",
+                    "Lacerar",
+                    "Ejecución Pública"
+                ]
+            },
+            {
+                "id": 16,
+                "nombre": "Bel'Veth",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "El Vacío",
+                "descripcion": "Una horripilante emperatriz creada a partir de los restos de una ciudad devorada por completo, Bel'Veth es el fin de la misma Runaterra... y el comienzo de una realidad monstruosa diseñada por ella. Impulsada por eras de historias, conocimientos y...",
+                "habilidades": [
+                    "Embate del Vacío",
+                    "Ascenso y Descenso",
+                    "Vorágine Imperial",
+                    "Banquete Infinito"
+                ]
+            },
+            {
+                "id": 20,
+                "nombre": "Briar",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "Noxus",
+                "descripcion": "La sed de sangre incontrolable de Briar, un experimento fallido de la Rosa Negra, la obliga a llevar un cepo especial que calma su frenética mente. Tras años de confinamiento, esta arma viviente se ha liberado de sus ataduras para abalanzarse sobre el...",
+                "habilidades": [
+                    "Golpe de Adrenalina",
+                    "Frenesí Sangriento / Mordisco",
+                    "Grito Escalofriante",
+                    "Muerte Certera"
+                ]
+            },
+            {
+                "id": 22,
+                "nombre": "Camille",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Piltover",
+                "descripcion": "Armada para operar fuera de los límites de la ley, Camille es la principal inteligencia del Clan Ferros: una elegante agente de élite que se asegura de que la máquina de Piltóver y el submundo zaunita funcione sin problemas. Al ser adaptable y precisa...",
+                "habilidades": [
+                    "Protocolo de Precisión",
+                    "Barrido Táctico",
+                    "Gancho",
+                    "El Ultimátum Hextech"
+                ]
+            },
+            {
+                "id": 26,
+                "nombre": "Darius",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "Noxus",
+                "descripcion": "No hay símbolo más grande del poder noxiano que Darius, el líder más temido y con más experiencia en la guerra. Desde sus orígenes humildes hasta convertirse en la Mano de Noxus, Darius acaba con los enemigos del imperio, de los cuales, muchos también...",
+                "habilidades": [
+                    "Diezmar",
+                    "Golpe Incapacitante",
+                    "Aprehender",
+                    "Guillotina Noxiana"
+                ]
+            },
+            {
+                "id": 27,
+                "nombre": "Diana",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Targón",
+                "descripcion": "Portando su hoja lunar creciente, Diana pelea como una guerrera de los Lunari, una poderosa fe que impera en las tierras alrededor del Monte Targón. Blindada con una armadura reluciente del color de la nieve de invierno durante la noche, ella es la...",
+                "habilidades": [
+                    "Golpe Creciente",
+                    "Cascada Pálida",
+                    "Impulso Lunar",
+                    "Caída de la Luna"
+                ]
+            },
+            {
+                "id": 35,
+                "nombre": "Fiora",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "Demacia",
+                "descripcion": "Fiora, la duelista más temida de Valoran, se hizo famosa por sus modales bruscos y su astucia, además de la rapidez y destreza con la que maneja su florete. Nacida en el seno de la Casa Laurent de Demacia, tomó el control de la familia de su padre en...",
+                "habilidades": [
+                    "Embestida",
+                    "Estocada",
+                    "Esgrima",
+                    "Gran Duelo"
+                ]
+            },
+            {
+                "id": 38,
+                "nombre": "Gangplank",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Aguasturbias",
+                "descripcion": "Tan impredecible como brutal, el saqueador y rey destronado Gangplank es temido por todo el mundo. Alguna vez gobernó la ciudad portuaria de Aguasturbias y aunque su reino terminó, hay quienes creen que esto solo lo hizo más peligroso. Gangplank...",
+                "habilidades": [
+                    "Parrrlamentar",
+                    "Eliminar Escorbuto",
+                    "Barril de Pólvora",
+                    "Descarga de Cañones"
+                ]
+            },
+            {
+                "id": 39,
+                "nombre": "Garen",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Demacia",
+                "descripcion": "Como un orgulloso y noble guerrero, Garen forma parte de la Vanguardia Valerosa. Es popular entre sus compañeros y bastante respetado por sus enemigos. Es descendiente de la prestigiosa familia Guardia de la Corona y se le confió la tarea de defender a...",
+                "habilidades": [
+                    "Golpe Decisivo",
+                    "Coraje",
+                    "Juicio",
+                    "Justicia Demaciana"
+                ]
+            },
+            {
+                "id": 40,
+                "nombre": "Gnar",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Freljord",
+                "descripcion": "Gnar es un yordle primitivo cuyos jugueteos bobos pueden transformarse en un berrinche de infante en un instante, transformándolo así en una bestia masiva que disfruta la destrucción. Congelado en Hielo Puro por miles de años, la curiosa criatura se...",
+                "habilidades": [
+                    "Búmeran / Pedrada",
+                    "Hiper / Aplastar",
+                    "Brinco / Salto Bestial",
+                    "¡GNAR!"
+                ]
+            },
+            {
+                "id": 41,
+                "nombre": "Gragas",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Freljord",
+                "descripcion": "Tan alegre como imponente, Gragas es un experto de los brebajes que siempre está buscando nuevas formas de animar a todo el mundo. Aunque se desconoce de dónde viene, se lo puede encontrar explorando los inmaculados páramos del Fréljord para encontrar...",
+                "habilidades": [
+                    "Barril Rodante",
+                    "Furia Ebria",
+                    "Lanzamiento de Barriga",
+                    "Tonel Explosivo"
+                ]
+            },
+            {
+                "id": 43,
+                "nombre": "Gwen",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Islas de la Sombra",
+                "descripcion": "Gwen, una antigua muñeca que se transformó y cobró vida a través de la magia, usa las mismas herramientas que en su momento la crearon. Lleva el peso del amor de su creadora a cada paso, sin dar nada por sentado. Bajo su mando está la Niebla Sagrada...",
+                "habilidades": [
+                    "¡A Cortar!",
+                    "Niebla Sagrada",
+                    "Costura Letal",
+                    "Ráfaga de Agujas"
+                ]
+            },
+            {
+                "id": 44,
+                "nombre": "Hecarim",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Islas de la Sombra",
+                "descripcion": "Hecarim es una fusión espectral de un hombre y una bestia condenada a llevar las almas de los vivos por toda la eternidad. Cuando las Islas Bendecidas cayeron en oscuridad, este orgulloso caballero fue arrasado por la destructiva energía de la Ruina...",
+                "habilidades": [
+                    "Ataque de Furia",
+                    "Espíritu del Terror",
+                    "Carga Devastadora",
+                    "Avalancha de Sombras"
+                ]
+            },
+            {
+                "id": 47,
+                "nombre": "Illaoi",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Aguasturbias",
+                "descripcion": "El poderoso físico de Illaoi solo se ve disminuido por su indomable fe. Como profeta del Gran Kraken, ella usa un enorme ídolo dorado para arrebatarles el espíritu a sus enemigos y destrozar su percepción de la realidad. Todo aquel que desafíe a la...",
+                "habilidades": [
+                    "Tentáculo Aplastante",
+                    "Dura Lección",
+                    "Prueba de Espíritu",
+                    "Salto de Fe"
+                ]
+            },
+            {
+                "id": 48,
+                "nombre": "Irelia",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Jonia",
+                "descripcion": "La invasión de Jonia a manos de Noxus produjo muchos héroes, pero ninguno fue tan improbable como la joven Irelia de Navori. Entrenada en las ancestrales danzas de su región, adaptó su arte para la guerra y ahora usa sus movimientos refinados y llenos...",
+                "habilidades": [
+                    "Embate de Cuchillas",
+                    "Danza de Insurrección",
+                    "Dueto Perfecto",
+                    "Filo de Vanguardia"
+                ]
+            },
+            {
+                "id": 51,
+                "nombre": "Jarvan IV",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Demacia",
+                "descripcion": "El príncipe Jarvan, vástago de la dinastía Escudo de Luz, es heredero del trono de Demacia. Criado para ser un modelo de las virtudes más grandes de su nación, se ve forzado a balancear las grandes expectativas que se tienen de él y su propio deseo de...",
+                "habilidades": [
+                    "Golpe Dragón",
+                    "Égida Dorada",
+                    "Estandarte Demaciano",
+                    "Cataclismo"
+                ]
+            },
+            {
+                "id": 52,
+                "nombre": "Jax",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "Inigualable tanto en sus habilidades de armamentos únicos como en su mordaz sarcasmo, Jax es el último maestro de armas conocido de Icathia. Después de que su tierra natal fue destruida por su propia arrogancia al desencadenar el Vacío, Jax y su especie...",
+                "habilidades": [
+                    "Salto Brutal",
+                    "Potenciación",
+                    "Contraataque",
+                    "Gran Maestro de Armas"
+                ]
+            },
+            {
+                "id": 53,
+                "nombre": "Jayce",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Piltover",
+                "descripcion": "Jayce Talis es un brillante inventor que, junto con su amigo Viktor, hizo los primeros grandes descubrimientos en el campo de la tecnología Hextech. Admirado por toda la ciudad, Jayce intenta vivir a la altura de su reputación, pero no siempre es...",
+                "habilidades": [
+                    "¡Hacia los Cielos!/Descarga Eléctrica",
+                    "Campo Electrificado/Hipercarga",
+                    "Golpe Relámpago/Portal de Aceleración",
+                    "Cañón de Mercurio/Martillo de Mercurio"
+                ]
+            },
+            {
+                "id": 64,
+                "nombre": "Kayn",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Jonia",
+                "descripcion": "Shieda Kayn, un practicante sin igual de la letal magia sombría, lucha para alcanzar su verdadero destino: conducir la Orden de la Sombra hacia una nueva era de supremacía joniana. Esgrime la oscura arma viviente Rhaast, inmutable ante la progresiva...",
+                "habilidades": [
+                    "Corte Segador",
+                    "Alcance de Cuchilla",
+                    "Paso Sombrío",
+                    "Transgresión de Umbral"
+                ]
+            },
+            {
+                "id": 68,
+                "nombre": "Kled",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Noxus",
+                "descripcion": "El yordle Kled, guerrero tan temerario como insoportable, es la encarnación de la bravuconería de Noxus. Es un ícono amado por los soldados del imperio, que se ha ganado la desconfianza de sus oficiales y el desprecio de la nobleza. Muchos aseguran que...",
+                "habilidades": [
+                    "Trampa para Osos",
+                    "Tendencias Violentas",
+                    "Justa",
+                    "¡¡¡A la cargaaaaaaa!!!"
+                ]
+            },
+            {
+                "id": 71,
+                "nombre": "Lee Sin",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Jonia",
+                "descripcion": "Lee Sin, maestro de las antiguas artes marciales jonianas, es un peleador ejemplar que canaliza la esencia del espíritu del dragón para enfrentar cualquier desafío que se le presente. A pesar de que perdió la vista hace muchos años, el monje guerrero ha...",
+                "habilidades": [
+                    "Onda Sónica / Golpe Resonante",
+                    "Salvaguarda / Voluntad de Hierro",
+                    "Tempestad / Incapacitar",
+                    "Furia del Dragón"
+                ]
+            },
+            {
+                "id": 73,
+                "nombre": "Lillia",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Jonia",
+                "descripcion": "Lillia, la extremadamente tímida cervatilla, deambula nerviosa por los bosques de Jonia. Escondida fuera de la vista de los mortales, cuya misteriosa naturaleza la ha cautivado e intimidado por mucho tiempo, Lillia espera descubrir por qué sus sueños ya...",
+                "habilidades": [
+                    "Golpes Florecedores",
+                    "¡Cuidado! ¡Hip!",
+                    "Semilla Remolino",
+                    "Arrullo Rítmico"
+                ]
+            },
+            {
+                "id": 79,
+                "nombre": "Maestro Yi",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Jonia",
+                "descripcion": "El Maestro Yi templó su cuerpo y afinó su mente para que su forma de pensar y actuar se convirtieran casi en uno. A pesar de que solo elige actuar con violencia como último recurso, la gracia y la velocidad de su espada garantizan que la resolución...",
+                "habilidades": [
+                    "Golpe Alfa",
+                    "Meditación",
+                    "Estilo Wuju",
+                    "Imparable"
+                ]
+            },
+            {
+                "id": 86,
+                "nombre": "Mordekaiser",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Noxus",
+                "descripcion": "Asesinado dos veces y renacido tres, Mordekaiser es un señor de la guerra brutal de una época olvidada, quien usa su brujería nigromántica para atar almas a una esclavitud eterna. Quedan muy pocos que recuerden sus conquistas precedentes o que conozcan...",
+                "habilidades": [
+                    "Aniquilación",
+                    "Indestructible",
+                    "Garra del Inframundo",
+                    "Reino de la Muerte"
+                ]
+            },
+            {
+                "id": 90,
+                "nombre": "Nasus",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Shurima",
+                "descripcion": "Nasus es una imponente criatura Ascendida con cabeza de chacal procedente de la antigua Shurima; una figura heroica a la que la gente del desierto encumbró al nivel de semidiós. Poseedor de una increíble inteligencia, fue un guardián del saber y...",
+                "habilidades": [
+                    "Golpe Absorbente",
+                    "Marchitar",
+                    "Fuego Espiritual",
+                    "Furia de las Arenas"
+                ]
+            },
+            {
+                "id": 94,
+                "nombre": "Nilah",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Aguasturbias",
+                "descripcion": "Nilah es una guerrera ascética proveniente de una tierra lejana que busca a los oponentes más letales y titánicos del mundo para poder enfrentarlos y destruirlos. Después de haber ganado su poder en un enfrentamiento con el demonio de la alegría, quien...",
+                "habilidades": [
+                    "Filo sin Forma",
+                    "Velo de Júbilo",
+                    "Estela Acuática",
+                    "Apoteosis"
+                ]
+            },
+            {
+                "id": 95,
+                "nombre": "Nocturne",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "Nocturne, una fusión demoniaca traída de las pesadillas que aterran a todas las mentes conscientes, se convirtió en una fuerza primigenia de maldad pura. Su aspecto de caos líquido es el de una sombra sin rostro con ojos crueles y armado con unas...",
+                "habilidades": [
+                    "Portador del Anochecer",
+                    "Manto de Oscuridad",
+                    "Horror Inenarrable",
+                    "Paranoia"
+                ]
+            },
+            {
+                "id": 97,
+                "nombre": "Olaf",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "Freljord",
+                "descripcion": "Como una fuerza imparable de destrucción, el portador de hachas Olaf no quiere nada más que morir en glorioso combate. Proveniente de la brutal península freljordiana de Lokfar, alguna vez recibió una profecía que predecía su muerte pacífica, que es el...",
+                "habilidades": [
+                    "Corriente Marina",
+                    "Golpes Sanguinarios",
+                    "Lance Temerario",
+                    "Ragnarok"
+                ]
+            },
+            {
+                "id": 100,
+                "nombre": "Pantheon",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Targón",
+                "descripcion": "Antaño un reticente huésped del Aspecto de la guerra, Atreus sobrevivió cuando el poder celestial en su interior fue asesinado, negándose a sucumbir ante un golpe que, de un desgarro, borró estrellas de los cielos. Con el tiempo, aprendió a aceptar el...",
+                "habilidades": [
+                    "Lanza Cometa",
+                    "Salto con escudo",
+                    "Égida de Asalto",
+                    "Gran Descarga Estelar"
+                ]
+            },
+            {
+                "id": 107,
+                "nombre": "Rek'Sai",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "El Vacío",
+                "descripcion": "Rek'Sai es una depredadora sin piedad y un engendro del Vacío que se mueve debajo de la tierra para emboscar y devorar a las presas desprevenidas. Su hambre insaciable ha dejado en calidad de desecho a regiones enteras del antes gran imperio de Shurima...",
+                "habilidades": [
+                    "Ira de la Reina/Rastreadora",
+                    "Excavar/Emerger",
+                    "Mordedura Feroz/Túnel",
+                    "Impulso del Vacío"
+                ]
+            },
+            {
+                "id": 110,
+                "nombre": "Renekton",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "Shurima",
+                "descripcion": "Renekton es una terrorífica criatura Ascendida movida por la ira y procedente de los desiertos abrasadores de Shurima. Antaño fue el guerrero más admirado del imperio, un líder que condujo a los ejércitos shurimanos a incontables victorias. Sin embargo...",
+                "habilidades": [
+                    "Sacrifica al Débil",
+                    "Depredador Implacable",
+                    "Cortar y Trocear",
+                    "Dominus"
+                ]
+            },
+            {
+                "id": 112,
+                "nombre": "Riven",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Noxus",
+                "descripcion": "Riven, que anteriormente era una líder de los guerreros de Noxus, está exiliada en una tierra que alguna vez intentó conquistar. Ascendió por los rangos con la fuerza de su convicción y brutal eficiencia, lo cual la recompensó con su legendaria espada...",
+                "habilidades": [
+                    "Alas Rotas",
+                    "Estallido de Ki",
+                    "Valor",
+                    "Espada del Exilio"
+                ]
+            },
+            {
+                "id": 113,
+                "nombre": "Rumble",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Ciudad de Bandle",
+                "descripcion": "Rumble es un joven inventor con un peculiar temperamento. Con nada más que sus dos manos y un montón de chatarra, el yordle construyó un colosal traje mecánico equipado con un arsenal de arpones electrificados y cohetes incendiarios. Aunque otros se...",
+                "habilidades": [
+                    "Escupellamas",
+                    "Escudo de Chatarra",
+                    "Arpón Eléctrico",
+                    "El Equilibrador"
+                ]
+            },
+            {
+                "id": 119,
+                "nombre": "Sett",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "Jonia",
+                "descripcion": "Sett, uno de los líderes del creciente inframundo criminal de Jonia, ascendió a la fama tras la guerra con Noxus. Se inició como un humilde púgil en las arenas de pelea de Navori, pero pronto ganó notoriedad por su fuerza salvaje y su habilidad para...",
+                "habilidades": [
+                    "Saluda a mis Nudillos",
+                    "Mi Turno",
+                    "Ahora Bésense",
+                    "Hora del Show"
+                ]
+            },
+            {
+                "id": 122,
+                "nombre": "Shyvana",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Demacia",
+                "descripcion": "Shyvana es una temible guerrera mitad dragón. Aunque a menudo se presenta con una apariencia humanoide, adopta la forma de una dragona para dominar los cielos e incinerar a sus enemigos con un aliento abrasador. Tras haberle salvado la vida al príncipe...",
+                "habilidades": [
+                    "Golpe Ígneo",
+                    "Égida Infernal",
+                    "Llamarada Calcinante",
+                    "Descendiente del Dragón"
+                ]
+            },
+            {
+                "id": 140,
+                "nombre": "Trundle",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Freljord",
+                "descripcion": "Trundle es un corpulento y retorcido trol con una voraz actitud, y no hay nada que no pueda aplastar hasta someterlo, ni siquiera el mismo Fréljord. Feroz y territorial, persigue a cualquiera que sea lo suficiente tonto como para entrar a su dominio...",
+                "habilidades": [
+                    "Mascar",
+                    "Reino Congelado",
+                    "Pilar de Hielo",
+                    "Subyugar"
+                ]
+            },
+            {
+                "id": 141,
+                "nombre": "Tryndamere",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Freljord",
+                "descripcion": "Impulsado por la ira, Tryndamere alguna vez emprendió su camino por Fréljord y desafió abiertamente a los más grandes guerreros del norte preparándose para los días más oscuros que se avecinaban. Por mucho tiempo, el iracundo bárbaro ha buscado la...",
+                "habilidades": [
+                    "Ansia de Sangre",
+                    "Grito Burlón",
+                    "Cuchillada Giratoria",
+                    "Furia Inmortal"
+                ]
+            },
+            {
+                "id": 144,
+                "nombre": "Udyr",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Freljord",
+                "descripcion": "Al ser el cambiapieles más poderoso que existe, Udyr tiene la capacidad de comunicarse con todos los espíritus del Fréljord, ya sea al entender de forma empática sus necesidades o al transformar su energía etérea en su propio estilo de lucha salvaje...",
+                "habilidades": [
+                    "Garra Salvaje",
+                    "Manto Férreo",
+                    "Estampida Abrasadora",
+                    "Tormenta Invernal"
+                ]
+            },
+            {
+                "id": 145,
+                "nombre": "Urgot",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Zaun",
+                "descripcion": "Urgot, quien fue alguna vez un poderoso verdugo noxiano, había sido traicionado por el imperio que lo hizo matar a tantos en su nombre. Atado con cadenas de hierro, lo forzaron a aprender el verdadero significado de la fuerza en el Dragado, una mina de...",
+                "habilidades": [
+                    "Carga Corrosiva",
+                    "Purga",
+                    "Desdén",
+                    "Miedo de Ultratumba"
+                ]
+            },
+            {
+                "id": 151,
+                "nombre": "Vi",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Piltover",
+                "descripcion": "Criada en las calles salvajes de Zaun, Vi es una mujer tenaz pero impulsiva, con muy poco respeto por la autoridad. Su juventud, llena de dificultades, culminaría en una injusta y larga estancia en la Prisión de Aguasquietas, lo que la convirtió en una...",
+                "habilidades": [
+                    "Rompebóvedas",
+                    "Golpes Abollantes",
+                    "Fuerza Implacable",
+                    "Cesar y Desistir"
+                ]
+            },
+            {
+                "id": 152,
+                "nombre": "Viego",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Islas de la Sombra",
+                "descripcion": "Otrora gobernante de un reino perdido en el tiempo, Viego falleció hace más de mil años cuando su intento de regresar a su esposa de la muerte desencadenó la catástrofe mágica conocida como la Ruina. Transformado en un poderoso espectro, y torturado por...",
+                "habilidades": [
+                    "Espada del Rey Arruinado",
+                    "Fauces Espectrales",
+                    "Sendero Arruinado",
+                    "Rompecorazones"
+                ]
+            },
+            {
+                "id": 155,
+                "nombre": "Volibear",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "Freljord",
+                "descripcion": "Para quienes aún lo veneran, Volibear es la encarnación de la tormenta. Destructivo, salvaje y con una determinación obstinada, existió antes de que los mortales caminaran sobre la tundra del Fréljord. Protege salvajemente las tierras que él y los demás...",
+                "habilidades": [
+                    "Choque Estruendoso",
+                    "Zarpazo Frenético",
+                    "Rompecielos",
+                    "Invocador de Tormentas"
+                ]
+            },
+            {
+                "id": 156,
+                "nombre": "Warwick",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "Zaun",
+                "descripcion": "Warwick es un monstruo que caza en los grises callejones de Zaun. Su cuerpo, transformado por una serie de horribles experimentos, está fusionado a un complejo sistema de válvulas y bombas, una terrible maquinaria que llena sus venas con ira alquímica...",
+                "habilidades": [
+                    "Fauces de la Bestia",
+                    "Cacería de Sangre",
+                    "Aullido Primigenio",
+                    "Opresión Infinita"
+                ]
+            },
+            {
+                "id": 157,
+                "nombre": "Wukong",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "Jonia",
+                "descripcion": "Wukong es un vastaya embaucador que usa su fuerza, agilidad e inteligencia para confundir a sus oponentes y obtener la ventaja. Tras encontrar un amigo de por vida en el guerrero conocido como Maestro Yi, Wukong se convirtió en el último aprendiz de la...",
+                "habilidades": [
+                    "Golpe Aplastante",
+                    "Guerrero Bromista",
+                    "Golpe de Nimbo",
+                    "Ciclón"
+                ]
+            },
+            {
+                "id": 160,
+                "nombre": "Xin Zhao",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "Demacia",
+                "descripcion": "Xin Zhao es un determinado guerrero y leal a la dinastía regente de los Escudo de Luz. Alguna vez condenado al coliseo de combate de Noxus, sobrevivió a un sin fin de batallas de gladiadores, pero después de ser liberado por fuerzas demacianas, juró su...",
+                "habilidades": [
+                    "Golpe de Garra Triple",
+                    "El Viento se Vuelve Tormenta",
+                    "Carga Audaz",
+                    "Guardia Creciente"
+                ]
+            },
+            {
+                "id": 161,
+                "nombre": "Yasuo",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Jonia",
+                "descripcion": "Yasuo, un jonio de gran determinación, es un ágil espadachín entrenado para empuñar al mismo viento contra sus enemigos. Cuando era joven y orgulloso, lo acusaron de asesinar a su maestro, algo que no era verdad. Al no poder demostrar su inocencia, se...",
+                "habilidades": [
+                    "Tempestad de Acero",
+                    "Muro de Viento",
+                    "Hoja al Viento",
+                    "Último Aliento"
+                ]
+            },
+            {
+                "id": 162,
+                "nombre": "Yone",
+                "rol": "Luchador",
+                "dificultad": "Alta",
+                "region": "Jonia",
+                "descripcion": "En vida era Yone, medio hermano de Yasuo y estudiante destacado de la escuela de espadachines de su aldea. Tras morir a manos de su hermano, fue acechado por una entidad malévola del reino espiritual y forzado a asesinarla con su propia espada. Ahora...",
+                "habilidades": [
+                    "Acero Letal",
+                    "Cercenamiento Espiritual",
+                    "Alma Desatada",
+                    "Destino Sellado"
+                ]
+            },
+            {
+                "id": 163,
+                "nombre": "Yorick",
+                "rol": "Luchador",
+                "dificultad": "Media",
+                "region": "Islas de la Sombra",
+                "descripcion": "Yorick, el último sobreviviente de una orden religiosa olvidada hace mucho tiempo, vive con la terrible bendición de controlar a los muertos. Atrapado en las Islas de la Sombra, su única compañía son cadáveres en descomposición y los atormentados...",
+                "habilidades": [
+                    "Extremaunción",
+                    "Procesión Oscura",
+                    "Niebla del Lamento",
+                    "Elegía de las Islas"
+                ]
+            },
+            {
+                "id": 166,
+                "nombre": "Zaahen",
+                "rol": "Luchador",
+                "dificultad": "Baja",
+                "region": "Runaterra",
+                "descripcion": "Zaahen, un dios caído que ejerce tanto el poder divino como el profano, persigue a sus compañeros Darkin mientras resiste la corrupción que amenaza con consumirlo. Hace mucho tiempo, quedó sellado en su guja por voluntad propia para evitar caer en la...",
+                "habilidades": [
+                    "La Guja Darkin",
+                    "Ominoso Retorno",
+                    "Embate Áureo",
+                    "Retribución Final"
+                ]
+            }
+        ],
+        "mago": [
+            {
+                "id": 2,
+                "nombre": "Ahri",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Jonia",
+                "descripcion": "Ahri es una vastaya de aspecto vulpino conectada de forma innata a la magia del reino de los espíritus; puede manipular las emociones de sus presas y consumir su esencia, por lo que recibe fragmentos de su memoria y conocimiento de cada alma que consume...",
+                "habilidades": [
+                    "Orbe del Engaño",
+                    "Fuego Zorruno",
+                    "Encanto",
+                    "Impulso Espiritual"
+                ]
+            },
+            {
+                "id": 8,
+                "nombre": "Anivia",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Freljord",
+                "descripcion": "Anivia es un espíritu benevolente alado que soporta interminables ciclos de vida, muerte y resurrección para proteger Fréljord. Nació de la unión del hielo cruel y del viento penetrante, por lo que es una semidiosa que utiliza esos poderes elementales...",
+                "habilidades": [
+                    "Destello Helado",
+                    "Cristalizar",
+                    "Quemadura Gélida",
+                    "Tormenta Glacial"
+                ]
+            },
+            {
+                "id": 9,
+                "nombre": "Annie",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "Annie es una peligrosa, talentosa y encantadora niña maga que posee un inmenso poder piroquinético. Incluso bajo las sombras de las montañas al norte de Noxus, es una maga excepcional. Su afinidad innata con el fuego se manifestó pronto en su vida a...",
+                "habilidades": [
+                    "Desintegrar",
+                    "Incinerar",
+                    "Escudo Fundido",
+                    "Invocar: Tibbers"
+                ]
+            },
+            {
+                "id": 12,
+                "nombre": "Aurelion Sol",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Runaterra",
+                "descripcion": "Aurelion Sol alguna vez adornó el gran vacío del cosmos con maravillas celestiales de su propia creación. Ahora, se ve obligado a usar su increíble poder para el beneficio de un imperio espacial que, tras engañarlo, lo mantiene bajo su servicio. Deseoso...",
+                "habilidades": [
+                    "Aliento Luminoso",
+                    "Vuelo Astral",
+                    "Singularidad",
+                    "Estrella Fugaz / Descenso Celestial"
+                ]
+            },
+            {
+                "id": 13,
+                "nombre": "Aurora",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Freljord",
+                "descripcion": "Desde el día en que nació, Aurora ha podido ver el mundo espiritual y el material al mismo tiempo. Con una insaciable sed por saber más sobre los espíritus, Aurora dejó atrás su hogar en pos de su investigación. Sería en estos viajes que conocería a un...",
+                "habilidades": [
+                    "Maleficio Doble",
+                    "A Través del Velo",
+                    "La Raritud",
+                    "Entre mundos"
+                ]
+            },
+            {
+                "id": 14,
+                "nombre": "Azir",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Shurima",
+                "descripcion": "Azir, emperador de Shurima en un pasado remoto, fue un hombre orgulloso que estuvo a punto de alcanzar la inmortalidad. Dominado por la arrogancia, fue traicionado y asesinado en la hora de su mayor triunfo. Pero ahora, milenios después, renació como un...",
+                "habilidades": [
+                    "Conquistador de las Arenas",
+                    "¡Levántense!",
+                    "Arenas Movedizas",
+                    "División Imperial"
+                ]
+            },
+            {
+                "id": 18,
+                "nombre": "Brand",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "La criatura conocida como Brand es una lección de la tentación del poder. Alguna vez fue un simple hombre de la tribu de Fréljord y su nombre era Kegan Rodhe, pero al estar buscando una de las Runas del Mundo, Kegan traicionó a sus compañeros y se la...",
+                "habilidades": [
+                    "Abrasar",
+                    "Columna de Fuego",
+                    "Conflagración",
+                    "Piroclasma"
+                ]
+            },
+            {
+                "id": 23,
+                "nombre": "Cassiopeia",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Noxus",
+                "descripcion": "Cassiopeia es una criatura mortífera que disfruta manipular a otros para que hagan su voluntad siniestra. La más joven y más hermosa hija de la familia noble de Du Couteau de Noxus, se aventuró a las profundidades de la cripta debajo de Shurima en...",
+                "habilidades": [
+                    "Explosión Nociva",
+                    "Miasma",
+                    "Colmillos Gemelos",
+                    "Mirada Petrificante"
+                ]
+            },
+            {
+                "id": 34,
+                "nombre": "Fiddlesticks",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Runaterra",
+                "descripcion": "Algo ha despertado en Runaterra. Algo ancestral. Algo terrible. El horror eterno conocido como Fiddlesticks acecha los bordes de la sociedad mortal, atraído por los espacios en donde la paranoia abunda, en los que se alimenta de sus aterradas víctimas...",
+                "habilidades": [
+                    "Aterrorizar",
+                    "Extracción Abundante",
+                    "Cosechar",
+                    "Tormenta de Cuervos"
+                ]
+            },
+            {
+                "id": 45,
+                "nombre": "Heimerdinger",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Piltover",
+                "descripcion": "El excéntrico pero estimado profesor Cecil B. Heimerdinger es uno de los inventores más innovadores que el mundo haya conocido jamás. Como miembro veterano del Concejo de Piltóver, Heimerdinger ha sido testigo de los logros y los fracasos que conlleva...",
+                "habilidades": [
+                    "Torreta Evolutiva H-28 G",
+                    "Microcohetes Hextech",
+                    "Granada de Tormenta de Electrones CH-2",
+                    "¡ACTUALIZACIÓN!"
+                ]
+            },
+            {
+                "id": 46,
+                "nombre": "Hwei",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Jonia",
+                "descripcion": "Hwei es un pintor melancólico que crea arte extraordinario para enfrentar a los criminales de Jonia y consolar a las víctimas. Bajo su melancolía se esconde una mente desgarrada y sensible, atormentada tanto por las intensas visiones de su imaginación...",
+                "habilidades": [
+                    "Tema: Desastre",
+                    "Tema: Serenidad",
+                    "Tema: Tormento",
+                    "Desesperación en Espiral"
+                ]
+            },
+            {
+                "id": 59,
+                "nombre": "Karma",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Jonia",
+                "descripcion": "Ningún mortal es capaz de ilustrar mejor las tradiciones espirituales de Jonia que Karma. Ella es la personificación de un alma antigua que ha reencarnado innumerables veces, transmitiendo sus recuerdos acumulados en cada una de las vidas nuevas...",
+                "habilidades": [
+                    "Llama Interna",
+                    "Resolución Enfocada",
+                    "Inspiración",
+                    "Mantra"
+                ]
+            },
+            {
+                "id": 60,
+                "nombre": "Karthus",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Islas de la Sombra",
+                "descripcion": "Karthus, heraldo del olvido, es un espíritu inmortal cuyas canciones pavorosas preceden el horror de su dantesca aparición. Los vivos temen la eternidad de la no-muerte, pero Karthus solo ve hermosura y pureza en su abrazo, una comunión perfecta entre...",
+                "habilidades": [
+                    "Sembrar la Desolación",
+                    "Muro de Dolor",
+                    "Profanación",
+                    "Réquiem"
+                ]
+            },
+            {
+                "id": 65,
+                "nombre": "Kennen",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Jonia",
+                "descripcion": "Además de ser un rápido ejecutor del balance Jonio, Kennen es el único miembro yordle del Kinkou. A pesar de su pequeña y peluda estatura, está ansioso por enfrentarse a cualquier amenaza con una tormenta de shuriken y desbordante entusiasmo. A lado de...",
+                "habilidades": [
+                    "Shuriken Trueno",
+                    "Tensión Eléctrica",
+                    "Impulso Relámpago",
+                    "Tempestad Cercenante"
+                ]
+            },
+            {
+                "id": 74,
+                "nombre": "Lissandra",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Freljord",
+                "descripcion": "La magia de Lissandra transforma el poder del hielo en algo oscuro y terrible. Con la fuerza de su hielo negro, además de congelar a aquellos que la enfrentan, los empala y los destruye sin mostrar piedad. Se le conoce como ''la Bruja de Hielo'' entre...",
+                "habilidades": [
+                    "Fragmento de Hielo",
+                    "Anillo de Escarcha",
+                    "Sendero Glacial",
+                    "Tumba Congelada"
+                ]
+            },
+            {
+                "id": 78,
+                "nombre": "Lux",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Demacia",
+                "descripcion": "Luxanna Guardia de la Corona proviene de Demacia, un reino aislado en el que la gente observa con terror y sospecha a las habilidades mágicas. Con el talento de manipular la luz a su voluntad, Lux creció temiendo que la descubrieran y exiliaran, lo que...",
+                "habilidades": [
+                    "Hechizo Luminoso",
+                    "Barrera Prismática",
+                    "Singularidad Brillante",
+                    "Chispa Final"
+                ]
+            },
+            {
+                "id": 81,
+                "nombre": "Malzahar",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "El Vacío",
+                "descripcion": "Como vidente fanático dedicado a la unificación de toda la vida, Malzahar realmente cree que el recién emergido Vacío es el camino a la salvación de Runaterra. En los páramos desérticos de Shurima, siguió los susurros en su mente que lo llevaron a la...",
+                "habilidades": [
+                    "Llamado del Vacío",
+                    "Enjambre del Vacío",
+                    "Visiones Maléficas",
+                    "Agarre Infernal"
+                ]
+            },
+            {
+                "id": 83,
+                "nombre": "Mel",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Noxus",
+                "descripcion": "Mel Medarda es, muy posiblemente, la próxima matriarca de los Medarda, la familia que otrora fue la más poderosa de todo Noxus. Aunque aparenta ser solo una aristócrata elegante, debajo de esa máscara se esconde una hábil política que se asegura de...",
+                "habilidades": [
+                    "Ráfaga Radiante",
+                    "Refutar",
+                    "Ofuscador Solar",
+                    "Eclipse Dorado"
+                ]
+            },
+            {
+                "id": 92,
+                "nombre": "Neeko",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Ixtal",
+                "descripcion": "Proveniente de una tribu vastaya perdida desde hace mucho tiempo, Neeko puede mezclarse en cualquier multitud adoptando la apariencia de los demás e incluso absorber un poco de su estado emocional para distinguir a un amigo de un enemigo en tan solo un...",
+                "habilidades": [
+                    "Estallido Floral",
+                    "División de Esencia",
+                    "Espiral Enredadiza",
+                    "Detonación Silvestre"
+                ]
+            },
+            {
+                "id": 98,
+                "nombre": "Orianna",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Piltover",
+                "descripcion": "Aunque una vez una curiosa chica de carne y hueso, Orianna es ahora una maravilla tecnológica hecha completamente de relojería. Sufrió una terrible enfermedad después de un accidente en los bajos distritos de Zaun y su deteriorado cuerpo tuvo que ser...",
+                "habilidades": [
+                    "Orden: Atacar",
+                    "Orden: Disonancia",
+                    "Orden: Proteger",
+                    "Orden: Onda de Choque"
+                ]
+            },
+            {
+                "id": 114,
+                "nombre": "Ryze",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Runaterra",
+                "descripcion": "Ryze, considerado por muchos como uno de los hechiceros más expertos en Runaterra, es un antiguo y endurecido archimago con una responsabilidad casi imposible de llevar. Armado con una constitución sin igual y una gran gama de conocimiento místico, se...",
+                "habilidades": [
+                    "Descarga Eléctrica",
+                    "Prisión Rúnica",
+                    "Flujo de Hechizos",
+                    "Distorsión del Entorno"
+                ]
+            },
+            {
+                "id": 130,
+                "nombre": "Swain",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Noxus",
+                "descripcion": "Jericho Swain es el visionario gobernante de una nación expansionista que solo venera a la fuerza. Aunque lo derribaron, incapacitaron y perdió su brazo izquierdo en las guerras jonias, tomó control del imperio con una inquebrantable determinación... y...",
+                "habilidades": [
+                    "Mano de la Muerte",
+                    "Visión Imperial",
+                    "Nunca Más",
+                    "Ascenso Demoniaco"
+                ]
+            },
+            {
+                "id": 131,
+                "nombre": "Sylas",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Demacia",
+                "descripcion": "Criado en uno de los lugares más humildes de Demacia, Sylas de Dregbourne se ha convertido en un símbolo del lado más oscuro de la Gran Ciudad. Cuando era niño, su habilidad para encontrar la hechicería oculta llamó la atención de notables cazadores de...",
+                "habilidades": [
+                    "Azote de Cadenas",
+                    "Matarreyes",
+                    "Fuga/Abducción",
+                    "Usurpación"
+                ]
+            },
+            {
+                "id": 132,
+                "nombre": "Syndra",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Jonia",
+                "descripcion": "Syndra es una temible maga de Jonia con un extraordinario poder bajo su comando. Cuando era pequeña, alteró a los maestros de su aldea con su magia salvaje e imprudente. La enviaron lejos para que aprendiera a tener un mayor control, pero con el tiempo...",
+                "habilidades": [
+                    "Esfera Oscura",
+                    "Fuerza de Voluntad",
+                    "Dispersar a los Débiles",
+                    "Poder Desatado"
+                ]
+            },
+            {
+                "id": 134,
+                "nombre": "Taliyah",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Shurima",
+                "descripcion": "Taliyah es una maga nómada de Shurima que se siente dividida entre la libertad de la adolescencia y las responsabilidades adultas. Ha cruzado casi todo Valoran en un viaje para conocer la verdadera naturaleza de sus crecientes poderes, aunque más...",
+                "habilidades": [
+                    "Descarga Pétrea",
+                    "Empujón Sísmico",
+                    "Tierra Desatada",
+                    "Muro de la Tejedora"
+                ]
+            },
+            {
+                "id": 142,
+                "nombre": "Twisted Fate",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Aguasturbias",
+                "descripcion": "Twisted Fate es un afamado experto en juegos de cartas y estafador. Ha apostado y usado su encanto en gran parte del mundo conocido, lo que le ha hecho ganarse el odio y la admiración de ricos y tontos por igual. Rara vez se toma las cosas en serio...",
+                "habilidades": [
+                    "Comodines",
+                    "Escoge una Carta",
+                    "Baraja Trucada",
+                    "Destino"
+                ]
+            },
+            {
+                "id": 148,
+                "nombre": "Veigar",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Ciudad de Bandle",
+                "descripcion": "Veigar, entusiasta maestro de la magia oscura, se adaptó a poderes que pocos mortales se atreven a explorar. Como un habitante de espíritu libre de Ciudad de Bandle, deseaba rebasar las limitaciones de la magia yordle. Así fue como llegó a unos textos...",
+                "habilidades": [
+                    "Ataque Maligno",
+                    "Materia Oscura",
+                    "Horizonte de Sucesos",
+                    "Estallido Primordial"
+                ]
+            },
+            {
+                "id": 149,
+                "nombre": "Vel'Koz",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "El Vacío",
+                "descripcion": "No está claro si Vel'Koz fue la primera manifestación del Vacío que emergió en Runaterra, pero ciertamente no ha habido ninguna que llegue a su nivel de cruel y calculadora conciencia. Mientras que los suyos devoran o corrompen todo a su alrededor, él...",
+                "habilidades": [
+                    "Fisión de Plasma",
+                    "Grieta del Vacío",
+                    "Perturbación Tectónica",
+                    "Rayo Desintegrador de Seres Vivos"
+                ]
+            },
+            {
+                "id": 150,
+                "nombre": "Vex",
+                "rol": "Mago",
+                "dificultad": "Baja",
+                "region": "Islas de la Sombra",
+                "descripcion": "En el corazón negro de las Islas de la Sombra, una yordle solitaria va arrastrando los pies entre la niebla espectral, regocijándose en su oscura miseria. Vex, un pozo sin fondo de malestar adolescente, habita su propio rinconcito de la miseria, con una...",
+                "habilidades": [
+                    "Descarga Mistral",
+                    "Espacio Personal",
+                    "Amenaza Umbría",
+                    "¡Haz lo tuyo, Sombra!"
+                ]
+            },
+            {
+                "id": 153,
+                "nombre": "Viktor",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Zaun",
+                "descripcion": "Después de que su cuerpo fuera transformado en una maravilla biomecánica, Viktor se convirtió en el profeta de ''La Gloriosa Evolución''. Seguro de que las emociones son la fuente del sufrimiento, Viktor sacrificó gustoso su humanidad. Ahora pretende...",
+                "habilidades": [
+                    "Transferencia de Potencia",
+                    "Campo Gravitatorio",
+                    "Rayo Hextech",
+                    "Tormenta Arcana"
+                ]
+            },
+            {
+                "id": 154,
+                "nombre": "Vladimir",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Noxus",
+                "descripcion": "Vladimir, un demonio con sed de sangre mortal, ha influenciado la política de Noxus desde los primeros días del imperio. Además de extender su vida de manera sobrenatural, su maestría de la hemomancia le permite controlar las mentes y cuerpos de otros...",
+                "habilidades": [
+                    "Transfusión",
+                    "Charco de Sangre",
+                    "Marea Roja",
+                    "Hemoplaga"
+                ]
+            },
+            {
+                "id": 159,
+                "nombre": "Xerath",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Shurima",
+                "descripcion": "Xerath es un mago Ascendido de la antigua Shurima, un ser con energía arcana retorciéndose en los quebrados fragmentos de un sarcófago mágico. Estuvo atrapado durante milenios bajo las arenas del desierto, pero el ascenso de Shurima lo liberó de su...",
+                "habilidades": [
+                    "Pulso Arcano",
+                    "Ojo de la Destrucción",
+                    "Impacto Orbital",
+                    "Rito del Arcano"
+                ]
+            },
+            {
+                "id": 170,
+                "nombre": "Ziggs",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Zaun",
+                "descripcion": "Con un amor por las grandes bombas y los fusibles cortos, el yordle Ziggs es una explosiva fuerza de la naturaleza. Como asistente de un inventor en Piltóver, estaba aburrido de su predecible vida y se hizo amigo de una loca bombardera de cabello azul...",
+                "habilidades": [
+                    "Bomba Rebotante",
+                    "Carga Concentrada",
+                    "Minas Hexplosivas",
+                    "Bomba Megainfernal"
+                ]
+            },
+            {
+                "id": 172,
+                "nombre": "Zoe",
+                "rol": "Mago",
+                "dificultad": "Media",
+                "region": "Targón",
+                "descripcion": "Como la personificación de las travesuras, la imaginación y el cambio, Zoe actúa como la mensajera cósmica de Targón y anuncia grandes acontecimientos que pueden alterar mundos. Su mera presencia distorsiona las matemáticas arcanas que rigen las...",
+                "habilidades": [
+                    "¡Estrella Saltarina!",
+                    "Ladrona de Hechizos",
+                    "Burbuja Dormilona",
+                    "Salto de Portal"
+                ]
+            },
+            {
+                "id": 173,
+                "nombre": "Zyra",
+                "rol": "Mago",
+                "dificultad": "Alta",
+                "region": "Ixtal",
+                "descripcion": "Nacida en una antigua y mágica catástrofe, Zyra es la manifestación de la ira de la naturaleza: una seductora mezcla entre planta y humana que crea vida nueva a cada paso. Ve a los mortales de Valoran como poco más que presa para su progenie de semillas...",
+                "habilidades": [
+                    "Espinas Mortales",
+                    "Crecimiento Desenfrenado",
+                    "Raíces Atrapadoras",
+                    "Tuercespinas"
+                ]
+            }
+        ],
+        "tirador": [
+            {
+                "id": 4,
+                "nombre": "Akshan",
+                "rol": "Tirador",
+                "dificultad": "Baja",
+                "region": "Shurima",
+                "descripcion": "Con una ceja levantada frente al peligro, Akshan pelea contra el mal con un carisma deslumbrante, una venganza justiciera y una llamativa falta de camisas. Con gran habilidad en el arte del combate furtivo, es capaz de evadir a sus enemigos y reaparecer...",
+                "habilidades": [
+                    "Venganzarang",
+                    "Contra las Reglas",
+                    "Pirueta Heroica",
+                    "Tu Merecido"
+                ]
+            },
+            {
+                "id": 10,
+                "nombre": "Aphelios",
+                "rol": "Tirador",
+                "dificultad": "Alta",
+                "region": "Targón",
+                "descripcion": "Aphelios emerge de la sombra de la luz de la luna con sus armas listas y mata a los enemigos de su fe en un silencio melancólico. Habla únicamente a través de la certeza de su puntería y del disparo de cada arma. Si bien su impulso proviene de un veneno...",
+                "habilidades": [
+                    "Habilidades de armas",
+                    "Cambio de Arma",
+                    "Sistema de armas en serie",
+                    "Vigilia de Luz Lunar"
+                ]
+            },
+            {
+                "id": 11,
+                "nombre": "Ashe",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Freljord",
+                "descripcion": "Como Hija del Hielo y madre de guerra de la tribu Avarosa, Ashe comanda la más grande horda en el norte. Estoica, inteligente e idealista, pero incómoda con su rol de líder, ella aprovecha las magias ancestrales de su linaje para portar un arco de Hielo...",
+                "habilidades": [
+                    "Concentración de la Guardabosques",
+                    "Descarga",
+                    "Tiro de Halcón",
+                    "Flecha de Cristal Encantada"
+                ]
+            },
+            {
+                "id": 21,
+                "nombre": "Caitlyn",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Piltover",
+                "descripcion": "Reconocida como la mejor tiradora de todo Piltóver, Caitlyn Kiramman es también la mejor pacificadora de la ciudad. A menudo, la emparejan con Vi, cuya impulsividad sirve como contrapeso a la actitud tranquila de Cailtlyn. Aunque su rifle es todo un...",
+                "habilidades": [
+                    "Pacificadora de Piltóver",
+                    "Trampa para Yordles",
+                    "Red Calibre 90",
+                    "As bajo la Mira"
+                ]
+            },
+            {
+                "id": 25,
+                "nombre": "Corki",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Ciudad de Bandle",
+                "descripcion": "Corki, el piloto yordle, adora dos cosas sobre todo lo demás: volar y su glamoroso bigote... aunque no siempre en ese orden. Luego de dejar la Ciudad de Bandle, se estableció en Piltóver y se enamoró de las máquinas maravillosas que encontró ahí. Se...",
+                "habilidades": [
+                    "Bomba Fosfórica",
+                    "Valquiria",
+                    "Cañón de Repetición",
+                    "Descarga de Misiles"
+                ]
+            },
+            {
+                "id": 29,
+                "nombre": "Draven",
+                "rol": "Tirador",
+                "dificultad": "Alta",
+                "region": "Noxus",
+                "descripcion": "En Noxus, los guerreros llamados ''jueces'' se enfrentan unos a otros en arenas donde la sangre corre y la fuerza se pone a prueba, pero nadie ha sido tan celebrado como Draven. Este exsoldado encontró que el público en verdad apreciaba su habilidad...",
+                "habilidades": [
+                    "Hacha Giratoria",
+                    "Impulso Sangriento",
+                    "Apártate",
+                    "Muerte Rodante"
+                ]
+            },
+            {
+                "id": 33,
+                "nombre": "Ezreal",
+                "rol": "Tirador",
+                "dificultad": "Alta",
+                "region": "Piltover",
+                "descripcion": "Un aventurero deslumbrante, inconscientemente talentoso para las artes mágicas, Ezreal saquea catacumbas hace mucho tiempo perdidas, se enreda en antiguas maldiciones y supera probabilidades aparentemente imposibles con ligereza. Su valentía no conoce...",
+                "habilidades": [
+                    "Disparo Místico",
+                    "Flujo de Esencia",
+                    "Desplazamiento Arcano",
+                    "Descarga de Tiros Certeros"
+                ]
+            },
+            {
+                "id": 42,
+                "nombre": "Graves",
+                "rol": "Tirador",
+                "dificultad": "Baja",
+                "region": "Aguasturbias",
+                "descripcion": "Malcolm Graves es un reconocido mercenario, apostador y ladrón: un hombre al que se le busca en cada ciudad e imperio que ha visitado. Aunque tiene un temperamento explosivo, posee un estricto sentido de honor criminal que hace valer con el poder de su...",
+                "habilidades": [
+                    "Fin del Trayecto",
+                    "Pantalla de Humo",
+                    "Disparo Veloz",
+                    "Daño Colateral"
+                ]
+            },
+            {
+                "id": 54,
+                "nombre": "Jhin",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Jonia",
+                "descripcion": "Jhin es un psicópata meticuloso que cree que el asesinato es un arte. Alguna vez un prisionero jonio, pero liberado por elementos sombríos dentro del concejo líder de Jonia, el asesino en serie ahora presta sus servicios como sicario a esa camarilla...",
+                "habilidades": [
+                    "Granada Bailarina",
+                    "Brote Mortal",
+                    "Audiencia Cautiva",
+                    "Llamado a Escena"
+                ]
+            },
+            {
+                "id": 55,
+                "nombre": "Jinx",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Zaun",
+                "descripcion": "Jinx es una desquiciada e impulsiva delincuente del Distrito Suburbano. Con su mente destrozada por un pasado atormentado, esta bala perdida continuamente está buscando una nueva forma de desatar el caos. Con un arsenal de armas que ella misma diseñó y...",
+                "habilidades": [
+                    "¡Cambio de Armas!",
+                    "¡Chispas!",
+                    "¡Mascafuegos!",
+                    "¡¡Supermegacohete Requetemortal!!"
+                ]
+            },
+            {
+                "id": 57,
+                "nombre": "Kai'Sa",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "El Vacío",
+                "descripcion": "Reclamada por el Vacío cuando era tan solo una niña, Kai'Sa ha logrado sobrevivir a través de absoluta tenacidad y fuerza de voluntad. Sus experiencias la han convertido en una cazadora letal y, para algunos, el presagio de un futuro para el cual...",
+                "habilidades": [
+                    "Lluvia de Icathia",
+                    "Buscadora del Vacío",
+                    "Supercarga",
+                    "Instinto Asesino"
+                ]
+            },
+            {
+                "id": 58,
+                "nombre": "Kalista",
+                "rol": "Tirador",
+                "dificultad": "Alta",
+                "region": "Islas de la Sombra",
+                "descripcion": "Kalista, espectro de ira y retribución, es el espíritu eterno de la venganza, una pesadilla armada invocada de las Islas de la Sombra para cazar impostores y traidores. Los traicionados pueden llorar ensangrentados clamando venganza, pero Kalista solo...",
+                "habilidades": [
+                    "Atravesar",
+                    "Guardián",
+                    "Desgarrar",
+                    "Llamada del Destino"
+                ]
+            },
+            {
+                "id": 63,
+                "nombre": "Kayle",
+                "rol": "Tirador",
+                "dificultad": "Alta",
+                "region": "Demacia",
+                "descripcion": "Nacida de un Aspecto targoniano durante el punto culminante de las Guerras Rúnicas, Kayle honra el legado de su madre al pelear por la justicia con sus alas de fuego divino. Ella y su hermana gemela, Morgana, fueron las protectoras de Demacia durante...",
+                "habilidades": [
+                    "Explosión Radiante",
+                    "Bendición Celestial",
+                    "Espadafuego Celeste",
+                    "Juicio Divino"
+                ]
+            },
+            {
+                "id": 67,
+                "nombre": "Kindred",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "Separados, pero nunca divididos, los Kindred representan las esencias hermanas de la muerte. La flecha de la Oveja ofrece una vía de escape rápida para los mortales que acepten su destino. El Lobo sale a la caza de los que huyen de su final y les...",
+                "habilidades": [
+                    "Danza de Flechas",
+                    "Frenesí de Lobo",
+                    "Terror Creciente",
+                    "Alivio de Cordero"
+                ]
+            },
+            {
+                "id": 69,
+                "nombre": "Kog'Maw",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "El Vacío",
+                "descripcion": "Arrojada desde una incursión de un Vacío putrefacto en las profundidades de los deshechos de Icathia, Kog'Maw es una criatura inquisitiva pero pútrida, con una boca ácida y enorme. Este particular engendro del Vacío necesita roer y babear todo para...",
+                "habilidades": [
+                    "Baba Cáustica",
+                    "Descarga Bioarcana",
+                    "Vacío Supurante",
+                    "Artillería Viviente"
+                ]
+            },
+            {
+                "id": 76,
+                "nombre": "Lucian",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "Lucian es un lúgubre Centinela de la Luz. Armado con unas pistolas reliquia gemelas, se debe a su misión de cazar y aniquilar espectros y fantasmas. Después de que el espectro Thresh asesinara a su esposa, Lucian se embarcó en el camino de la venganza...",
+                "habilidades": [
+                    "Luz Lacerante",
+                    "Resplandor Ardiente",
+                    "Persecución Implacable",
+                    "El Sacrificio"
+                ]
+            },
+            {
+                "id": 85,
+                "nombre": "Miss Fortune",
+                "rol": "Tirador",
+                "dificultad": "Baja",
+                "region": "Aguasturbias",
+                "descripcion": "Sarah Fortune, capitana de Aguasturbias famosa por su apariencia, pero temida por su brutalidad, es una figura severa entre los criminales más duros de la ciudad portuaria. Cuando era niña fue testigo de cómo el rey Gangplank asesinó a su familia, un...",
+                "habilidades": [
+                    "Doble Bala",
+                    "Alarde",
+                    "Lluvia de Plomo",
+                    "Balacera"
+                ]
+            },
+            {
+                "id": 104,
+                "nombre": "Quinn",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Demacia",
+                "descripcion": "Quinn es una caballero y exploradora de Demacia que se embarca en misiones que la llevan al mismo núcleo del territorio enemigo. Comparte un vínculo inquebrantable con su legendaria águila, Valor, y sus enemigos a menudo quedan derrotados antes de darse...",
+                "habilidades": [
+                    "Ataque Cegador",
+                    "Sentidos Aguzados",
+                    "Asalto",
+                    "Detrás de las Líneas Enemigas"
+                ]
+            },
+            {
+                "id": 115,
+                "nombre": "Samira",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Noxus",
+                "descripcion": "Samira ve a la muerte a los ojos con una confianza obstinada, en busca de la emoción, adonde sea que vaya. Después de que su hogar shurimano fuera destruido cuando era niña, Samira encontró su verdadero llamado en Noxus, donde construyó su reputación de...",
+                "habilidades": [
+                    "Instinto",
+                    "Corte Torbellino",
+                    "Carrera Salvaje",
+                    "Gatillo Infernal"
+                ]
+            },
+            {
+                "id": 125,
+                "nombre": "Sivir",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Shurima",
+                "descripcion": "Sivir es una afamada buscadora de tesoros y capitana mercenaria que se gana la vida en el desierto de Shurima. Provista de una legendaria arma en forma de cruz e incrustada con gemas, ha peleado y ganado innumerables batallas para los que pueden...",
+                "habilidades": [
+                    "Cuchilla Búmeran",
+                    "Rebote",
+                    "Escudo Antihechizos",
+                    "Cazadora"
+                ]
+            },
+            {
+                "id": 127,
+                "nombre": "Smolder",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "Oculto entre los peñascos de la frontera noxiana, bajo la atenta mirada de su madre, un joven dragón está aprendiendo lo que significa ser heredero del linaje de dragones imperiales de Camavor. Juguetón y ansioso por crecer, Smolder busca cualquier...",
+                "habilidades": [
+                    "Aliento Superabrasador",
+                    "¡Achú!",
+                    "Vuela, Vuela",
+                    "¡MAMÁAAA!"
+                ]
+            },
+            {
+                "id": 137,
+                "nombre": "Teemo",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Ciudad de Bandle",
+                "descripcion": "Teemo no se inmuta ante los obstáculos más peligrosos y amenazadores mientras explora el mundo con un entusiasmo infinito y un espíritu lleno de alegría. Es un yordle con una moralidad inquebrantable que se enorgullece de seguir el código de los...",
+                "habilidades": [
+                    "Dardo Cegador",
+                    "Movimiento Rápido",
+                    "Tiro Tóxico",
+                    "Trampa Nociva"
+                ]
+            },
+            {
+                "id": 139,
+                "nombre": "Tristana",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Ciudad de Bandle",
+                "descripcion": "Mientras que otros yordles usan su energía para hacer descubrimientos, inventos o simplemente travesuras, Tristana siempre estuvo inspirada por las aventuras de los grandes guerreros. Ella había escuchado mucho de Runaterra, sus facciones y sus guerras...",
+                "habilidades": [
+                    "Fuego Rápido",
+                    "Salto Cohete",
+                    "Carga Explosiva",
+                    "Tiro Destructor"
+                ]
+            },
+            {
+                "id": 143,
+                "nombre": "Twitch",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Zaun",
+                "descripcion": "Una rata zaunita de nacimiento, pero conocedor de la más fina suciedad por pasión. Twitch no tiene miedo de ensuciarse las patas. Apunta una ballesta potenciada con químicos hacia el centro de Piltóver y jura mostrarles a los que habitan arriba en la...",
+                "habilidades": [
+                    "Emboscada",
+                    "Tonel de Veneno",
+                    "Contaminar",
+                    "Lluvia de Proyectiles"
+                ]
+            },
+            {
+                "id": 146,
+                "nombre": "Varus",
+                "rol": "Tirador",
+                "dificultad": "Baja",
+                "region": "Jonia",
+                "descripcion": "Varus, como uno de los antiguos darkin, era un mortal asesino que amaba atormentar a sus enemigos y los llevaba casi hasta la locura antes de darles el flechazo final. Lo encerraron al final de la Gran Guerra Darkin, pero escapó siglos después en un...",
+                "habilidades": [
+                    "Flecha Penetrante",
+                    "El Carcaj Maldito",
+                    "Tormenta de Flechas",
+                    "Cadena de Corrupción"
+                ]
+            },
+            {
+                "id": 147,
+                "nombre": "Vayne",
+                "rol": "Tirador",
+                "dificultad": "Alta",
+                "region": "Demacia",
+                "descripcion": "Shauna Vayne es una mortal e implacable cazadora de monstruos demaciana que ha dedicado su vida a encontrar y destruir al demonio que asesinó a su familia. Armada con una ballesta que lleva montada en la muñeca y un corazón lleno de venganza, solo es...",
+                "habilidades": [
+                    "Voltereta",
+                    "Proyectiles de Plata",
+                    "Condena",
+                    "Hora Final"
+                ]
+            },
+            {
+                "id": 158,
+                "nombre": "Xayah",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Jonia",
+                "descripcion": "Letal y precisa, Xayah es una vastaya revolucionaria que lleva a cabo una guerra personal para salvar a su gente. Utiliza su velocidad, astucia y plumas afiladas para abatir a cualquiera que se interponga en su camino. Xayah pelea junto a su compañero y...",
+                "habilidades": [
+                    "Dagas Dobles",
+                    "Plumaje Letal",
+                    "Invocadora de Cuchillas",
+                    "Tormenta de Plumas"
+                ]
+            },
+            {
+                "id": 164,
+                "nombre": "Yunara",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Jonia",
+                "descripcion": "Impulsada por su firme devoción a Jonia, Yunara ha pasado siglos recluida en el reino espiritual para perfeccionar sus habilidades con las Aion Er'na, una legendaria reliquia Kinkou. A pesar de tal sacrificio, la joven jamás ha dudado sobre su juramento...",
+                "habilidades": [
+                    "Cultivo de Espíritu",
+                    "Rendición de Cuentas | Cuentas de la Ruina",
+                    "Andar Kanmei | Sombra Intocable",
+                    "Trascendencia Espiritual"
+                ]
+            },
+            {
+                "id": 169,
+                "nombre": "Zeri",
+                "rol": "Tirador",
+                "dificultad": "Media",
+                "region": "Zaun",
+                "descripcion": "Zeri, una joven testaruda y enérgica de la clase trabajadora de Zaun, canaliza su magia eléctrica para cargarse a sí misma y su arma fabricada a la medida. Su poder volátil refleja sus emociones y sus chispas reflejan su enfoque de la vida a la...",
+                "habilidades": [
+                    "Ráfaga de Luz",
+                    "Láser Ultracargado",
+                    "Chispazo",
+                    "Estallido Eléctrico"
+                ]
+            }
+        ],
+        "soporte": [
+            {
+                "id": 15,
+                "nombre": "Bardo",
+                "rol": "Soporte",
+                "dificultad": "Alta",
+                "region": "Runaterra",
+                "descripcion": "El Bardo es un viajero de un reino más allá de las estrellas y un agente de la serendipia quien lucha por conservar el balance donde sea que la vida resista la indiferencia del caos. Muchas canciones de Runaterra hablan sobre su extraordinaria...",
+                "habilidades": [
+                    "Amarre Cósmico",
+                    "Altar del Guardián",
+                    "Viaje Místico",
+                    "Destino Apacible"
+                ]
+            },
+            {
+                "id": 49,
+                "nombre": "Ivern",
+                "rol": "Soporte",
+                "dificultad": "Alta",
+                "region": "Jonia",
+                "descripcion": "Ivern Pies de Espino, conocido por muchos como el Árbol Padre, es un ser peculiar, mitad humano y mitad árbol, que deambula por los bosques de Runaterra y cultiva vida dondequiera que va. Conoce los secretos del mundo natural y es buen amigo de todo lo...",
+                "habilidades": [
+                    "Invocador de Raíces",
+                    "Creador de Maleza",
+                    "Detonar Semilla",
+                    "¡Daisy!"
+                ]
+            },
+            {
+                "id": 50,
+                "nombre": "Janna",
+                "rol": "Soporte",
+                "dificultad": "Alta",
+                "region": "Zaun",
+                "descripcion": "Janna es un poderoso y misterioso espíritu del viento que protege a los desvalidos de Zaun con la tempestad de Runaterra. Algunos creen que las súplicas de los marineros pidiendo vientos favorables mientras navegaban a través de las aguas traicioneras y...",
+                "habilidades": [
+                    "Vendaval Aullante",
+                    "Céfiro",
+                    "Ojo de la Tormenta",
+                    "Monzón"
+                ]
+            },
+            {
+                "id": 77,
+                "nombre": "Lulu",
+                "rol": "Soporte",
+                "dificultad": "Media",
+                "region": "Ciudad de Bandle",
+                "descripcion": "La maga yordle, Lulu, es conocida por conjurar ilusiones oníricas y extravagantes criaturas mientras vaga por Runaterra con su hada compañera, Pix. Lulu puede darle forma a la realidad a su antojo, deformando el tejido del mundo, y lo que ve como los...",
+                "habilidades": [
+                    "Lanza Brillantina",
+                    "Capricho",
+                    "¡Ayudita, Pix!",
+                    "Enormamiento"
+                ]
+            },
+            {
+                "id": 84,
+                "nombre": "Milio",
+                "rol": "Soporte",
+                "dificultad": "Media",
+                "region": "Ixtal",
+                "descripcion": "Milio es un joven de corazón cálido proveniente de Ixtal que, a pesar de su corta edad, dominó el axioma del fuego y descubrió algo nuevo: el fuego reconfortante. Con su reciente poder, Milio planea ayudar a su familia a escapar del exilio uniéndose a...",
+                "habilidades": [
+                    "Ultramegapatada de Fuego",
+                    "Fogata Hogareña",
+                    "Abrazos Calientitos",
+                    "Aliento de la Vida"
+                ]
+            },
+            {
+                "id": 87,
+                "nombre": "Morgana",
+                "rol": "Soporte",
+                "dificultad": "Baja",
+                "region": "Demacia",
+                "descripcion": "Atribulada entre su naturaleza celestial y mortal, Morgana ató sus alas para aceptar su humanidad e inflige su dolor y amargura en los deshonestos y los corruptos. Rechaza las leyes y tradiciones que considera injustas y pelea por la verdad desde las...",
+                "habilidades": [
+                    "Hechizo Oscuro",
+                    "Sombra Maldita",
+                    "Escudo Negro",
+                    "Grilletes del Alma"
+                ]
+            },
+            {
+                "id": 89,
+                "nombre": "Nami",
+                "rol": "Soporte",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "Como una joven y obstinada vastaya de los mares, Nami fue la primera de la tribu Marai en dejar las olas y aventurarse a tierra firme cuando se quebrantó el ancestral acuerdo con los targonianos. Sin ninguna otra opción, se dedicó a la tarea de...",
+                "habilidades": [
+                    "Prisión de Agua",
+                    "Flujo y Reflujo",
+                    "Bendición de la Marea",
+                    "Maremoto"
+                ]
+            },
+            {
+                "id": 102,
+                "nombre": "Pyke",
+                "rol": "Soporte",
+                "dificultad": "Alta",
+                "region": "Aguasturbias",
+                "descripcion": "Un reconocido arponero de los Muelles del Matadero de Aguasturbias, Pyke debió encontrarse con su fin en el estómago de un enorme leviatán... pero logró regresar. Ahora acecha los húmedos callejones y rincones de su anterior ciudad y usa sus nuevos...",
+                "habilidades": [
+                    "Mondahuesos",
+                    "Aguas Espectrales",
+                    "Corriente Fantasma",
+                    "De lo profundo"
+                ]
+            },
+            {
+                "id": 105,
+                "nombre": "Rakan",
+                "rol": "Soporte",
+                "dificultad": "Media",
+                "region": "Jonia",
+                "descripcion": "Tan impredecible como encantador, Rakan es un vastaya infame que siempre se mete en problemas, además de ser el mejor guerrero bailarín en la historia tribal de Lhotlan. Para los humanos de las tierras altas de Jonia, su nombre ha sido por mucho tiempo...",
+                "habilidades": [
+                    "Cálamo Reluciente",
+                    "Gran Entrada",
+                    "Danza de Combate",
+                    "Celeridad"
+                ]
+            },
+            {
+                "id": 109,
+                "nombre": "Renata Glasc",
+                "rol": "Soporte",
+                "dificultad": "Alta",
+                "region": "Zaun",
+                "descripcion": "Renata Glasc emergió de las cenizas de su infancia con nada más que su nombre y la investigación alquímica de sus padres. En las décadas posteriores, logró convertirse en la quimobaronesa más rica de Zaun, una magnate de los negocios que fundó su...",
+                "habilidades": [
+                    "Apretón",
+                    "Préstamo",
+                    "Cliente Frecuente",
+                    "Asuntos Pendientes"
+                ]
+            },
+            {
+                "id": 117,
+                "nombre": "Senna",
+                "rol": "Soporte",
+                "dificultad": "Alta",
+                "region": "Runaterra",
+                "descripcion": "Maldita desde la infancia a ser perseguida por la sobrenatural Niebla Negra, Senna se unió a una orden secreta conocida como los Centinelas de la Luz para intentar huir de tan terrible augurio. Aunque se defendió ferozmente, terminó siendo asesinada por...",
+                "habilidades": [
+                    "Oscuridad Lacerante",
+                    "Abrazo Final",
+                    "Maldición de la Niebla Negra",
+                    "Cañón de Sombras"
+                ]
+            },
+            {
+                "id": 118,
+                "nombre": "Seraphine",
+                "rol": "Soporte",
+                "dificultad": "Baja",
+                "region": "Piltover",
+                "descripcion": "Nacida en Piltóver de padres zaunitas, Seraphine es capaz de escuchar las almas de otros; el mundo canta para ella, y ella canta para él. Aunque estos sonidos la abrumaban en su juventud, ahora acude a ellos para inspirarse y convertir el caos en una...",
+                "habilidades": [
+                    "Nota Alta",
+                    "Sonido Envolvente",
+                    "¡Siente el Ritmo!",
+                    "¡Otra!"
+                ]
+            },
+            {
+                "id": 128,
+                "nombre": "Sona",
+                "rol": "Soporte",
+                "dificultad": "Media",
+                "region": "Demacia",
+                "descripcion": "Sona es la virtuosa demaciana más destacada del encordado etwahl. Habla solo a través de sus agraciados acordes y vibrantes arias. Estos elegantes modales la volvieron muy querida por la aristocracia, pero otros sospechan que sus hechizantes melodías en...",
+                "habilidades": [
+                    "Himno del Valor",
+                    "Aria de la Perseverancia",
+                    "Canción de la Celeridad",
+                    "Crescendo"
+                ]
+            },
+            {
+                "id": 129,
+                "nombre": "Soraka",
+                "rol": "Soporte",
+                "dificultad": "Baja",
+                "region": "Targón",
+                "descripcion": "Como nómada de las dimensiones celestiales más allá de Monte Targón, Soraka renunció a su inmortalidad para proteger a las razas mortales de sus mismos instintos más violentos. Se dedica a compartir las virtudes de la compasión y la misericordia a todos...",
+                "habilidades": [
+                    "Invocación Estelar",
+                    "Infusión Astral",
+                    "Equinoccio",
+                    "Plegaria"
+                ]
+            },
+            {
+                "id": 136,
+                "nombre": "Taric",
+                "rol": "Soporte",
+                "dificultad": "Baja",
+                "region": "Targón",
+                "descripcion": "Taric es el Aspecto del Protector y, gracias a su increíble poder, es el guardián de la vida, el amor y la belleza en Runaterra. Caído en desgracia debido a la negligencia de su deber y exiliado de su tierra, Demacia, Taric ascendió el Monte Targón...",
+                "habilidades": [
+                    "Toque de Luz Estelar",
+                    "Baluarte",
+                    "Deslumbramiento",
+                    "Resplandor Cósmico"
+                ]
+            },
+            {
+                "id": 138,
+                "nombre": "Thresh",
+                "rol": "Soporte",
+                "dificultad": "Alta",
+                "region": "Islas de la Sombra",
+                "descripcion": "Thresh es un ambicioso, incansable, astuto y sádico espectro de las Islas de la Sombra. En vida, fue custodio de innumerables secretos arcanos. Su vida de ambición terminó cuando un poder más allá de la vida y la muerte lo destrozó. Ahora, subsiste del...",
+                "habilidades": [
+                    "Sentencia de Muerte",
+                    "Pasaje Oscuro",
+                    "Despellejar",
+                    "La Caja"
+                ]
+            },
+            {
+                "id": 165,
+                "nombre": "Yuumi",
+                "rol": "Soporte",
+                "dificultad": "Baja",
+                "region": "Ciudad de Bandle",
+                "descripcion": "Yuumi, una gatita mágica proveniente de la Ciudad de Bandle, alguna vez fue la compañera de una hechicera yordle, Norra. Cuando su dueña desapareció misteriosamente, Yuumi se convirtió en la Guardiana del Libro de los Umbrales, perteneciente a Norra...",
+                "habilidades": [
+                    "Proyectil Acechador",
+                    "¡Tú y Yo!",
+                    "Zoomies",
+                    "Últimas Páginas"
+                ]
+            },
+            {
+                "id": 171,
+                "nombre": "Zilean",
+                "rol": "Soporte",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "Anteriormente un poderoso mago de Icathia, Zilean se obsesionó con el paso del tiempo después de presenciar la destrucción de su tierra por el Vacío. No dando ni un minuto para lamentar la catastrófica pérdida, invocó a ancestrales magias del tiempo...",
+                "habilidades": [
+                    "Bomba de Tiempo",
+                    "Retroceder",
+                    "Distorsión Temporal",
+                    "Cronoviaje"
+                ]
+            }
+        ],
+        "tanque": [
+            {
+                "id": 5,
+                "nombre": "Alistar",
+                "rol": "Tanque",
+                "dificultad": "Alta",
+                "region": "Runaterra",
+                "descripcion": "Alistar, que desde siempre fue un gran guerrero con una temible reputación, busca venganza por la muerte de su clan a manos del imperio noxiano. Aunque haya sido esclavizado y forzado a tener una vida de gladiador, su voluntad inquebrantable fue lo que...",
+                "habilidades": [
+                    "Pulverizar",
+                    "Testarazo",
+                    "Pisotear",
+                    "Voluntad Inquebrantable"
+                ]
+            },
+            {
+                "id": 7,
+                "nombre": "Amumu",
+                "rol": "Tanque",
+                "dificultad": "Baja",
+                "region": "Shurima",
+                "descripcion": "Cuenta la leyenda que Amumu es un alma solitaria y melancólica de la antigua Shurima que vaga por el mundo en busca de un amigo. Una antigua maldición lo condenó a permanecer solo por toda la eternidad. Sus caricias son la muerte, su afecto es la ruina...",
+                "habilidades": [
+                    "Lanzamiento de Vendas",
+                    "Desesperanza",
+                    "Berrinche",
+                    "Maldición de la Momia Triste"
+                ]
+            },
+            {
+                "id": 17,
+                "nombre": "Blitzcrank",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Zaun",
+                "descripcion": "Blitzcrank es un autómata gigantesco y casi indestructible de Zaun, que originalmente fue creado para deshacerse de los desechos tóxicos. Sin embargo, él cree que su propósito principal era demasiado limitado, así que modificó su propia forma para poder...",
+                "habilidades": [
+                    "Agarre Cohete",
+                    "Sobremarcha",
+                    "Puño de Poder",
+                    "Campo Estático"
+                ]
+            },
+            {
+                "id": 19,
+                "nombre": "Braum",
+                "rol": "Tanque",
+                "dificultad": "Baja",
+                "region": "Freljord",
+                "descripcion": "Dotado de bíceps masivos y un corazón aún más grande, Braum es un querido héroe de Fréljord. Todas las tabernas al norte de Fuertefrío brindan por su fuerza legendaria; se dice que taló un bosque de robles en una sola noche y que hizo añicos una montaña...",
+                "habilidades": [
+                    "Rigor del Invierno",
+                    "Detrás de Mí",
+                    "Inquebrantable",
+                    "Fisura Glacial"
+                ]
+            },
+            {
+                "id": 24,
+                "nombre": "Cho'Gath",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "El Vacío",
+                "descripcion": "Desde el momento que Cho'Gath emergió por primera vez a la fuerte luz del sol de Runaterra, la bestia se vio consumida por el hambre más pura e insaciable. Como una expresión perfecta del deseo del Vacío para consumir toda vida conocida, la biología...",
+                "habilidades": [
+                    "Ruptura",
+                    "Grito Salvaje",
+                    "Clavos Vorpalinos",
+                    "Festín"
+                ]
+            },
+            {
+                "id": 28,
+                "nombre": "Dr. Mundo",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Zaun",
+                "descripcion": "El Dr. Mundo, completamente demente, trágicamente homicida y espeluznantemente morado, es la razón por la que los ciudadanos de Zaun permanecen en sus casas en las noches particularmente oscuras. Ahora un médico autoproclamado, en otra vida fue un...",
+                "habilidades": [
+                    "Sierra Infectada",
+                    "Desfibrilador",
+                    "Trauma Contundente",
+                    "Dosis Máxima"
+                ]
+            },
+            {
+                "id": 37,
+                "nombre": "Galio",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Demacia",
+                "descripcion": "En las afueras de la resplandeciente ciudad de Demacia, el coloso de piedra Galio se mantiene en guardia constante. Construido como un baluarte contra los magos enemigos, se mantiene inmóvil durante décadas hasta que la presencia de magia poderosa lo...",
+                "habilidades": [
+                    "Vientos de Guerra",
+                    "Escudo de Durand",
+                    "Golpe Justiciero",
+                    "Entrada Heroica"
+                ]
+            },
+            {
+                "id": 56,
+                "nombre": "K'Sante",
+                "rol": "Tanque",
+                "dificultad": "Alta",
+                "region": "Shurima",
+                "descripcion": "Tan valiente como desafiante, K'Sante combate colosales y despiadadas bestias Ascendidas para proteger su hogar, Nazumah, un codiciado oasis en medio de las arenas de Shurima. Pero, luego de una discusión con su antiguo compañero, K'Sante se da cuenta...",
+                "habilidades": [
+                    "Ntofazos",
+                    "Trazacaminos",
+                    "Juego de Pies",
+                    "Con Todo"
+                ]
+            },
+            {
+                "id": 72,
+                "nombre": "Leona",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Targón",
+                "descripcion": "Leona es una guerrera imbuida con fuego solar y templaria de los Solari que defiende el Monte Targón con la Espada del Cénit y el Escudo del Amanecer. Su piel resplandece con el brillo de una estrella y sus ojos arden con el poder del aspecto celestial...",
+                "habilidades": [
+                    "Escudo del Amanecer",
+                    "Eclipse",
+                    "Espada del Cénit",
+                    "Llamarada Solar"
+                ]
+            },
+            {
+                "id": 80,
+                "nombre": "Malphite",
+                "rol": "Tanque",
+                "dificultad": "Baja",
+                "region": "Ixtal",
+                "descripcion": "Como una criatura masiva de piedra viviente, Malphite lucha para imponer orden bendito en un mundo caótico. Nacido como un fragmento originario de un obelisco sobrenatural llamado Monolito, usó su tremendo poderío elemental para mantener y proteger a su...",
+                "habilidades": [
+                    "Fragmento Sísmico",
+                    "Estruendo",
+                    "Golpe en el Suelo",
+                    "Fuerza Imparable"
+                ]
+            },
+            {
+                "id": 82,
+                "nombre": "Maokai",
+                "rol": "Tanque",
+                "dificultad": "Baja",
+                "region": "Islas de la Sombra",
+                "descripcion": "Maokai es un imponente y feroz treant que lucha contra los horrores antinaturales de las Islas de la Sombra. Las ansias de venganza lo inundaron después de que un cataclismo mágico destruyera su hogar y sobrevive a la podredumbre únicamente gracias las...",
+                "habilidades": [
+                    "Aplastamiento Espinoso",
+                    "Avance Retorcido",
+                    "Lanzamiento de Retoño",
+                    "Agarre de la Naturaleza"
+                ]
+            },
+            {
+                "id": 91,
+                "nombre": "Nautilus",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Aguasturbias",
+                "descripcion": "Una solitaria leyenda tan antigua como los primeros muelles hundidos de Aguasturbias, el gigante en armadura conocido como Nautilus deambula las oscuras aguas de la costa de las Islas de la Llama Azul. Motivado por una traición ya olvidada, ataca sin...",
+                "habilidades": [
+                    "Línea de Dragado",
+                    "Ira del Titán",
+                    "Aguas Revueltas",
+                    "Carga de las Profundidades"
+                ]
+            },
+            {
+                "id": 96,
+                "nombre": "Nunu y Willump",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Freljord",
+                "descripcion": "Había una vez un niño que quería demostrar que era un héroe al matar a un temible monstruo... solo para descubrir que la bestia, un yeti solitario y mágico, simplemente necesitaba un amigo. Unidos por un poder ancestral y el amor compartido por las...",
+                "habilidades": [
+                    "Voracidad",
+                    "¡Gigantobola de nieve!",
+                    "¡Come Nieve!",
+                    "Cero Absoluto"
+                ]
+            },
+            {
+                "id": 99,
+                "nombre": "Ornn",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Freljord",
+                "descripcion": "Ornn es el espíritu freljordiano de las forjas y artesanías. Trabaja en solitario en una gigantesca forja hecha en las cavernas de lava bajo el volcán conocido como Hogar. Allí, aviva las calderas burbujeantes de piedra fundida para purificar los...",
+                "habilidades": [
+                    "Ruptura Volcánica",
+                    "Rugido de Fuego",
+                    "Embestida Abrasadora",
+                    "Llamado del Dios de la Forja"
+                ]
+            },
+            {
+                "id": 101,
+                "nombre": "Poppy",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Demacia",
+                "descripcion": "A Runaterra no le hacen falta campeones valientes, pero pocos son tan tenaces como Poppy. Como portadora del legendario martillo de Orlon, un arma que la supera al doble de tamaño, esta determinada yordle ha pasado años en búsqueda del aclamado ''Héroe...",
+                "habilidades": [
+                    "Impacto de Martillo",
+                    "Presencia Inalterable",
+                    "Carga Heroica",
+                    "Veredicto de la Guardiana"
+                ]
+            },
+            {
+                "id": 106,
+                "nombre": "Rammus",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Shurima",
+                "descripcion": "Idolatrado por muchos, desdeñado por algunos, mistificado por todos, el curioso ser Rammus, es un enigma. Protegido por un caparazón con púas, Rammus inspira teorías cada vez más disparatadas sobre su origen a dondequiera que vaya: desde semidiós hasta...",
+                "habilidades": [
+                    "Bola Rodante",
+                    "Posición Defensiva",
+                    "Provocación Frenética",
+                    "Salto de Temblores"
+                ]
+            },
+            {
+                "id": 108,
+                "nombre": "Rell",
+                "rol": "Tanque",
+                "dificultad": "Baja",
+                "region": "Noxus",
+                "descripcion": "Producto de brutales experimentos realizados por la Rosa Negra, Rell es un arma viviente rebelde con la firme determinación de acabar con Noxus. Su infancia estuvo llena de miseria y horror. Tuvo que soportar procedimientos atroces para perfeccionar y...",
+                "habilidades": [
+                    "Golpe Devastador",
+                    "Ferromancia: Desplome",
+                    "Tilteo Total",
+                    "Tormenta Magnética"
+                ]
+            },
+            {
+                "id": 116,
+                "nombre": "Sejuani",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Freljord",
+                "descripcion": "Sejuani es la brutal e implacable Hija del Hielo y líder de la Garra Invernal, una de las tribus más temidas del Fréljord. La supervivencia de su gente es una constante y desesperada batalla contra los elementos, lo que los obliga a invadir a noxianos...",
+                "habilidades": [
+                    "Asalto Ártico",
+                    "Ira del Invierno",
+                    "Permahielo",
+                    "Prisión Glacial"
+                ]
+            },
+            {
+                "id": 121,
+                "nombre": "Shen",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Jonia",
+                "descripcion": "Entre los secretos guerreros jonios conocidos como los Kinkou, Shen sirve como su líder, el Ojo del Crepúsculo. Desea mantenerse libre de las confusiones que provocan la emoción, los prejuicios y el ego, y camina por la senda oculta del juicio imparcial...",
+                "habilidades": [
+                    "Ataque de Crepúsculo",
+                    "Refugio del Espíritu",
+                    "Ataque de Sombra",
+                    "Unidos"
+                ]
+            },
+            {
+                "id": 123,
+                "nombre": "Singed",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Zaun",
+                "descripcion": "Singed es un gran alquimista de dudosa moral, cuyos experimentos le revolverían el estómago hasta al criminal más despiadado. Sus habilidades están a disponibilidad del mejor postor, pues poco le importa cómo o para qué han de usarse sus terribles...",
+                "habilidades": [
+                    "Rastro de Veneno",
+                    "Megadhesivo",
+                    "Arrojar",
+                    "Poción Demencial"
+                ]
+            },
+            {
+                "id": 124,
+                "nombre": "Sion",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Noxus",
+                "descripcion": "Como héroe de guerra de una época antigua, Sion era venerado en Noxus por quitarle la vida al rey demaciano con sus propias manos. Sin embargo, se le negó el descanso eterno y lo resucitaron para servir a su imperio incluso en la muerte. Su matanza...",
+                "habilidades": [
+                    "Impacto Aniquilador",
+                    "Horno del Alma",
+                    "Rugido del Asesino",
+                    "Embestida Imparable"
+                ]
+            },
+            {
+                "id": 126,
+                "nombre": "Skarner",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Ixtal",
+                "descripcion": "Skarner, el colosal brackern ancestral, es venerado en Ixtal por ser uno de los miembros fundadores de la casta gobernante: los Yun Tal. Dedicado a mantener a su nación a salvo del resto del mundo, Skarner habita recluido en una cámara debajo de Ixaocan...",
+                "habilidades": [
+                    "Tierra Desgarrada / Avasallar",
+                    "Bastión Sísmico",
+                    "Impacto Ixtalí",
+                    "Empalar"
+                ]
+            },
+            {
+                "id": 133,
+                "nombre": "Tahm Kench",
+                "rol": "Tanque",
+                "dificultad": "Media",
+                "region": "Runaterra",
+                "descripcion": "Conocido por muchos nombres a lo largo de la historia, el demonio Tahm Kench viaja a través de las aguas de Runaterra mientras alimenta su insaciable apetito con la miseria de otros. Aunque pudiera parecer particularmente encantador y orgulloso, se...",
+                "habilidades": [
+                    "Lengüetazo",
+                    "Inmersión Abisal",
+                    "Piel Dura",
+                    "Devorar"
+                ]
+            },
+            {
+                "id": 167,
+                "nombre": "Zac",
+                "rol": "Tanque",
+                "dificultad": "Alta",
+                "region": "Zaun",
+                "descripcion": "Zac es el producto de un derrame tóxico que pasó por una soldadura quimtech y que cayó en una caverna aislada en lo profundo del Sumidero de Zaun. A pesar de su humilde origen, Zac pasó de ser un fluido primigenio a un ser pensante que vive en las...",
+                "habilidades": [
+                    "Golpes de Estiramiento",
+                    "Materia Inestable",
+                    "Honda Elástica",
+                    "¡Rebotemos!"
+                ]
+            }
+        ]
+    },
+    "builds": {
+        "asesino": [
+            {
+                "id": 3,
+                "campeon": "Akali",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Akali en el parche 26.17, centrada en daño mágico explosivo y movilidad.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Reloj de Arena de Zhonya"
                 ],
-                runas: [
+                "runas": [
                     "Electrocutar",
-                    "Impacto repentino",
-                    "Coleccion de globos oculares",
-                    "Cazador de tesoros"
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
                 ],
-                runasSecundarias: [
-                    "Banda de mana",
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
                     "Trascendencia"
                 ]
-            }
-        ],
-        tirador: [],
-        soporte: [],
-        tanque: []
-    },
-    jugadores: {
-        asesino: [],
-        luchador: [],
-        mago: [
+            },
             {
-                id: 1,
-                nombre: "Faker",
-                rol: "Mago",
-                region: "Corea del Sur",
-                rango: "Challenger",
-                nivel: 500,
-                campeonFavorito: "Azir",
-                partidas: 100,
-                victorias: 60,
-                kda: "3.8"
+                "id": 30,
+                "campeon": "Ekko",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Ekko en el parche 26.17, centrada en daño mágico explosivo y movilidad.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia"
+                ]
+            },
+            {
+                "id": 31,
+                "campeon": "Elise",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Elise en el parche 26.17, centrada en daño mágico explosivo y movilidad.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia"
+                ]
+            },
+            {
+                "id": 32,
+                "campeon": "Evelynn",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Evelynn en el parche 26.17, centrada en daño mágico explosivo y movilidad.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia"
+                ]
+            },
+            {
+                "id": 36,
+                "campeon": "Fizz",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Fizz en el parche 26.17, centrada en daño mágico explosivo y movilidad.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia"
+                ]
+            },
+            {
+                "id": 61,
+                "campeon": "Kassadin",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Kassadin en el parche 26.17, centrada en daño mágico explosivo y movilidad.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia"
+                ]
+            },
+            {
+                "id": 62,
+                "campeon": "Katarina",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Katarina en el parche 26.17, centrada en daño mágico explosivo y movilidad.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia"
+                ]
+            },
+            {
+                "id": 66,
+                "campeon": "Kha'Zix",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Kha'Zix en el parche 26.17, centrada en letalidad, accesos al objetivo y reinicios.",
+                "objetos": [
+                    "Espada Fantasma de Youmuu",
+                    "Botas Jonias de la Lucidez",
+                    "Arco Axiomático",
+                    "Rencor de Serylda"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Golpe de Gracia"
+                ]
+            },
+            {
+                "id": 70,
+                "campeon": "LeBlanc",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para LeBlanc en el parche 26.17, centrada en daño mágico explosivo y movilidad.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia"
+                ]
+            },
+            {
+                "id": 75,
+                "campeon": "Locke",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Locke en el parche 26.17, centrada en daño mágico explosivo y movilidad.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia"
+                ]
+            },
+            {
+                "id": 88,
+                "campeon": "Naafiri",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Naafiri en el parche 26.17, centrada en letalidad, accesos al objetivo y reinicios.",
+                "objetos": [
+                    "Espada Fantasma de Youmuu",
+                    "Botas Jonias de la Lucidez",
+                    "Arco Axiomático",
+                    "Rencor de Serylda"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Golpe de Gracia"
+                ]
+            },
+            {
+                "id": 93,
+                "campeon": "Nidalee",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Nidalee en el parche 26.17, centrada en daño mágico explosivo y movilidad.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia"
+                ]
+            },
+            {
+                "id": 103,
+                "campeon": "Qiyana",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Qiyana en el parche 26.17, centrada en letalidad, accesos al objetivo y reinicios.",
+                "objetos": [
+                    "Espada Fantasma de Youmuu",
+                    "Botas Jonias de la Lucidez",
+                    "Arco Axiomático",
+                    "Rencor de Serylda"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Golpe de Gracia"
+                ]
+            },
+            {
+                "id": 111,
+                "campeon": "Rengar",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Rengar en el parche 26.17, centrada en letalidad, accesos al objetivo y reinicios.",
+                "objetos": [
+                    "Espada Fantasma de Youmuu",
+                    "Botas Jonias de la Lucidez",
+                    "Arco Axiomático",
+                    "Rencor de Serylda"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Golpe de Gracia"
+                ]
+            },
+            {
+                "id": 120,
+                "campeon": "Shaco",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Shaco en el parche 26.17, centrada en daño mágico explosivo y movilidad.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia"
+                ]
+            },
+            {
+                "id": 135,
+                "campeon": "Talon",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Talon en el parche 26.17, centrada en letalidad, accesos al objetivo y reinicios.",
+                "objetos": [
+                    "Espada Fantasma de Youmuu",
+                    "Botas Jonias de la Lucidez",
+                    "Arco Axiomático",
+                    "Rencor de Serylda"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Golpe de Gracia"
+                ]
+            },
+            {
+                "id": 168,
+                "campeon": "Zed",
+                "rol": "Asesino",
+                "descripcion": "Build orientativa para Zed en el parche 26.17, centrada en letalidad, accesos al objetivo y reinicios.",
+                "objetos": [
+                    "Espada Fantasma de Youmuu",
+                    "Botas Jonias de la Lucidez",
+                    "Arco Axiomático",
+                    "Rencor de Serylda"
+                ],
+                "runas": [
+                    "Electrocutar",
+                    "Impacto Súbito",
+                    "Recuerdos Macabros",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Golpe de Gracia"
+                ]
             }
         ],
-        tirador: [],
-        soporte: [],
-        tanque: []
+        "luchador": [
+            {
+                "id": 1,
+                "campeon": "Aatrox",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Aatrox en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 6,
+                "campeon": "Ambessa",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Ambessa en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 16,
+                "campeon": "Bel'Veth",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Bel'Veth en el parche 26.17, centrada en duelos prolongados y daño al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Terminus",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Triunfo",
+                    "Leyenda: Celeridad",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 20,
+                "campeon": "Briar",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Briar en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 22,
+                "campeon": "Camille",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Camille en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 26,
+                "campeon": "Darius",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Darius en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 27,
+                "campeon": "Diana",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Diana en el parche 26.17, centrada en poder de habilidad, daño sostenido y supervivencia.",
+                "objetos": [
+                    "Agrietador",
+                    "Botas del Hechicero",
+                    "Diente de Nashor",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 35,
+                "campeon": "Fiora",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Fiora en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 38,
+                "campeon": "Gangplank",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Gangplank en el parche 26.17, centrada en golpes críticos y escalado de daño físico.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Arcoescudo Inmortal"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 39,
+                "campeon": "Garen",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Garen en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 40,
+                "campeon": "Gnar",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Gnar en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 41,
+                "campeon": "Gragas",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Gragas en el parche 26.17, centrada en poder de habilidad, daño sostenido y supervivencia.",
+                "objetos": [
+                    "Agrietador",
+                    "Botas del Hechicero",
+                    "Diente de Nashor",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 43,
+                "campeon": "Gwen",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Gwen en el parche 26.17, centrada en poder de habilidad, daño sostenido y supervivencia.",
+                "objetos": [
+                    "Agrietador",
+                    "Botas del Hechicero",
+                    "Diente de Nashor",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 44,
+                "campeon": "Hecarim",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Hecarim en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 47,
+                "campeon": "Illaoi",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Illaoi en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 48,
+                "campeon": "Irelia",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Irelia en el parche 26.17, centrada en duelos prolongados y daño al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Terminus",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Triunfo",
+                    "Leyenda: Celeridad",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 51,
+                "campeon": "Jarvan IV",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Jarvan IV en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 52,
+                "campeon": "Jax",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Jax en el parche 26.17, centrada en duelos prolongados y daño al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Terminus",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Triunfo",
+                    "Leyenda: Celeridad",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 53,
+                "campeon": "Jayce",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Jayce en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 64,
+                "campeon": "Kayn",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Kayn en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 68,
+                "campeon": "Kled",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Kled en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 71,
+                "campeon": "Lee Sin",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Lee Sin en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 73,
+                "campeon": "Lillia",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Lillia en el parche 26.17, centrada en poder de habilidad, daño sostenido y supervivencia.",
+                "objetos": [
+                    "Agrietador",
+                    "Botas del Hechicero",
+                    "Diente de Nashor",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 79,
+                "campeon": "Maestro Yi",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Maestro Yi en el parche 26.17, centrada en duelos prolongados y daño al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Terminus",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Triunfo",
+                    "Leyenda: Celeridad",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 86,
+                "campeon": "Mordekaiser",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Mordekaiser en el parche 26.17, centrada en poder de habilidad, daño sostenido y supervivencia.",
+                "objetos": [
+                    "Agrietador",
+                    "Botas del Hechicero",
+                    "Diente de Nashor",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 90,
+                "campeon": "Nasus",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Nasus en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 94,
+                "campeon": "Nilah",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Nilah en el parche 26.17, centrada en golpes críticos y escalado de daño físico.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Arcoescudo Inmortal"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 95,
+                "campeon": "Nocturne",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Nocturne en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 97,
+                "campeon": "Olaf",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Olaf en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 100,
+                "campeon": "Pantheon",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Pantheon en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 107,
+                "campeon": "Rek'Sai",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Rek'Sai en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 110,
+                "campeon": "Renekton",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Renekton en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 112,
+                "campeon": "Riven",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Riven en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 113,
+                "campeon": "Rumble",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Rumble en el parche 26.17, centrada en poder de habilidad, daño sostenido y supervivencia.",
+                "objetos": [
+                    "Agrietador",
+                    "Botas del Hechicero",
+                    "Diente de Nashor",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 119,
+                "campeon": "Sett",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Sett en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 122,
+                "campeon": "Shyvana",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Shyvana en el parche 26.17, centrada en poder de habilidad, daño sostenido y supervivencia.",
+                "objetos": [
+                    "Agrietador",
+                    "Botas del Hechicero",
+                    "Diente de Nashor",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 140,
+                "campeon": "Trundle",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Trundle en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 141,
+                "campeon": "Tryndamere",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Tryndamere en el parche 26.17, centrada en golpes críticos y escalado de daño físico.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Arcoescudo Inmortal"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 144,
+                "campeon": "Udyr",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Udyr en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 145,
+                "campeon": "Urgot",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Urgot en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 151,
+                "campeon": "Vi",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Vi en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 152,
+                "campeon": "Viego",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Viego en el parche 26.17, centrada en duelos prolongados y daño al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Terminus",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Triunfo",
+                    "Leyenda: Celeridad",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 155,
+                "campeon": "Volibear",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Volibear en el parche 26.17, centrada en poder de habilidad, daño sostenido y supervivencia.",
+                "objetos": [
+                    "Agrietador",
+                    "Botas del Hechicero",
+                    "Diente de Nashor",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 156,
+                "campeon": "Warwick",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Warwick en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 157,
+                "campeon": "Wukong",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Wukong en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 160,
+                "campeon": "Xin Zhao",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Xin Zhao en el parche 26.17, centrada en daño físico, aceleración y resistencia en combate.",
+                "objetos": [
+                    "Eclipse",
+                    "Botas de Mercurio",
+                    "Cuchilla Oscura",
+                    "Danza de la Muerte"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Coraza Ósea",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 161,
+                "campeon": "Yasuo",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Yasuo en el parche 26.17, centrada en golpes críticos y escalado de daño físico.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Arcoescudo Inmortal"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 162,
+                "campeon": "Yone",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Yone en el parche 26.17, centrada en golpes críticos y escalado de daño físico.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Arcoescudo Inmortal"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 163,
+                "campeon": "Yorick",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Yorick en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            },
+            {
+                "id": 166,
+                "campeon": "Zaahen",
+                "rol": "Luchador",
+                "descripcion": "Build orientativa para Zaahen en el parche 26.17, centrada en aguante, presión lateral y peleas extendidas.",
+                "objetos": [
+                    "Cielo Desgarrado",
+                    "Grebas de Armacero",
+                    "Guantelete de Sterak",
+                    "Apariencia Espiritual"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Triunfo",
+                    "Leyenda: Aceleración",
+                    "La Última Batalla"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Crecimiento Excesivo"
+                ]
+            }
+        ],
+        "mago": [
+            {
+                "id": 2,
+                "campeon": "Ahri",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Ahri en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 8,
+                "campeon": "Anivia",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Anivia en el parche 26.17, centrada en daño sostenido, control de zona y vida.",
+                "objetos": [
+                    "El Tormento de Liandry",
+                    "Botas del Hechicero",
+                    "Cetro de Cristal de Rylai",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Absorber Vida",
+                    "Corte"
+                ]
+            },
+            {
+                "id": 9,
+                "campeon": "Annie",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Annie en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 12,
+                "campeon": "Aurelion Sol",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Aurelion Sol en el parche 26.17, centrada en daño sostenido, control de zona y vida.",
+                "objetos": [
+                    "El Tormento de Liandry",
+                    "Botas del Hechicero",
+                    "Cetro de Cristal de Rylai",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Absorber Vida",
+                    "Corte"
+                ]
+            },
+            {
+                "id": 13,
+                "campeon": "Aurora",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Aurora en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 14,
+                "campeon": "Azir",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Azir en el parche 26.17, centrada en maná, aceleración y escalado para peleas de equipo.",
+                "objetos": [
+                    "Vara de las Edades",
+                    "Botas Jonias de la Lucidez",
+                    "Báculo del Arcángel",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Arrebato del Cabalgatormentas",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 18,
+                "campeon": "Brand",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Brand en el parche 26.17, centrada en daño sostenido, control de zona y vida.",
+                "objetos": [
+                    "El Tormento de Liandry",
+                    "Botas del Hechicero",
+                    "Cetro de Cristal de Rylai",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Absorber Vida",
+                    "Corte"
+                ]
+            },
+            {
+                "id": 23,
+                "campeon": "Cassiopeia",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Cassiopeia en el parche 26.17, centrada en daño sostenido, control de zona y vida.",
+                "objetos": [
+                    "El Tormento de Liandry",
+                    "Botas del Hechicero",
+                    "Cetro de Cristal de Rylai",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Absorber Vida",
+                    "Corte"
+                ]
+            },
+            {
+                "id": 34,
+                "campeon": "Fiddlesticks",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Fiddlesticks en el parche 26.17, centrada en daño sostenido, control de zona y vida.",
+                "objetos": [
+                    "El Tormento de Liandry",
+                    "Botas del Hechicero",
+                    "Cetro de Cristal de Rylai",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Absorber Vida",
+                    "Corte"
+                ]
+            },
+            {
+                "id": 45,
+                "campeon": "Heimerdinger",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Heimerdinger en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 46,
+                "campeon": "Hwei",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Hwei en el parche 26.17, centrada en maná, aceleración y escalado para peleas de equipo.",
+                "objetos": [
+                    "Vara de las Edades",
+                    "Botas Jonias de la Lucidez",
+                    "Báculo del Arcángel",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Arrebato del Cabalgatormentas",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 59,
+                "campeon": "Karma",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Karma en el parche 26.17, centrada en maná, aceleración y escalado para peleas de equipo.",
+                "objetos": [
+                    "Vara de las Edades",
+                    "Botas Jonias de la Lucidez",
+                    "Báculo del Arcángel",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Arrebato del Cabalgatormentas",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 60,
+                "campeon": "Karthus",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Karthus en el parche 26.17, centrada en daño sostenido, control de zona y vida.",
+                "objetos": [
+                    "El Tormento de Liandry",
+                    "Botas del Hechicero",
+                    "Cetro de Cristal de Rylai",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Absorber Vida",
+                    "Corte"
+                ]
+            },
+            {
+                "id": 65,
+                "campeon": "Kennen",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Kennen en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 74,
+                "campeon": "Lissandra",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Lissandra en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 78,
+                "campeon": "Lux",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Lux en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 81,
+                "campeon": "Malzahar",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Malzahar en el parche 26.17, centrada en daño sostenido, control de zona y vida.",
+                "objetos": [
+                    "El Tormento de Liandry",
+                    "Botas del Hechicero",
+                    "Cetro de Cristal de Rylai",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Absorber Vida",
+                    "Corte"
+                ]
+            },
+            {
+                "id": 83,
+                "campeon": "Mel",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Mel en el parche 26.17, centrada en maná, aceleración y escalado para peleas de equipo.",
+                "objetos": [
+                    "Vara de las Edades",
+                    "Botas Jonias de la Lucidez",
+                    "Báculo del Arcángel",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Arrebato del Cabalgatormentas",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 92,
+                "campeon": "Neeko",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Neeko en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 98,
+                "campeon": "Orianna",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Orianna en el parche 26.17, centrada en maná, aceleración y escalado para peleas de equipo.",
+                "objetos": [
+                    "Vara de las Edades",
+                    "Botas Jonias de la Lucidez",
+                    "Báculo del Arcángel",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Arrebato del Cabalgatormentas",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 114,
+                "campeon": "Ryze",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Ryze en el parche 26.17, centrada en maná, aceleración y escalado para peleas de equipo.",
+                "objetos": [
+                    "Vara de las Edades",
+                    "Botas Jonias de la Lucidez",
+                    "Báculo del Arcángel",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Arrebato del Cabalgatormentas",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 130,
+                "campeon": "Swain",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Swain en el parche 26.17, centrada en daño sostenido, control de zona y vida.",
+                "objetos": [
+                    "El Tormento de Liandry",
+                    "Botas del Hechicero",
+                    "Cetro de Cristal de Rylai",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Absorber Vida",
+                    "Corte"
+                ]
+            },
+            {
+                "id": 131,
+                "campeon": "Sylas",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Sylas en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 132,
+                "campeon": "Syndra",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Syndra en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 134,
+                "campeon": "Taliyah",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Taliyah en el parche 26.17, centrada en maná, aceleración y escalado para peleas de equipo.",
+                "objetos": [
+                    "Vara de las Edades",
+                    "Botas Jonias de la Lucidez",
+                    "Báculo del Arcángel",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Arrebato del Cabalgatormentas",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 142,
+                "campeon": "Twisted Fate",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Twisted Fate en el parche 26.17, centrada en maná, aceleración y escalado para peleas de equipo.",
+                "objetos": [
+                    "Vara de las Edades",
+                    "Botas Jonias de la Lucidez",
+                    "Báculo del Arcángel",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Arrebato del Cabalgatormentas",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 148,
+                "campeon": "Veigar",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Veigar en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 149,
+                "campeon": "Vel'Koz",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Vel'Koz en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 150,
+                "campeon": "Vex",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Vex en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 153,
+                "campeon": "Viktor",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Viktor en el parche 26.17, centrada en maná, aceleración y escalado para peleas de equipo.",
+                "objetos": [
+                    "Vara de las Edades",
+                    "Botas Jonias de la Lucidez",
+                    "Báculo del Arcángel",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Arrebato del Cabalgatormentas",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 154,
+                "campeon": "Vladimir",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Vladimir en el parche 26.17, centrada en daño sostenido, control de zona y vida.",
+                "objetos": [
+                    "El Tormento de Liandry",
+                    "Botas del Hechicero",
+                    "Cetro de Cristal de Rylai",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Absorber Vida",
+                    "Corte"
+                ]
+            },
+            {
+                "id": 159,
+                "campeon": "Xerath",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Xerath en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 170,
+                "campeon": "Ziggs",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Ziggs en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 172,
+                "campeon": "Zoe",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Zoe en el parche 26.17, centrada en daño mágico explosivo y penetración.",
+                "objetos": [
+                    "Eco de Luden",
+                    "Botas del Hechicero",
+                    "Lumbría",
+                    "Sombrero Mortífero de Rabadon"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 173,
+                "campeon": "Zyra",
+                "rol": "Mago",
+                "descripcion": "Build orientativa para Zyra en el parche 26.17, centrada en daño sostenido, control de zona y vida.",
+                "objetos": [
+                    "El Tormento de Liandry",
+                    "Botas del Hechicero",
+                    "Cetro de Cristal de Rylai",
+                    "Reloj de Arena de Zhonya"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Tormenta Creciente"
+                ],
+                "runasSecundarias": [
+                    "Absorber Vida",
+                    "Corte"
+                ]
+            }
+        ],
+        "tirador": [
+            {
+                "id": 4,
+                "campeon": "Akshan",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Akshan en el parche 26.17, centrada en daño de habilidades y picos de poder tempranos.",
+                "objetos": [
+                    "Saqueador de Esencias",
+                    "Botas Jonias de la Lucidez",
+                    "Cuchilla Rauda de Navori",
+                    "Filo del Infinito"
+                ],
+                "runas": [
+                    "Estrategia Ofensiva",
+                    "Absorber Vida",
+                    "Leyenda: Aceleración",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 10,
+                "campeon": "Aphelios",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Aphelios en el parche 26.17, centrada en probabilidad de crítico y daño por segundo.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Recuerdos de Lord Dominik"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 11,
+                "campeon": "Ashe",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Ashe en el parche 26.17, centrada en velocidad de ataque y efectos al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Espadafuria de Guinsoo",
+                    "Terminus"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Corte"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 21,
+                "campeon": "Caitlyn",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Caitlyn en el parche 26.17, centrada en probabilidad de crítico y daño por segundo.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Recuerdos de Lord Dominik"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 25,
+                "campeon": "Corki",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Corki en el parche 26.17, centrada en daño de habilidades y picos de poder tempranos.",
+                "objetos": [
+                    "Saqueador de Esencias",
+                    "Botas Jonias de la Lucidez",
+                    "Cuchilla Rauda de Navori",
+                    "Filo del Infinito"
+                ],
+                "runas": [
+                    "Estrategia Ofensiva",
+                    "Absorber Vida",
+                    "Leyenda: Aceleración",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 29,
+                "campeon": "Draven",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Draven en el parche 26.17, centrada en probabilidad de crítico y daño por segundo.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Recuerdos de Lord Dominik"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 33,
+                "campeon": "Ezreal",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Ezreal en el parche 26.17, centrada en hostigamiento a distancia y daño de habilidades.",
+                "objetos": [
+                    "Manamune",
+                    "Botas Jonias de la Lucidez",
+                    "Fuerza de la Trinidad",
+                    "Rencor de Serylda"
+                ],
+                "runas": [
+                    "Conquistador",
+                    "Absorber Vida",
+                    "Leyenda: Aceleración",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia"
+                ]
+            },
+            {
+                "id": 42,
+                "campeon": "Graves",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Graves en el parche 26.17, centrada en daño de habilidades y picos de poder tempranos.",
+                "objetos": [
+                    "Saqueador de Esencias",
+                    "Botas Jonias de la Lucidez",
+                    "Cuchilla Rauda de Navori",
+                    "Filo del Infinito"
+                ],
+                "runas": [
+                    "Estrategia Ofensiva",
+                    "Absorber Vida",
+                    "Leyenda: Aceleración",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 54,
+                "campeon": "Jhin",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Jhin en el parche 26.17, centrada en daño de habilidades y picos de poder tempranos.",
+                "objetos": [
+                    "Saqueador de Esencias",
+                    "Botas Jonias de la Lucidez",
+                    "Cuchilla Rauda de Navori",
+                    "Filo del Infinito"
+                ],
+                "runas": [
+                    "Estrategia Ofensiva",
+                    "Absorber Vida",
+                    "Leyenda: Aceleración",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 55,
+                "campeon": "Jinx",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Jinx en el parche 26.17, centrada en probabilidad de crítico y daño por segundo.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Recuerdos de Lord Dominik"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 57,
+                "campeon": "Kai'Sa",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Kai'Sa en el parche 26.17, centrada en velocidad de ataque y efectos al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Espadafuria de Guinsoo",
+                    "Terminus"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Corte"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 58,
+                "campeon": "Kalista",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Kalista en el parche 26.17, centrada en velocidad de ataque y efectos al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Espadafuria de Guinsoo",
+                    "Terminus"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Corte"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 63,
+                "campeon": "Kayle",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Kayle en el parche 26.17, centrada en velocidad de ataque y efectos al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Espadafuria de Guinsoo",
+                    "Terminus"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Corte"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 67,
+                "campeon": "Kindred",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Kindred en el parche 26.17, centrada en velocidad de ataque y efectos al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Espadafuria de Guinsoo",
+                    "Terminus"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Corte"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 69,
+                "campeon": "Kog'Maw",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Kog'Maw en el parche 26.17, centrada en velocidad de ataque y efectos al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Espadafuria de Guinsoo",
+                    "Terminus"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Corte"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 76,
+                "campeon": "Lucian",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Lucian en el parche 26.17, centrada en daño de habilidades y picos de poder tempranos.",
+                "objetos": [
+                    "Saqueador de Esencias",
+                    "Botas Jonias de la Lucidez",
+                    "Cuchilla Rauda de Navori",
+                    "Filo del Infinito"
+                ],
+                "runas": [
+                    "Estrategia Ofensiva",
+                    "Absorber Vida",
+                    "Leyenda: Aceleración",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 85,
+                "campeon": "Miss Fortune",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Miss Fortune en el parche 26.17, centrada en daño de habilidades y picos de poder tempranos.",
+                "objetos": [
+                    "Saqueador de Esencias",
+                    "Botas Jonias de la Lucidez",
+                    "Cuchilla Rauda de Navori",
+                    "Filo del Infinito"
+                ],
+                "runas": [
+                    "Estrategia Ofensiva",
+                    "Absorber Vida",
+                    "Leyenda: Aceleración",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 104,
+                "campeon": "Quinn",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Quinn en el parche 26.17, centrada en daño de habilidades y picos de poder tempranos.",
+                "objetos": [
+                    "Saqueador de Esencias",
+                    "Botas Jonias de la Lucidez",
+                    "Cuchilla Rauda de Navori",
+                    "Filo del Infinito"
+                ],
+                "runas": [
+                    "Estrategia Ofensiva",
+                    "Absorber Vida",
+                    "Leyenda: Aceleración",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 115,
+                "campeon": "Samira",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Samira en el parche 26.17, centrada en daño de habilidades y picos de poder tempranos.",
+                "objetos": [
+                    "Saqueador de Esencias",
+                    "Botas Jonias de la Lucidez",
+                    "Cuchilla Rauda de Navori",
+                    "Filo del Infinito"
+                ],
+                "runas": [
+                    "Estrategia Ofensiva",
+                    "Absorber Vida",
+                    "Leyenda: Aceleración",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 125,
+                "campeon": "Sivir",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Sivir en el parche 26.17, centrada en probabilidad de crítico y daño por segundo.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Recuerdos de Lord Dominik"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 127,
+                "campeon": "Smolder",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Smolder en el parche 26.17, centrada en daño de habilidades y picos de poder tempranos.",
+                "objetos": [
+                    "Saqueador de Esencias",
+                    "Botas Jonias de la Lucidez",
+                    "Cuchilla Rauda de Navori",
+                    "Filo del Infinito"
+                ],
+                "runas": [
+                    "Estrategia Ofensiva",
+                    "Absorber Vida",
+                    "Leyenda: Aceleración",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 137,
+                "campeon": "Teemo",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Teemo en el parche 26.17, centrada en velocidad de ataque y efectos al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Espadafuria de Guinsoo",
+                    "Terminus"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Corte"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 139,
+                "campeon": "Tristana",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Tristana en el parche 26.17, centrada en probabilidad de crítico y daño por segundo.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Recuerdos de Lord Dominik"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 143,
+                "campeon": "Twitch",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Twitch en el parche 26.17, centrada en probabilidad de crítico y daño por segundo.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Recuerdos de Lord Dominik"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 146,
+                "campeon": "Varus",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Varus en el parche 26.17, centrada en velocidad de ataque y efectos al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Espadafuria de Guinsoo",
+                    "Terminus"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Corte"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 147,
+                "campeon": "Vayne",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Vayne en el parche 26.17, centrada en velocidad de ataque y efectos al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Espadafuria de Guinsoo",
+                    "Terminus"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Corte"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 158,
+                "campeon": "Xayah",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Xayah en el parche 26.17, centrada en probabilidad de crítico y daño por segundo.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Recuerdos de Lord Dominik"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 164,
+                "campeon": "Yunara",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Yunara en el parche 26.17, centrada en velocidad de ataque y efectos al impacto.",
+                "objetos": [
+                    "Espada del Rey Arruinado",
+                    "Grebas del Berserker",
+                    "Espadafuria de Guinsoo",
+                    "Terminus"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Corte"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            },
+            {
+                "id": 169,
+                "campeon": "Zeri",
+                "rol": "Tirador",
+                "descripcion": "Build orientativa para Zeri en el parche 26.17, centrada en probabilidad de crítico y daño por segundo.",
+                "objetos": [
+                    "Flechas Salvajes de Yun Tal",
+                    "Grebas del Berserker",
+                    "Filo del Infinito",
+                    "Recuerdos de Lord Dominik"
+                ],
+                "runas": [
+                    "Cadencia Letal",
+                    "Absorber Vida",
+                    "Leyenda: Celeridad",
+                    "Golpe de Gracia"
+                ],
+                "runasSecundarias": [
+                    "Calzado Mágico",
+                    "Entrega de Galletas"
+                ]
+            }
+        ],
+        "soporte": [
+            {
+                "id": 15,
+                "campeon": "Bardo",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Bardo en el parche 26.17, centrada en hostigamiento, control y presión de línea.",
+                "objetos": [
+                    "Mandato Imperial",
+                    "Botas del Hechicero",
+                    "Ecos de Helia",
+                    "Morellonomicón"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 49,
+                "campeon": "Ivern",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Ivern en el parche 26.17, centrada en escudos, curaciones y utilidad para el equipo.",
+                "objetos": [
+                    "Renovador de Piedra Lunar",
+                    "Botas Jonias de la Lucidez",
+                    "Pebetero Ardiente",
+                    "Redención"
+                ],
+                "runas": [
+                    "Invocación: Aery",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Fuente de Vida",
+                    "Revitalizar"
+                ]
+            },
+            {
+                "id": 50,
+                "campeon": "Janna",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Janna en el parche 26.17, centrada en escudos, curaciones y utilidad para el equipo.",
+                "objetos": [
+                    "Renovador de Piedra Lunar",
+                    "Botas Jonias de la Lucidez",
+                    "Pebetero Ardiente",
+                    "Redención"
+                ],
+                "runas": [
+                    "Invocación: Aery",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Fuente de Vida",
+                    "Revitalizar"
+                ]
+            },
+            {
+                "id": 77,
+                "campeon": "Lulu",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Lulu en el parche 26.17, centrada en escudos, curaciones y utilidad para el equipo.",
+                "objetos": [
+                    "Renovador de Piedra Lunar",
+                    "Botas Jonias de la Lucidez",
+                    "Pebetero Ardiente",
+                    "Redención"
+                ],
+                "runas": [
+                    "Invocación: Aery",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Fuente de Vida",
+                    "Revitalizar"
+                ]
+            },
+            {
+                "id": 84,
+                "campeon": "Milio",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Milio en el parche 26.17, centrada en escudos, curaciones y utilidad para el equipo.",
+                "objetos": [
+                    "Renovador de Piedra Lunar",
+                    "Botas Jonias de la Lucidez",
+                    "Pebetero Ardiente",
+                    "Redención"
+                ],
+                "runas": [
+                    "Invocación: Aery",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Fuente de Vida",
+                    "Revitalizar"
+                ]
+            },
+            {
+                "id": 87,
+                "campeon": "Morgana",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Morgana en el parche 26.17, centrada en hostigamiento, control y presión de línea.",
+                "objetos": [
+                    "Mandato Imperial",
+                    "Botas del Hechicero",
+                    "Ecos de Helia",
+                    "Morellonomicón"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 89,
+                "campeon": "Nami",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Nami en el parche 26.17, centrada en escudos, curaciones y utilidad para el equipo.",
+                "objetos": [
+                    "Renovador de Piedra Lunar",
+                    "Botas Jonias de la Lucidez",
+                    "Pebetero Ardiente",
+                    "Redención"
+                ],
+                "runas": [
+                    "Invocación: Aery",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Fuente de Vida",
+                    "Revitalizar"
+                ]
+            },
+            {
+                "id": 102,
+                "campeon": "Pyke",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Pyke en el parche 26.17, centrada en letalidad, visión y ejecuciones.",
+                "objetos": [
+                    "Espada de la Penumbra",
+                    "Botas de Marcha Rápida",
+                    "Espada Fantasma de Youmuu",
+                    "Arco Axiomático"
+                ],
+                "runas": [
+                    "Lluvia de Espadas",
+                    "Impacto Súbito",
+                    "Centinela profundo",
+                    "Cazador Definitivo"
+                ],
+                "runasSecundarias": [
+                    "Segundo Aire",
+                    "Inquebrantable"
+                ]
+            },
+            {
+                "id": 105,
+                "campeon": "Rakan",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Rakan en el parche 26.17, centrada en iniciación, visión y protección del equipo.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 109,
+                "campeon": "Renata Glasc",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Renata Glasc en el parche 26.17, centrada en escudos, curaciones y utilidad para el equipo.",
+                "objetos": [
+                    "Renovador de Piedra Lunar",
+                    "Botas Jonias de la Lucidez",
+                    "Pebetero Ardiente",
+                    "Redención"
+                ],
+                "runas": [
+                    "Invocación: Aery",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Fuente de Vida",
+                    "Revitalizar"
+                ]
+            },
+            {
+                "id": 117,
+                "campeon": "Senna",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Senna en el parche 26.17, centrada en hostigamiento, control y presión de línea.",
+                "objetos": [
+                    "Mandato Imperial",
+                    "Botas del Hechicero",
+                    "Ecos de Helia",
+                    "Morellonomicón"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 118,
+                "campeon": "Seraphine",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Seraphine en el parche 26.17, centrada en hostigamiento, control y presión de línea.",
+                "objetos": [
+                    "Mandato Imperial",
+                    "Botas del Hechicero",
+                    "Ecos de Helia",
+                    "Morellonomicón"
+                ],
+                "runas": [
+                    "Cometa Arcano",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Entrega de Galletas",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 128,
+                "campeon": "Sona",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Sona en el parche 26.17, centrada en escudos, curaciones y utilidad para el equipo.",
+                "objetos": [
+                    "Renovador de Piedra Lunar",
+                    "Botas Jonias de la Lucidez",
+                    "Pebetero Ardiente",
+                    "Redención"
+                ],
+                "runas": [
+                    "Invocación: Aery",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Fuente de Vida",
+                    "Revitalizar"
+                ]
+            },
+            {
+                "id": 129,
+                "campeon": "Soraka",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Soraka en el parche 26.17, centrada en escudos, curaciones y utilidad para el equipo.",
+                "objetos": [
+                    "Renovador de Piedra Lunar",
+                    "Botas Jonias de la Lucidez",
+                    "Pebetero Ardiente",
+                    "Redención"
+                ],
+                "runas": [
+                    "Invocación: Aery",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Fuente de Vida",
+                    "Revitalizar"
+                ]
+            },
+            {
+                "id": 136,
+                "campeon": "Taric",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Taric en el parche 26.17, centrada en iniciación, visión y protección del equipo.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 138,
+                "campeon": "Thresh",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Thresh en el parche 26.17, centrada en iniciación, visión y protección del equipo.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 165,
+                "campeon": "Yuumi",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Yuumi en el parche 26.17, centrada en escudos, curaciones y utilidad para el equipo.",
+                "objetos": [
+                    "Renovador de Piedra Lunar",
+                    "Botas Jonias de la Lucidez",
+                    "Pebetero Ardiente",
+                    "Redención"
+                ],
+                "runas": [
+                    "Invocación: Aery",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Fuente de Vida",
+                    "Revitalizar"
+                ]
+            },
+            {
+                "id": 171,
+                "campeon": "Zilean",
+                "rol": "Soporte",
+                "descripcion": "Build orientativa para Zilean en el parche 26.17, centrada en escudos, curaciones y utilidad para el equipo.",
+                "objetos": [
+                    "Renovador de Piedra Lunar",
+                    "Botas Jonias de la Lucidez",
+                    "Pebetero Ardiente",
+                    "Redención"
+                ],
+                "runas": [
+                    "Invocación: Aery",
+                    "Anillo de Flujo de Maná",
+                    "Trascendencia",
+                    "Quemadura"
+                ],
+                "runasSecundarias": [
+                    "Fuente de Vida",
+                    "Revitalizar"
+                ]
+            }
+        ],
+        "tanque": [
+            {
+                "id": 5,
+                "campeon": "Alistar",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Alistar en el parche 26.17, centrada en iniciación y utilidad desde el rol de soporte.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 7,
+                "campeon": "Amumu",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Amumu en el parche 26.17, centrada en iniciación y utilidad desde el rol de soporte.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 17,
+                "campeon": "Blitzcrank",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Blitzcrank en el parche 26.17, centrada en iniciación y utilidad desde el rol de soporte.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 19,
+                "campeon": "Braum",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Braum en el parche 26.17, centrada en iniciación y utilidad desde el rol de soporte.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 24,
+                "campeon": "Cho'Gath",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Cho'Gath en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 28,
+                "campeon": "Dr. Mundo",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Dr. Mundo en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 37,
+                "campeon": "Galio",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Galio en el parche 26.17, centrada en iniciación y utilidad desde el rol de soporte.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 56,
+                "campeon": "K'Sante",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para K'Sante en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 72,
+                "campeon": "Leona",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Leona en el parche 26.17, centrada en iniciación y utilidad desde el rol de soporte.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 80,
+                "campeon": "Malphite",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Malphite en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 82,
+                "campeon": "Maokai",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Maokai en el parche 26.17, centrada en iniciación y utilidad desde el rol de soporte.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 91,
+                "campeon": "Nautilus",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Nautilus en el parche 26.17, centrada en iniciación y utilidad desde el rol de soporte.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 96,
+                "campeon": "Nunu y Willump",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Nunu y Willump en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 99,
+                "campeon": "Ornn",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Ornn en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 101,
+                "campeon": "Poppy",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Poppy en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 106,
+                "campeon": "Rammus",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Rammus en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 108,
+                "campeon": "Rell",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Rell en el parche 26.17, centrada en iniciación y utilidad desde el rol de soporte.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 116,
+                "campeon": "Sejuani",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Sejuani en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 121,
+                "campeon": "Shen",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Shen en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 123,
+                "campeon": "Singed",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Singed en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 124,
+                "campeon": "Sion",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Sion en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 126,
+                "campeon": "Skarner",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Skarner en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            },
+            {
+                "id": 133,
+                "campeon": "Tahm Kench",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Tahm Kench en el parche 26.17, centrada en iniciación y utilidad desde el rol de soporte.",
+                "objetos": [
+                    "Relicario de los Solari de Hierro",
+                    "Botas de Rapidez",
+                    "Promesa del Caballero",
+                    "Convergencia de Zeke"
+                ],
+                "runas": [
+                    "Réplica",
+                    "Fuente de Vida",
+                    "Acondicionamiento",
+                    "Inquebrantable"
+                ],
+                "runasSecundarias": [
+                    "Destello Hextech",
+                    "Perspicacia Cósmica"
+                ]
+            },
+            {
+                "id": 167,
+                "campeon": "Zac",
+                "rol": "Tanque",
+                "descripcion": "Build orientativa para Zac en el parche 26.17, centrada en resistencias, control de masas y primera línea.",
+                "objetos": [
+                    "Égida de Fuego Solar",
+                    "Grebas de Armacero",
+                    "Cota de Espinas",
+                    "Jak'Sho, el Proteico"
+                ],
+                "runas": [
+                    "Agarre del Perpetuo",
+                    "Demolición",
+                    "Acondicionamiento",
+                    "Crecimiento Excesivo"
+                ],
+                "runasSecundarias": [
+                    "Triunfo",
+                    "Leyenda: Aceleración"
+                ]
+            }
+        ]
+    },
+    "jugadores": {
+        "asesino": [
+            {
+                "id": 1,
+                "nombre": "Zed99",
+                "rol": "Asesino",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 367,
+                "campeonFavorito": "Zed",
+                "partidas": 263,
+                "victorias": 153,
+                "kda": "4.6"
+            },
+            {
+                "id": 2,
+                "nombre": "Beifeng",
+                "rol": "Asesino",
+                "region": "China",
+                "rango": "Challenger / Profesional",
+                "nivel": 414,
+                "campeonFavorito": "Qiyana",
+                "partidas": 346,
+                "victorias": 225,
+                "kda": "3.4"
+            },
+            {
+                "id": 3,
+                "nombre": "Pz Zzang",
+                "rol": "Asesino",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 461,
+                "campeonFavorito": "Zed",
+                "partidas": 429,
+                "victorias": 236,
+                "kda": "5.3"
+            },
+            {
+                "id": 4,
+                "nombre": "KatEvolved",
+                "rol": "Asesino",
+                "region": "Estados Unidos",
+                "rango": "Challenger / Profesional",
+                "nivel": 508,
+                "campeonFavorito": "Katarina",
+                "partidas": 512,
+                "victorias": 317,
+                "kda": "4.1"
+            },
+            {
+                "id": 5,
+                "nombre": "Dopa",
+                "rol": "Asesino",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 555,
+                "campeonFavorito": "Kassadin",
+                "partidas": 595,
+                "victorias": 309,
+                "kda": "2.9"
+            },
+            {
+                "id": 6,
+                "nombre": "ShowMaker",
+                "rol": "Asesino",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 602,
+                "campeonFavorito": "LeBlanc",
+                "partidas": 678,
+                "victorias": 400,
+                "kda": "4.8"
+            },
+            {
+                "id": 7,
+                "nombre": "Caps",
+                "rol": "Asesino",
+                "region": "Dinamarca",
+                "rango": "Challenger / Profesional",
+                "nivel": 649,
+                "campeonFavorito": "Akali",
+                "partidas": 761,
+                "victorias": 502,
+                "kda": "3.6"
+            },
+            {
+                "id": 8,
+                "nombre": "Knight",
+                "rol": "Asesino",
+                "region": "China",
+                "rango": "Challenger / Profesional",
+                "nivel": 696,
+                "campeonFavorito": "Akali",
+                "partidas": 844,
+                "victorias": 473,
+                "kda": "5.5"
+            },
+            {
+                "id": 9,
+                "nombre": "Rookie",
+                "rol": "Asesino",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 743,
+                "campeonFavorito": "LeBlanc",
+                "partidas": 927,
+                "victorias": 584,
+                "kda": "4.3"
+            },
+            {
+                "id": 10,
+                "nombre": "Scout",
+                "rol": "Asesino",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 790,
+                "campeonFavorito": "LeBlanc",
+                "partidas": 1010,
+                "victorias": 535,
+                "kda": "3.1"
+            }
+        ],
+        "luchador": [
+            {
+                "id": 11,
+                "nombre": "Zeus",
+                "rol": "Luchador",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 837,
+                "campeonFavorito": "Aatrox",
+                "partidas": 1093,
+                "victorias": 656,
+                "kda": "5.0"
+            },
+            {
+                "id": 12,
+                "nombre": "Bin",
+                "rol": "Luchador",
+                "region": "China",
+                "rango": "Challenger / Profesional",
+                "nivel": 884,
+                "campeonFavorito": "Jax",
+                "partidas": 196,
+                "victorias": 131,
+                "kda": "3.8"
+            },
+            {
+                "id": 13,
+                "nombre": "TheShy",
+                "rol": "Luchador",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 931,
+                "campeonFavorito": "Riven",
+                "partidas": 279,
+                "victorias": 159,
+                "kda": "5.7"
+            },
+            {
+                "id": 14,
+                "nombre": "Kiin",
+                "rol": "Luchador",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 978,
+                "campeonFavorito": "Renekton",
+                "partidas": 362,
+                "victorias": 232,
+                "kda": "4.5"
+            },
+            {
+                "id": 15,
+                "nombre": "Doran",
+                "rol": "Luchador",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 345,
+                "campeonFavorito": "Gnar",
+                "partidas": 445,
+                "victorias": 240,
+                "kda": "3.3"
+            },
+            {
+                "id": 16,
+                "nombre": "BrokenBlade",
+                "rol": "Luchador",
+                "region": "Alemania",
+                "rango": "Challenger / Profesional",
+                "nivel": 392,
+                "campeonFavorito": "Yone",
+                "partidas": 528,
+                "victorias": 322,
+                "kda": "5.2"
+            },
+            {
+                "id": 17,
+                "nombre": "Bwipo",
+                "rol": "Luchador",
+                "region": "Bélgica",
+                "rango": "Challenger / Profesional",
+                "nivel": 439,
+                "campeonFavorito": "Aatrox",
+                "partidas": 611,
+                "victorias": 312,
+                "kda": "4.0"
+            },
+            {
+                "id": 18,
+                "nombre": "Wunder",
+                "rol": "Luchador",
+                "region": "Dinamarca",
+                "rango": "Challenger / Profesional",
+                "nivel": 486,
+                "campeonFavorito": "Gragas",
+                "partidas": 694,
+                "victorias": 403,
+                "kda": "2.8"
+            },
+            {
+                "id": 19,
+                "nombre": "Impact",
+                "rol": "Luchador",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 533,
+                "campeonFavorito": "Gnar",
+                "partidas": 777,
+                "victorias": 505,
+                "kda": "4.7"
+            },
+            {
+                "id": 20,
+                "nombre": "Smeb",
+                "rol": "Luchador",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 580,
+                "campeonFavorito": "Riven",
+                "partidas": 860,
+                "victorias": 473,
+                "kda": "3.5"
+            }
+        ],
+        "mago": [
+            {
+                "id": 21,
+                "nombre": "Faker",
+                "rol": "Mago",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 627,
+                "campeonFavorito": "Azir",
+                "partidas": 943,
+                "victorias": 585,
+                "kda": "5.4"
+            },
+            {
+                "id": 22,
+                "nombre": "Chovy",
+                "rol": "Mago",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 674,
+                "campeonFavorito": "Orianna",
+                "partidas": 1026,
+                "victorias": 534,
+                "kda": "4.2"
+            },
+            {
+                "id": 23,
+                "nombre": "Bdd",
+                "rol": "Mago",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 721,
+                "campeonFavorito": "Azir",
+                "partidas": 1109,
+                "victorias": 654,
+                "kda": "3.0"
+            },
+            {
+                "id": 24,
+                "nombre": "Xiaohu",
+                "rol": "Mago",
+                "region": "China",
+                "rango": "Challenger / Profesional",
+                "nivel": 768,
+                "campeonFavorito": "Ryze",
+                "partidas": 212,
+                "victorias": 140,
+                "kda": "4.9"
+            },
+            {
+                "id": 25,
+                "nombre": "Bjergsen",
+                "rol": "Mago",
+                "region": "Dinamarca",
+                "rango": "Challenger / Profesional",
+                "nivel": 815,
+                "campeonFavorito": "Zilean",
+                "partidas": 295,
+                "victorias": 165,
+                "kda": "3.7"
+            },
+            {
+                "id": 26,
+                "nombre": "Jensen",
+                "rol": "Mago",
+                "region": "Dinamarca",
+                "rango": "Challenger / Profesional",
+                "nivel": 862,
+                "campeonFavorito": "Orianna",
+                "partidas": 378,
+                "victorias": 238,
+                "kda": "5.6"
+            },
+            {
+                "id": 27,
+                "nombre": "Humanoid",
+                "rol": "Mago",
+                "region": "República Checa",
+                "rango": "Challenger / Profesional",
+                "nivel": 909,
+                "campeonFavorito": "Syndra",
+                "partidas": 461,
+                "victorias": 244,
+                "kda": "4.4"
+            },
+            {
+                "id": 28,
+                "nombre": "Nisqy",
+                "rol": "Mago",
+                "region": "Bélgica",
+                "rango": "Challenger / Profesional",
+                "nivel": 956,
+                "campeonFavorito": "Taliyah",
+                "partidas": 544,
+                "victorias": 326,
+                "kda": "3.2"
+            },
+            {
+                "id": 29,
+                "nombre": "APA",
+                "rol": "Mago",
+                "region": "Estados Unidos",
+                "rango": "Challenger / Profesional",
+                "nivel": 323,
+                "campeonFavorito": "Ziggs",
+                "partidas": 627,
+                "victorias": 420,
+                "kda": "5.1"
+            },
+            {
+                "id": 30,
+                "nombre": "Maple",
+                "rol": "Mago",
+                "region": "Taiwán",
+                "rango": "Challenger / Profesional",
+                "nivel": 370,
+                "campeonFavorito": "Syndra",
+                "partidas": 710,
+                "victorias": 405,
+                "kda": "3.9"
+            }
+        ],
+        "tirador": [
+            {
+                "id": 31,
+                "nombre": "Uzi",
+                "rol": "Tirador",
+                "region": "China",
+                "rango": "Challenger / Profesional",
+                "nivel": 417,
+                "campeonFavorito": "Vayne",
+                "partidas": 793,
+                "victorias": 508,
+                "kda": "2.7"
+            },
+            {
+                "id": 32,
+                "nombre": "Ruler",
+                "rol": "Tirador",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 464,
+                "campeonFavorito": "Ezreal",
+                "partidas": 876,
+                "victorias": 473,
+                "kda": "4.6"
+            },
+            {
+                "id": 33,
+                "nombre": "Deft",
+                "rol": "Tirador",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 511,
+                "campeonFavorito": "Ezreal",
+                "partidas": 959,
+                "victorias": 585,
+                "kda": "3.4"
+            },
+            {
+                "id": 34,
+                "nombre": "Gumayusi",
+                "rol": "Tirador",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 558,
+                "campeonFavorito": "Varus",
+                "partidas": 1042,
+                "victorias": 531,
+                "kda": "5.3"
+            },
+            {
+                "id": 35,
+                "nombre": "Viper",
+                "rol": "Tirador",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 605,
+                "campeonFavorito": "Aphelios",
+                "partidas": 1125,
+                "victorias": 653,
+                "kda": "4.1"
+            },
+            {
+                "id": 36,
+                "nombre": "JackeyLove",
+                "rol": "Tirador",
+                "region": "China",
+                "rango": "Challenger / Profesional",
+                "nivel": 652,
+                "campeonFavorito": "Draven",
+                "partidas": 228,
+                "victorias": 148,
+                "kda": "2.9"
+            },
+            {
+                "id": 37,
+                "nombre": "Elk",
+                "rol": "Tirador",
+                "region": "China",
+                "rango": "Challenger / Profesional",
+                "nivel": 699,
+                "campeonFavorito": "Kai'Sa",
+                "partidas": 311,
+                "victorias": 171,
+                "kda": "4.8"
+            },
+            {
+                "id": 38,
+                "nombre": "Peyz",
+                "rol": "Tirador",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 746,
+                "campeonFavorito": "Zeri",
+                "partidas": 394,
+                "victorias": 244,
+                "kda": "3.6"
+            },
+            {
+                "id": 39,
+                "nombre": "Doublelift",
+                "rol": "Tirador",
+                "region": "Estados Unidos",
+                "rango": "Challenger / Profesional",
+                "nivel": 793,
+                "campeonFavorito": "Lucian",
+                "partidas": 477,
+                "victorias": 248,
+                "kda": "5.5"
+            },
+            {
+                "id": 40,
+                "nombre": "Hans Sama",
+                "rol": "Tirador",
+                "region": "Francia",
+                "rango": "Challenger / Profesional",
+                "nivel": 840,
+                "campeonFavorito": "Draven",
+                "partidas": 560,
+                "victorias": 330,
+                "kda": "4.3"
+            }
+        ],
+        "soporte": [
+            {
+                "id": 41,
+                "nombre": "Keria",
+                "rol": "Soporte",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 887,
+                "campeonFavorito": "Bardo",
+                "partidas": 643,
+                "victorias": 424,
+                "kda": "3.1"
+            },
+            {
+                "id": 42,
+                "nombre": "Mata",
+                "rol": "Soporte",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 934,
+                "campeonFavorito": "Thresh",
+                "partidas": 726,
+                "victorias": 407,
+                "kda": "5.0"
+            },
+            {
+                "id": 43,
+                "nombre": "MadLife",
+                "rol": "Soporte",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 981,
+                "campeonFavorito": "Thresh",
+                "partidas": 809,
+                "victorias": 510,
+                "kda": "3.8"
+            },
+            {
+                "id": 44,
+                "nombre": "BeryL",
+                "rol": "Soporte",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 348,
+                "campeonFavorito": "Rakan",
+                "partidas": 892,
+                "victorias": 473,
+                "kda": "5.7"
+            },
+            {
+                "id": 45,
+                "nombre": "Meiko",
+                "rol": "Soporte",
+                "region": "China",
+                "rango": "Challenger / Profesional",
+                "nivel": 395,
+                "campeonFavorito": "Renata Glasc",
+                "partidas": 975,
+                "victorias": 585,
+                "kda": "4.5"
+            },
+            {
+                "id": 46,
+                "nombre": "Mikyx",
+                "rol": "Soporte",
+                "region": "Eslovenia",
+                "rango": "Challenger / Profesional",
+                "nivel": 442,
+                "campeonFavorito": "Rakan",
+                "partidas": 1058,
+                "victorias": 709,
+                "kda": "3.3"
+            },
+            {
+                "id": 47,
+                "nombre": "CoreJJ",
+                "rol": "Soporte",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 489,
+                "campeonFavorito": "Thresh",
+                "partidas": 1141,
+                "victorias": 650,
+                "kda": "5.2"
+            },
+            {
+                "id": 48,
+                "nombre": "Lehends",
+                "rol": "Soporte",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 536,
+                "campeonFavorito": "Yuumi",
+                "partidas": 244,
+                "victorias": 156,
+                "kda": "4.0"
+            },
+            {
+                "id": 49,
+                "nombre": "Hylissang",
+                "rol": "Soporte",
+                "region": "Bulgaria",
+                "rango": "Challenger / Profesional",
+                "nivel": 583,
+                "campeonFavorito": "Rakan",
+                "partidas": 327,
+                "victorias": 177,
+                "kda": "2.8"
+            },
+            {
+                "id": 50,
+                "nombre": "ON",
+                "rol": "Soporte",
+                "region": "China",
+                "rango": "Challenger / Profesional",
+                "nivel": 630,
+                "campeonFavorito": "Rakan",
+                "partidas": 410,
+                "victorias": 250,
+                "kda": "4.7"
+            }
+        ],
+        "tanque": [
+            {
+                "id": 51,
+                "nombre": "Canyon",
+                "rol": "Tanque",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 677,
+                "campeonFavorito": "Sejuani",
+                "partidas": 493,
+                "victorias": 251,
+                "kda": "3.5"
+            },
+            {
+                "id": 52,
+                "nombre": "Bengi",
+                "rol": "Tanque",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 724,
+                "campeonFavorito": "Nunu y Willump",
+                "partidas": 576,
+                "victorias": 334,
+                "kda": "5.4"
+            },
+            {
+                "id": 53,
+                "nombre": "Jankos",
+                "rol": "Tanque",
+                "region": "Polonia",
+                "rango": "Challenger / Profesional",
+                "nivel": 771,
+                "campeonFavorito": "Sejuani",
+                "partidas": 659,
+                "victorias": 428,
+                "kda": "4.2"
+            },
+            {
+                "id": 54,
+                "nombre": "Peanut",
+                "rol": "Tanque",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 818,
+                "campeonFavorito": "Maokai",
+                "partidas": 742,
+                "victorias": 408,
+                "kda": "3.0"
+            },
+            {
+                "id": 55,
+                "nombre": "Oner",
+                "rol": "Tanque",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 865,
+                "campeonFavorito": "Poppy",
+                "partidas": 825,
+                "victorias": 512,
+                "kda": "4.9"
+            },
+            {
+                "id": 56,
+                "nombre": "Ambition",
+                "rol": "Tanque",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 912,
+                "campeonFavorito": "Sejuani",
+                "partidas": 908,
+                "victorias": 472,
+                "kda": "3.7"
+            },
+            {
+                "id": 57,
+                "nombre": "Makkro",
+                "rol": "Tanque",
+                "region": "Reino Unido",
+                "rango": "Challenger / Profesional",
+                "nivel": 959,
+                "campeonFavorito": "Ornn",
+                "partidas": 991,
+                "victorias": 585,
+                "kda": "5.6"
+            },
+            {
+                "id": 58,
+                "nombre": "369",
+                "rol": "Tanque",
+                "region": "China",
+                "rango": "Challenger / Profesional",
+                "nivel": 326,
+                "campeonFavorito": "Sion",
+                "partidas": 1074,
+                "victorias": 709,
+                "kda": "4.4"
+            },
+            {
+                "id": 59,
+                "nombre": "Cuzz",
+                "rol": "Tanque",
+                "region": "Corea del Sur",
+                "rango": "Challenger / Profesional",
+                "nivel": 373,
+                "campeonFavorito": "Sejuani",
+                "partidas": 1157,
+                "victorias": 648,
+                "kda": "3.2"
+            },
+            {
+                "id": 60,
+                "nombre": "Inspired",
+                "rol": "Tanque",
+                "region": "Polonia",
+                "rango": "Challenger / Profesional",
+                "nivel": 420,
+                "campeonFavorito": "Poppy",
+                "partidas": 260,
+                "victorias": 164,
+                "kda": "5.1"
+            }
+        ]
     }
 };
 
 const USUARIOS = [
     {
-        usuario: "admin",
-        password: "admin",
-        nombre: "Administrador",
-        rol: "admin"
+        "usuario": "admin",
+        "password": "admin",
+        "nombre": "Administrador",
+        "rol": "admin"
     }
 ];
