@@ -123,15 +123,3 @@ y abrir `http://localhost:8080` en el navegador.
 | [`docs/referencia-funciones.md`](docs/referencia-funciones.md) | Referencia de todas las funciones de `js/`. |
 
 ---
-
-## 7. Limitaciones conocidas (proyecto educativo)
-
-- **Credenciales en el cliente:** cualquiera puede leer el usuario/contraseña viendo `datos.js`.
-  No hay backend: es un sistema de login de demostración.
-- **Sin sanitización en catálogos:** el panel escapa el HTML (`escapar()` en `panel.js`) al mostrar
-  registros, pero las páginas públicas (`campeones.js`, `builds.js`, `jugadores.js`) insertan los
-  valores por concatenación directa. Un texto con `<script>` guardado desde el panel podría
-  ejecutarse en las páginas públicas. Para uso educativo se asume que el único editor es el admin.
-- **Alcance del navegador:** los datos guardados viven solo en el `localStorage` del navegador
-  actual; no se sincronizan entre dispositivos ni hay servidor.
-- **Idioma:** las descripciones de campeones vienen truncadas (los datos son orientativos).
