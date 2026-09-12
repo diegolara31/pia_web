@@ -43,7 +43,8 @@ Bootstrap 5.3.3 viene por CDN y el estado vive en el **Web Storage** del navegad
 | `auth.js` | Sesión: guardar/leer/validar credenciales, protección del panel. | `datos.js` |
 | `login.js` | UI de login: valida el formulario y redirige al panel. | `auth.js` |
 | `panel.js` | CRUD completo: formulario dinámico por categoría, validación, render de tarjetas, IDs, contadores, cierre de sesión. | `datos.js`, `util.js`, `auth.js` |
-| `campeones.js` / `builds.js` / `jugadores.js` | Render de cada catálogo: toman los datos y generan el HTML de las tarjetas. | `datos.js`, `util.js` |
+| `campeones.js` / `jugadores.js` | Render de cada catálogo: toman los datos y generan el HTML de las tarjetas. | `datos.js`, `util.js` |
+| `builds.js` | Render del catálogo y creador público de builds con persistencia y eliminación. | `datos.js`, `util.js` |
 
 Todos los archivos de lógica usan **IIFE** con `"use strict"` para no contaminar el scope global
 (salvo `datos.js` y `util.js`, que exponen deliberadamente constantes y funciones globales).
@@ -68,7 +69,7 @@ obtenerDatos()  ──  localStorage["piaDatos"] existe?  ──sí──▶ JSO
 1. `panel.js` carga los datos con `obtenerDatos()` y los **normaliza** con
    `normalizarDatosPanel()`: garantiza que existan las 6 claves de rol en cada categoría y que
    cada registro tenga `id` numérico (asigna los faltantes con `siguienteId()`).
-2. Al guardar/eliminar, primero clona los datos actuales (`datosOriginales`) como respaldo.
+2. Al guardar/eliminar desde el panel, primero clona los datos actuales (`datosOriginales`) como respaldo.
 3. Aplica el cambio en memoria y llama a `guardarDatos(datos)` → `localStorage.setItem("piaDatos", …)`.
 4. Si `setItem` falla (p. ej. cuota llena), **restaura** el respaldo y muestra error.
 
@@ -85,6 +86,10 @@ cualquiera de estos eventos:
 | `visibilitychange` (a `visible`) | Regresar a la pestaña. |
 
 De este modo, los cambios hechos en el panel se ven sin recargar manualmente.
+
+La página `builds.html` también escribe en la misma clave: una build creada por el usuario se
+clasifica según el rol del campeón, aparece de inmediato en el catálogo y permanece tras recargar.
+El enlace `builds.html#crear-build` conecta el creador directamente con los botones de inicio.
 
 ## 4. Motor de filtros por rol
 

@@ -84,6 +84,22 @@ function crearFiltrados(config) {
         grid.innerHTML = obtenerItems(filtroActivo).map(renderItem).join("");
     }
 
+    function activarFiltro(filtro) {
+        const botonActivo = Array.from(botones).find(function (boton) {
+            return boton.dataset.filtro === filtro;
+        });
+
+        if (!botonActivo) {
+            return;
+        }
+
+        botones.forEach(function (boton) {
+            boton.classList.toggle("activo", boton === botonActivo);
+        });
+        filtroActivo = filtro;
+        renderizar();
+    }
+
     botones.forEach(function (boton) {
         boton.addEventListener("click", function (evento) {
             botones.forEach(function (b) {
@@ -112,4 +128,9 @@ function crearFiltrados(config) {
             renderizar();
         }
     });
+
+    return {
+        renderizar: renderizar,
+        activarFiltro: activarFiltro
+    };
 }

@@ -63,6 +63,18 @@ Los datos agrupan los registros por rol en un objeto:
 }
 ```
 
+Las builds creadas desde la página pública conservan este esquema base y añaden estos campos:
+
+```jsonc
+{
+  "nombre": "Ahri agresiva",     // string · nombre elegido por el usuario
+  "posicion": "Mid",             // string · Top | Jungla | Mid | ADC | Soporte
+  "creadaPorUsuario": true        // boolean · permite mostrarla y eliminarla como build propia
+}
+```
+
+Se guardan dentro de `DATA.builds[rol]` usando la clase del campeón, no la posición de línea.
+
 ### 2.3 Jugador (`DATA.jugadores[rol][i]`)
 
 ```jsonc

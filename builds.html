@@ -32,10 +32,101 @@
     <main class="flex-grow-1">
         <section class="container pagina-titulo py-5 text-center">
             <h1 class="display-3 fw-bold">Builds</h1>
-            <p class="lead">Consulta objetos, runas y configuraciones para cada personaje</p>
+            <p class="lead">Consulta configuraciones para cada personaje o crea la tuya</p>
+        </section>
+
+        <section class="container pb-5" id="crear-build" aria-labelledby="titulo-crear-build">
+            <div class="card carta creator-card shadow">
+                <div class="card-body p-4 p-lg-5">
+                    <div class="row g-4 align-items-start">
+                        <div class="col-12 col-lg-4">
+                            <p class="eyebrow mb-2">Build de la comunidad</p>
+                            <h2 class="h2 section-title mb-3" id="titulo-crear-build">Crea tu propia build</h2>
+                            <p class="text-secondary mb-2">Elige un campeón, una posición, hasta seis objetos y la runa principal.</p>
+                            <p class="form-text mb-0" id="campeon-seleccionado">La clase se asignará automáticamente según el campeón.</p>
+                        </div>
+
+                        <div class="col-12 col-lg-8">
+                            <form id="build-form" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-12 col-md-6">
+                                        <label for="nombre-build" class="form-label">Nombre de la build</label>
+                                        <input type="text" class="form-control" id="nombre-build" maxlength="60" placeholder="Ej. Ahri agresiva" required>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="campeon-build" class="form-label">Campeón</label>
+                                        <select class="form-select" id="campeon-build" required>
+                                            <option value="">Selecciona un campeón</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="posicion-build" class="form-label">Posición</label>
+                                        <select class="form-select" id="posicion-build" required>
+                                            <option value="">Selecciona una posición</option>
+                                            <option value="Top">Top</option>
+                                            <option value="Jungla">Jungla</option>
+                                            <option value="Mid">Mid</option>
+                                            <option value="ADC">ADC</option>
+                                            <option value="Soporte">Soporte</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="runa-build" class="form-label">Runa principal</label>
+                                        <select class="form-select" id="runa-build" required>
+                                            <option value="">Selecciona una runa</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="descripcion-build" class="form-label">Descripción <span class="text-secondary fw-normal">(opcional)</span></label>
+                                        <textarea class="form-control" id="descripcion-build" rows="2" maxlength="240" placeholder="Explica el objetivo o estilo de la build"></textarea>
+                                    </div>
+                                </div>
+
+                                <fieldset class="mt-4">
+                                    <legend class="h5 mb-3">Objetos</legend>
+                                    <div class="row g-3" id="objetos-build">
+                                        <div class="col-12 col-md-6">
+                                            <label for="objeto-build-1" class="form-label item-slot-label">Objeto 1</label>
+                                            <select class="form-select objeto-build" id="objeto-build-1" required></select>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="objeto-build-2" class="form-label item-slot-label">Objeto 2</label>
+                                            <select class="form-select objeto-build" id="objeto-build-2"></select>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="objeto-build-3" class="form-label item-slot-label">Objeto 3</label>
+                                            <select class="form-select objeto-build" id="objeto-build-3"></select>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="objeto-build-4" class="form-label item-slot-label">Objeto 4</label>
+                                            <select class="form-select objeto-build" id="objeto-build-4"></select>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="objeto-build-5" class="form-label item-slot-label">Objeto 5</label>
+                                            <select class="form-select objeto-build" id="objeto-build-5"></select>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="objeto-build-6" class="form-label item-slot-label">Objeto 6</label>
+                                            <select class="form-select objeto-build" id="objeto-build-6"></select>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <div class="alert mt-4 mb-0 d-none" id="build-mensaje" role="status" aria-live="polite"></div>
+
+                                <div class="d-flex flex-column flex-sm-row gap-2 mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg">Guardar build</button>
+                                    <button type="reset" class="btn btn-outline-secondary btn-lg">Limpiar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="container filtros pb-4" aria-label="Filtrar builds por rol">
+            <h2 class="text-center section-title h3 mb-4">Builds disponibles</h2>
             <div class="d-flex flex-wrap justify-content-center gap-2">
                 <button class="btn btn-filter activo" data-filtro="todos">Todos</button>
                 <button class="btn btn-filter" data-filtro="asesino">Asesinos</button>
@@ -47,7 +138,7 @@
             </div>
         </section>
 
-        <section class="container listado pb-5">
+        <section class="container listado pb-5" id="listado-builds">
             <div class="row g-4" id="grid-builds"></div>
         </section>
     </main>

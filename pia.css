@@ -297,6 +297,55 @@ header {
     color: var(--lol-muted);
 }
 
+/* ====== CREADOR DE BUILDS ====== */
+
+#crear-build,
+#listado-builds {
+    scroll-margin-top: 1.5rem;
+}
+
+.creator-card {
+    border-color: rgba(200, 169, 81, 0.55);
+    background:
+        radial-gradient(circle at 0 0, rgba(200, 169, 81, 0.1), transparent 35%),
+        var(--lol-surface);
+}
+
+.creator-card:hover {
+    box-shadow: 0 10px 30px rgba(200, 169, 81, 0.12);
+    transform: none;
+}
+
+.creator-card .section-title {
+    letter-spacing: 1px;
+}
+
+.creator-card legend {
+    color: var(--lol-gold);
+    font-weight: 700;
+}
+
+.creator-card .form-text,
+.build-meta {
+    color: var(--lol-muted);
+}
+
+.item-slot-label {
+    color: var(--lol-muted);
+    font-size: 0.875rem;
+}
+
+.build-meta {
+    font-size: 0.875rem;
+    margin-top: 0.3rem;
+}
+
+.build-created-badge {
+    background-color: rgba(200, 169, 81, 0.18);
+    border: 1px solid var(--lol-gold);
+    color: var(--lol-gold-light);
+}
+
 .stat {
     display: flex;
     flex-direction: column;

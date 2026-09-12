@@ -24,7 +24,7 @@ página envuelven su lógica en IIFE para no exponer variables intermedias.
 | `obtenerDatosIniciales` | `() → Object` | Copia profunda de `DATA` (`JSON.parse(JSON.stringify(DATA))`) para editar sin mutar el original. |
 | `normalizarRol` | `(rol: string) → string` | Canoniza un rol (minúsculas, sin acentos, sinónimos EN/ES) → `asesino \| luchador \| mago \| tirador \| soporte \| tanque \| "default"`. |
 | `aplanar` | `(grupo: Object) → Array` | Concatena los arrays de un objeto agrupado por rol (para el filtro "todos"). |
-| `crearFiltrados` | `({ grid, botones, obtenerItems, renderItem }) → void` | Motor de filtros: al hacer clic en un botón `.btn-filter` (atributo `data-filtro`) marca el activo, obtiene los ítems con `obtenerItems(filtro)` y pinta el grid con `grid.innerHTML = items.map(renderItem).join("")`. Renderiza al inicio y se resincroniza con los eventos `storage` (clave `piaDatos`), `pageshow`, `focus` y `visibilitychange`. |
+| `crearFiltrados` | `({ grid, botones, obtenerItems, renderItem }) → Object` | Motor de filtros: renderiza al inicio y se resincroniza con `storage`, `pageshow`, `focus` y `visibilitychange`. Devuelve `renderizar()` y `activarFiltro(filtro)` para refrescar o cambiar el filtro desde la página. |
 
 ## `js/auth.js`
 
@@ -86,6 +86,10 @@ Cada archivo sigue el mismo patrón con `crearFiltrados()`:
 | `obtenerItems(datos, filtro)` | `datos.campeones[filtro]` o `aplanar()` | `datos.builds[filtro]` o `aplanar()` | `datos.jugadores[filtro]` o `aplanar()` |
 | `crearCarta*(item)` | Tarjeta con nombre, badge de rol (`badge-` + `normalizarRol`), región, descripción, dificultad y lista de habilidades. | Tarjeta con campeón, badge de rol, descripción y tres grupos de tags: objetos (`tag-objeto`), runas principales (`tag-runa`) y secundarias (`tag-runa-sec`). | Tarjeta con nombre, badge de rol y 8 estadísticas: región, rango, nivel, campeón favorito, partidas, victorias, win rate y KDA. |
 | auxiliares | — | `crearTags(items, clase)` | `calcularWinRate(j)` → `(victorias/partidas)*100` con 1 decimal; `crearStat(etiqueta, valor, claseExtra)`. |
+
+Además del render del catálogo, `js/builds.js` carga los campeones, objetos y runas disponibles
+en el formulario público; asigna automáticamente la clase del campeón, valida que no haya
+objetos repetidos y guarda o elimina builds propias mediante `guardarDatos()`.
 
 ---
 

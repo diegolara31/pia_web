@@ -15,6 +15,7 @@ editar y eliminar registros desde el navegador.
 |---|---|
 | Catálogo de campeones | 173 campeones agrupados por rol, con región, dificultad, descripción y habilidades. |
 | Builds recomendadas | 173 builds con objetos, runas principales y runas secundarias por campeón. |
+| Creador de builds | Formulario público para guardar builds propias en el navegador, verlas en el catálogo y eliminarlas. |
 | Perfiles de jugadores | 60 jugadores con estadísticas: región, rango, nivel, campeón favorito, partidas, victorias, **win rate** y KDA. |
 | Filtros por rol | Botones de filtro (Asesino, Luchador, Mago, Tirador, Soporte, Tanque, Todos) en cada catálogo. |
 | Panel de administración | CRUD (crear, editar, eliminar) sobre las tres categorías, con validación de formularios y contadores de registros. |
@@ -30,7 +31,7 @@ editar y eliminar registros desde el navegador.
 pia_web/
 ├── index.html            Página de inicio (hero + tarjetas de acceso)
 ├── campeones.html        Catálogo de campeones con filtros por rol
-├── builds.html           Catálogo de builds (objetos y runas)
+├── builds.html           Creador y catálogo de builds (objetos y runas)
 ├── jugadores.html        Catálogo de jugadores y estadísticas
 ├── login.html            Formulario de acceso al panel
 ├── panel.html            Panel de administración (CRUD)
@@ -105,7 +106,7 @@ y abrir `http://localhost:8080` en el navegador.
 
 1. Si `localStorage` no tiene la clave `piaDatos`, todas las páginas leen el arreglo `DATA`
    de `js/datos.js` (los datos "de fábrica").
-2. Al **guardar/eliminar** en el panel, se escribe el objeto completo en `localStorage`.
+2. Al **guardar/eliminar** en el panel o en el creador de builds, se escribe el objeto completo en `localStorage`.
 3. Las páginas de catálogo se **resincronizan solas** al escuchar los eventos
    `storage` (otra pestaña), `pageshow` (navegación hacia atrás), `focus` y
    `visibilitychange` (regresar a la pestaña).
